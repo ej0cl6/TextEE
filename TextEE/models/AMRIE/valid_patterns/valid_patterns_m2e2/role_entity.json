@@ -1,0 +1,74 @@
+{
+  "Agent": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "Artifact": [
+    "ORG",
+    "PER",
+    "VEH",
+    "WEA"
+  ],
+  "Attacker": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "Destination": [
+    "FAC",
+    "GPE",
+    "LOC"
+  ],
+  "Entity": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "Giver": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "Instrument": [
+    "VEH",
+    "WEA"
+  ],
+  "Origin": [
+    "FAC",
+    "GPE",
+    "LOC"
+  ],
+  "Person": [
+    "PER"
+  ],
+  "Place": [
+    "FAC",
+    "GPE",
+    "LOC"
+  ],
+  "Police": [
+    "ORG",
+    "PER"
+  ],
+  "Recipient": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "Target": [
+    "FAC",
+    "GPE",
+    "LOC",
+    "ORG",
+    "PER",
+    "VEH",
+    "WEA"
+  ],
+  "Vehicle": [
+    "VEH"
+  ],
+  "Victim": [
+    "PER"
+  ]
+}

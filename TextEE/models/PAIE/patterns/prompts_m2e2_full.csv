@@ -1,0 +1,8 @@
+Movement.Transport:prompt start, Agent ( and Agent ) transported Artifact ( and Artifact ) in Vehicle ( and Vehicle ) cost Price from Origin place ( and Origin ) to Destination place ( and Destination , Destination ) ,end  
+Conflict.Attack:prompt start, Attacker ( and Attacker ) attacked Target ( and Target ) hurting victims using Instrument ( and Instrument )  at Place ( and Place ) ,end 
+Conflict.Demonstrate:prompt start, Entity ( and Entity ) demonstrated at Place ( and Place ) with Police ,end 
+Contact.Meet:prompt start, Entity ( and Entity ) met with Entity ( and Entity ) at Place ( and Place ) ,end  
+Contact.Phone-Write:prompt start, Entity ( and Entity ) communicated remotely with Entity ( and Entity ) at Place ( and Place ) ,end  
+Transaction.Transfer-Money:prompt start, Giver ( and Giver ) gave Money to Recipient ( and Recipient ) for the benefit of Beneficiary ( and Beneficiary ) at Place ( and Place ) ,end 
+Justice.Arrest-Jail:prompt start, Agent ( and Agent ) arrested Person ( and Person ) at Place ( and Place ) ,end  
+Life.Die:prompt start, Agent ( and Agent ) killed Victim ( and Victim ) with Instrument ( and Instrument )  at Place ( and Place ) ,end  

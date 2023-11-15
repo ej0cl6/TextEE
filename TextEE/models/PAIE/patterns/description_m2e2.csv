@@ -1,0 +1,24 @@
+Conflict.Attack_Place,Where the attack takes place?
+Conflict.Attack_Target,Who is the target?
+Conflict.Attack_Attacker,Who is the attacking agent?
+Conflict.Attack_Instrument,What is the instrument used?
+Conflict.Demonstrate_Entity,Who is demonstrating agent?
+Conflict.Demonstrate_Place,Where the demonstrating takes place?
+Contact.Meet_Entity,Who is meeting?
+Contact.Meet_Place,Where the event takes place?
+Contact.Phone-Write_Entity,Who is communicating agents?
+Contact.Phone-Write_Place,Where is the communicating takes place?
+Justice.Arrest-Jail_Person,Who is jailed?
+Justice.Arrest-Jail_Agent,Who is the jailor?
+Justice.Arrest-Jail_Place,Where the event takes place?
+Life.Die_Victim,Who died?
+Life.Die_Agent,Who is the killer?
+Life.Die_Place,Where the event takes place?
+Life.Die_Instrument,What is the instrument used?
+Movement.Transport_Vehicle,What is the vehicle used?
+Movement.Transport_Artifact,What is being transported?
+Movement.Transport_Destination,Where the transporting is directed?
+Movement.Transport_Agent,Who is responsible for the transport event?
+Movement.Transport_Origin,Where the transporting originated?
+Transaction.Transfer-Money_Giver,Who is the donating agent?
+Transaction.Transfer-Money_Recipient,Who is the recipient?

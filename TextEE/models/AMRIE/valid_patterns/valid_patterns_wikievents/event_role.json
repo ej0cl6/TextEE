@@ -1,0 +1,263 @@
+{
+  "ArtifactExistence.DamageDestroyDisableDismantle.Damage": [
+    "Artifact",
+    "Damager",
+    "Instrument",
+    "Place"
+  ],
+  "ArtifactExistence.DamageDestroyDisableDismantle.Destroy": [
+    "Artifact",
+    "Destroyer",
+    "Instrument",
+    "Place"
+  ],
+  "ArtifactExistence.DamageDestroyDisableDismantle.DisableDefuse": [
+    "Artifact",
+    "Disabler",
+    "Instrument"
+  ],
+  "ArtifactExistence.DamageDestroyDisableDismantle.Dismantle": [
+    "Artifact",
+    "Components",
+    "Dismantler",
+    "Instrument",
+    "Place"
+  ],
+  "ArtifactExistence.DamageDestroyDisableDismantle.Unspecified": [
+    "Artifact",
+    "DamagerDestroyer",
+    "Instrument",
+    "Place"
+  ],
+  "ArtifactExistence.ManufactureAssemble.Unspecified": [
+    "Artifact",
+    "Components",
+    "ManufacturerAssembler",
+    "Place"
+  ],
+  "Cognitive.IdentifyCategorize.Unspecified": [
+    "IdentifiedObject",
+    "IdentifiedRole",
+    "Identifier",
+    "Place"
+  ],
+  "Cognitive.Inspection.SensoryObserve": [
+    "Instrument",
+    "ObservedEntity",
+    "Observer",
+    "Place"
+  ],
+  "Cognitive.Research.Unspecified": [
+    "Place",
+    "Researcher",
+    "Subject"
+  ],
+  "Cognitive.TeachingTrainingLearning.Unspecified": [
+    "Learner",
+    "TeacherTrainer"
+  ],
+  "Conflict.Attack.DetonateExplode": [
+    "Attacker",
+    "ExplosiveDevice",
+    "Instrument",
+    "Place",
+    "Target"
+  ],
+  "Conflict.Attack.Unspecified": [
+    "Attacker",
+    "Instrument",
+    "Place",
+    "Target"
+  ],
+  "Conflict.Defeat.Unspecified": [
+    "Defeated",
+    "Place",
+    "Victor"
+  ],
+  "Conflict.Demonstrate.DemonstrateWithViolence": [
+    "Demonstrator",
+    "Regulator"
+  ],
+  "Conflict.Demonstrate.Unspecified": [
+    "Demonstrator",
+    "Target",
+    "Topic"
+  ],
+  "Contact.Contact.Broadcast": [
+    "Communicator",
+    "Instrument",
+    "Place",
+    "Recipient",
+    "Topic"
+  ],
+  "Contact.Contact.Correspondence": [
+    "Participant",
+    "Place",
+    "Topic"
+  ],
+  "Contact.Contact.Meet": [
+    "Participant",
+    "Place",
+    "Topic"
+  ],
+  "Contact.Contact.Unspecified": [
+    "Participant",
+    "Place",
+    "Topic"
+  ],
+  "Contact.RequestCommand.Broadcast": [
+    "Communicator",
+    "Recipient"
+  ],
+  "Contact.RequestCommand.Correspondence": [
+    "Communicator",
+    "Recipient",
+    "Topic"
+  ],
+  "Contact.RequestCommand.Meet": [
+    "Communicator",
+    "Recipient"
+  ],
+  "Contact.RequestCommand.Unspecified": [
+    "Communicator",
+    "Place",
+    "Recipient"
+  ],
+  "Contact.ThreatenCoerce.Broadcast": [
+    "Communicator",
+    "Recipient"
+  ],
+  "Contact.ThreatenCoerce.Correspondence": [
+    "Communicator",
+    "Recipient"
+  ],
+  "Contact.ThreatenCoerce.Unspecified": [
+    "Communicator",
+    "Recipient"
+  ],
+  "Control.ImpedeInterfereWith.Unspecified": [
+    "Impeder",
+    "Place"
+  ],
+  "Disaster.Crash.Unspecified": [
+    "CrashObject",
+    "Place",
+    "Vehicle"
+  ],
+  "Disaster.DiseaseOutbreak.Unspecified": [
+    "Place",
+    "Victim"
+  ],
+  "GenericCrime.GenericCrime.GenericCrime": [
+    "Perpetrator",
+    "Place",
+    "Victim"
+  ],
+  "Justice.Acquit.Unspecified": [
+    "Defendant"
+  ],
+  "Justice.ArrestJailDetain.Unspecified": [
+    "Detainee",
+    "Jailer",
+    "Place"
+  ],
+  "Justice.ChargeIndict.Unspecified": [
+    "Defendant",
+    "JudgeCourt",
+    "Place",
+    "Prosecutor"
+  ],
+  "Justice.Convict.Unspecified": [
+    "Defendant",
+    "JudgeCourt"
+  ],
+  "Justice.InvestigateCrime.Unspecified": [
+    "Defendant",
+    "Investigator",
+    "ObservedEntity",
+    "Observer",
+    "Place"
+  ],
+  "Justice.ReleaseParole.Unspecified": [
+    "Defendant",
+    "JudgeCourt"
+  ],
+  "Justice.Sentence.Unspecified": [
+    "Defendant",
+    "JudgeCourt",
+    "Place"
+  ],
+  "Justice.TrialHearing.Unspecified": [
+    "Defendant",
+    "JudgeCourt",
+    "Place",
+    "Prosecutor"
+  ],
+  "Life.Die.Unspecified": [
+    "Killer",
+    "Place",
+    "Victim"
+  ],
+  "Life.Infect.Unspecified": [
+    "Victim"
+  ],
+  "Life.Injure.Unspecified": [
+    "BodyPart",
+    "Injurer",
+    "Instrument",
+    "Victim"
+  ],
+  "Medical.Intervention.Unspecified": [
+    "Patient",
+    "Place",
+    "Treater"
+  ],
+  "Movement.Transportation.Evacuation": [
+    "Destination",
+    "Origin",
+    "PassengerArtifact",
+    "Transporter"
+  ],
+  "Movement.Transportation.IllegalTransportation": [
+    "Destination",
+    "PassengerArtifact",
+    "Transporter",
+    "Vehicle"
+  ],
+  "Movement.Transportation.PreventPassage": [
+    "Destination",
+    "Origin",
+    "PassengerArtifact",
+    "Preventer",
+    "Transporter",
+    "Vehicle"
+  ],
+  "Movement.Transportation.Unspecified": [
+    "Destination",
+    "Origin",
+    "PassengerArtifact",
+    "Transporter",
+    "Vehicle"
+  ],
+  "Personnel.EndPosition.Unspecified": [
+    "Employee",
+    "PlaceOfEmployment"
+  ],
+  "Personnel.StartPosition.Unspecified": [
+    "Employee",
+    "Place",
+    "PlaceOfEmployment",
+    "Position"
+  ],
+  "Transaction.Donation.Unspecified": [
+    "ArtifactMoney",
+    "Giver",
+    "Recipient"
+  ],
+  "Transaction.ExchangeBuySell.Unspecified": [
+    "AcquiredEntity",
+    "Giver",
+    "PaymentBarter",
+    "Recipient"
+  ]
+}

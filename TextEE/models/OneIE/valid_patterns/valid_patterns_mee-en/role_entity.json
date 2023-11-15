@@ -1,0 +1,103 @@
+{
+  "Agent": [
+    "GEO",
+    "ORGANIZATION",
+    "PERSON"
+  ],
+  "Artifact": [
+    "FACILITY",
+    "ORGANIZATION",
+    "PERSON",
+    "VEHICLE",
+    "WEAPON"
+  ],
+  "Attacker": [
+    "GEO",
+    "ORGANIZATION",
+    "PERSON"
+  ],
+  "Beneficiary": [
+    "GEO",
+    "ORGANIZATION",
+    "PERSON"
+  ],
+  "Buyer": [
+    "GEO",
+    "ORGANIZATION",
+    "PERSON"
+  ],
+  "Crime": [
+    "CRIME"
+  ],
+  "Destination": [
+    "FACILITY",
+    "GEO",
+    "LOCATION"
+  ],
+  "Entity": [
+    "GEO",
+    "ORGANIZATION",
+    "PERSON"
+  ],
+  "Giver": [
+    "GEO",
+    "ORGANIZATION",
+    "PERSON"
+  ],
+  "Instrument": [
+    "VEHICLE",
+    "WEAPON"
+  ],
+  "Money": [
+    "MONEY"
+  ],
+  "Organization": [
+    "ORGANIZATION"
+  ],
+  "Origin": [
+    "FACILITY",
+    "GEO",
+    "LOCATION"
+  ],
+  "Person": [
+    "JOB",
+    "PERSON"
+  ],
+  "Place": [
+    "FACILITY",
+    "GEO",
+    "LOCATION"
+  ],
+  "Position": [
+    "JOB"
+  ],
+  "Price": [
+    "MONEY"
+  ],
+  "Recipient": [
+    "GEO",
+    "ORGANIZATION",
+    "PERSON"
+  ],
+  "Seller": [
+    "GEO",
+    "ORGANIZATION",
+    "PERSON"
+  ],
+  "Target": [
+    "FACILITY",
+    "ORGANIZATION",
+    "PERSON",
+    "VEHICLE",
+    "WEAPON"
+  ],
+  "Time": [
+    "TIME"
+  ],
+  "Vehicle": [
+    "VEHICLE"
+  ],
+  "Victim": [
+    "PERSON"
+  ]
+}

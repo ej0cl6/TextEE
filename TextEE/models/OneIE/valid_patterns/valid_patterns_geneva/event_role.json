@@ -1,0 +1,689 @@
+{
+  "Achieve": [
+    "Agent",
+    "Goal",
+    "Means"
+  ],
+  "Action": [
+    "Act",
+    "Agent",
+    "Domain",
+    "Manner"
+  ],
+  "Adducing": [
+    "Medium",
+    "Role",
+    "Speaker",
+    "Specified_entity"
+  ],
+  "Agree_or_refuse_to_act": [
+    "Proposed_action",
+    "Speaker"
+  ],
+  "Arranging": [
+    "Agent",
+    "Configuration",
+    "Location",
+    "Theme"
+  ],
+  "Arrest": [
+    "Authorities",
+    "Charges",
+    "Offense",
+    "Suspect"
+  ],
+  "Arriving": [
+    "Goal",
+    "Means",
+    "Path",
+    "Place",
+    "Purpose",
+    "Source",
+    "Theme"
+  ],
+  "Assistance": [
+    "Benefited_party",
+    "Focal_entity",
+    "Goal",
+    "Helper",
+    "Means"
+  ],
+  "Attack": [
+    "Assailant",
+    "Means",
+    "Victim",
+    "Weapon"
+  ],
+  "Bearing_arms": [
+    "Protagonist",
+    "Weapon"
+  ],
+  "Becoming": [
+    "Entity",
+    "Final_category",
+    "Final_quality"
+  ],
+  "Becoming_a_member": [
+    "Group",
+    "New_member"
+  ],
+  "Bodily_harm": [
+    "Agent",
+    "Body_part",
+    "Cause",
+    "Instrument",
+    "Victim"
+  ],
+  "Bringing": [
+    "Agent",
+    "Area",
+    "Carrier",
+    "Goal",
+    "Source",
+    "Theme"
+  ],
+  "Building": [
+    "Agent",
+    "Components",
+    "Created_entity",
+    "Place"
+  ],
+  "Catastrophe": [
+    "Cause",
+    "Patient",
+    "Place",
+    "Undesirable_event"
+  ],
+  "Causation": [
+    "Actor",
+    "Affected",
+    "Cause",
+    "Effect",
+    "Means"
+  ],
+  "Cause_change_of_position_on_a_scale": [
+    "Agent",
+    "Attribute",
+    "Cause",
+    "Difference",
+    "Item",
+    "Value_1",
+    "Value_2"
+  ],
+  "Cause_to_amalgamate": [
+    "Agent",
+    "Part_1",
+    "Part_2",
+    "Parts",
+    "Whole"
+  ],
+  "Cause_to_make_progress": [
+    "Agent",
+    "Project"
+  ],
+  "Change": [
+    "Agent",
+    "Attribute",
+    "Cause",
+    "Entity",
+    "Final_category",
+    "Final_value",
+    "Initial_category"
+  ],
+  "Change_of_leadership": [
+    "Body",
+    "New_leader",
+    "Old_leader",
+    "Old_order",
+    "Role",
+    "Selector"
+  ],
+  "Check": [
+    "Inspector",
+    "Means",
+    "Unconfirmed_content"
+  ],
+  "Choosing": [
+    "Chosen",
+    "Cognizer",
+    "Possibilities"
+  ],
+  "Collaboration": [
+    "Partners",
+    "Undertaking"
+  ],
+  "Come_together": [
+    "Configuration",
+    "Individuals",
+    "Place"
+  ],
+  "Coming_to_be": [
+    "Components",
+    "Entity",
+    "Place",
+    "Time"
+  ],
+  "Coming_to_believe": [
+    "Cognizer",
+    "Content",
+    "Means"
+  ],
+  "Commerce_buy": [
+    "Buyer",
+    "Goods",
+    "Seller"
+  ],
+  "Commerce_pay": [
+    "Buyer",
+    "Goods",
+    "Money",
+    "Seller"
+  ],
+  "Commerce_sell": [
+    "Buyer",
+    "Goods",
+    "Money",
+    "Seller"
+  ],
+  "Commitment": [
+    "Addressee",
+    "Message",
+    "Speaker"
+  ],
+  "Committing_crime": [
+    "Crime",
+    "Instrument",
+    "Perpetrator"
+  ],
+  "Communication": [
+    "Addressee",
+    "Interlocutors",
+    "Message",
+    "Speaker",
+    "Topic",
+    "Trigger"
+  ],
+  "Competition": [
+    "Competition",
+    "Participants",
+    "Venue"
+  ],
+  "Confronting_problem": [
+    "Activity",
+    "Experiencer"
+  ],
+  "Connect": [
+    "Figures",
+    "Ground"
+  ],
+  "Conquering": [
+    "Conqueror",
+    "Means",
+    "Theme"
+  ],
+  "Containing": [
+    "Container",
+    "Contents"
+  ],
+  "Control": [
+    "Controlling_variable",
+    "Dependent_variable"
+  ],
+  "Convincing": [
+    "Addressee",
+    "Content",
+    "Speaker",
+    "Topic"
+  ],
+  "Cost": [
+    "Asset",
+    "Goods",
+    "Intended_event",
+    "Payer",
+    "Rate"
+  ],
+  "Create_artwork": [
+    "Activity",
+    "Culture"
+  ],
+  "Creating": [
+    "Cause",
+    "Created_entity",
+    "Creator"
+  ],
+  "Criminal_investigation": [
+    "Incident",
+    "Investigator",
+    "Suspect"
+  ],
+  "Cure": [
+    "Affliction",
+    "Medication",
+    "Patient",
+    "Treatment"
+  ],
+  "Damaging": [
+    "Agent",
+    "Cause",
+    "Patient"
+  ],
+  "Death": [
+    "Deceased"
+  ],
+  "Deciding": [
+    "Cognizer",
+    "Decision"
+  ],
+  "Defending": [
+    "Assailant",
+    "Defender",
+    "Instrument",
+    "Victim"
+  ],
+  "Departing": [
+    "Goal",
+    "Path",
+    "Source",
+    "Traveller"
+  ],
+  "Destroying": [
+    "Cause",
+    "Destroyer",
+    "Means",
+    "Patient"
+  ],
+  "Dispersal": [
+    "Agent",
+    "Cause",
+    "Goal_area",
+    "Individuals"
+  ],
+  "Earnings_and_losses": [
+    "Earner",
+    "Earnings",
+    "Goods"
+  ],
+  "Education_teaching": [
+    "Course",
+    "Fact",
+    "Role",
+    "Skill",
+    "Student",
+    "Subject",
+    "Teacher"
+  ],
+  "Emergency": [
+    "Place",
+    "Undesirable_event"
+  ],
+  "Employment": [
+    "Employee",
+    "Employer",
+    "Field",
+    "Place_of_employment",
+    "Position",
+    "Task",
+    "Type"
+  ],
+  "Emptying": [
+    "Agent",
+    "Cause",
+    "Source",
+    "Theme"
+  ],
+  "Exchange": [
+    "Exchanger_1",
+    "Exchanger_2",
+    "Exchangers",
+    "Theme_1",
+    "Theme_2",
+    "Themes"
+  ],
+  "Expansion": [
+    "Agent",
+    "Dimension",
+    "Initial_size",
+    "Item",
+    "Result_size"
+  ],
+  "Filling": [
+    "Agent",
+    "Cause",
+    "Goal",
+    "Theme"
+  ],
+  "GetReady": [
+    "Activity",
+    "Protagonist"
+  ],
+  "Getting": [
+    "Means",
+    "Recipient",
+    "Source",
+    "Theme"
+  ],
+  "Giving": [
+    "Offerer",
+    "Recipient",
+    "Theme"
+  ],
+  "Hindering": [
+    "Action",
+    "Hindrance",
+    "Protagonist"
+  ],
+  "Hold": [
+    "Entity",
+    "Manipulator"
+  ],
+  "Hostile_encounter": [
+    "Instrument",
+    "Issue",
+    "Purpose",
+    "Side_1",
+    "Side_2",
+    "Sides"
+  ],
+  "Influence": [
+    "Action",
+    "Agent",
+    "Behavior",
+    "Cognizer",
+    "Product",
+    "Situation"
+  ],
+  "Ingestion": [
+    "Ingestibles",
+    "Ingestor"
+  ],
+  "Judgment_communication": [
+    "Addressee",
+    "Communicator",
+    "Evaluee",
+    "Medium",
+    "Reason",
+    "Topic"
+  ],
+  "Killing": [
+    "Cause",
+    "Instrument",
+    "Killer",
+    "Means",
+    "Victim"
+  ],
+  "Know": [
+    "Cognizer",
+    "Evidence",
+    "Instrument",
+    "Means",
+    "Phenomenon",
+    "Topic"
+  ],
+  "Labeling": [
+    "Entity",
+    "Label",
+    "Speaker"
+  ],
+  "Legality": [
+    "Action",
+    "Object"
+  ],
+  "Manufacturing": [
+    "Factory",
+    "Instrument",
+    "Producer",
+    "Product",
+    "Resource"
+  ],
+  "Motion": [
+    "Agent",
+    "Area",
+    "Cause",
+    "Distance",
+    "Goal",
+    "Means",
+    "Path",
+    "Source",
+    "Speed",
+    "Theme"
+  ],
+  "Motion_directional": [
+    "Area",
+    "Direction",
+    "Goal",
+    "Path",
+    "Source",
+    "Theme"
+  ],
+  "Openness": [
+    "Barrier",
+    "Theme",
+    "Useful_location"
+  ],
+  "Participation": [
+    "Event",
+    "Participants"
+  ],
+  "Perception_active": [
+    "Direction",
+    "Perceiver_agentive",
+    "Phenomenon"
+  ],
+  "Placing": [
+    "Agent",
+    "Cause",
+    "Location",
+    "Theme"
+  ],
+  "Practice": [
+    "Action",
+    "Agent",
+    "Occasion"
+  ],
+  "Presence": [
+    "Circumstances",
+    "Duration",
+    "Entity",
+    "Inherent_purpose",
+    "Place",
+    "Time"
+  ],
+  "Preventing_or_letting": [
+    "Agent",
+    "Event",
+    "Means",
+    "Potential_hindrance"
+  ],
+  "Process_end": [
+    "Agent",
+    "Cause",
+    "Final_subevent",
+    "Process",
+    "State",
+    "Time"
+  ],
+  "Process_start": [
+    "Agent",
+    "Event",
+    "Initial_subevent",
+    "Time"
+  ],
+  "Protest": [
+    "Addressee",
+    "Arguer",
+    "Content"
+  ],
+  "Quarreling": [
+    "Arguer2",
+    "Arguers",
+    "Issue"
+  ],
+  "Ratification": [
+    "Proposal",
+    "Ratifier"
+  ],
+  "Receiving": [
+    "Donor",
+    "Recipient",
+    "Theme"
+  ],
+  "Recovering": [
+    "Agent",
+    "Entity",
+    "Means"
+  ],
+  "Removing": [
+    "Agent",
+    "Cause",
+    "Goal",
+    "Source",
+    "Theme"
+  ],
+  "Request": [
+    "Addressee",
+    "Medium",
+    "Message",
+    "Speaker"
+  ],
+  "Research": [
+    "Field",
+    "Researcher",
+    "Topic"
+  ],
+  "Resolve_problem": [
+    "Agent",
+    "Cause",
+    "Means",
+    "Problem"
+  ],
+  "Response": [
+    "Agent",
+    "Responding_entity",
+    "Response",
+    "Trigger"
+  ],
+  "Reveal_secret": [
+    "Addressee",
+    "Information",
+    "Speaker",
+    "Topic"
+  ],
+  "Revenge": [
+    "Avenger",
+    "Injured_party",
+    "Injury",
+    "Offender",
+    "Punishment"
+  ],
+  "Rite": [
+    "Member",
+    "Object",
+    "Type"
+  ],
+  "Scrutiny": [
+    "Cognizer",
+    "Ground",
+    "Instrument",
+    "Phenomenon",
+    "Unwanted_entity"
+  ],
+  "Self_motion": [
+    "Direction",
+    "Distance",
+    "Goal",
+    "Path",
+    "Self_mover",
+    "Source"
+  ],
+  "Sending": [
+    "Goal",
+    "Means",
+    "Recipient",
+    "Sender",
+    "Source",
+    "Theme",
+    "Transferors",
+    "Vehicle"
+  ],
+  "Sign_agreement": [
+    "Agreement",
+    "Signatory"
+  ],
+  "Social_event": [
+    "Attendees",
+    "Beneficiary",
+    "Host",
+    "Occasion",
+    "Social_event"
+  ],
+  "Statement": [
+    "Addressee",
+    "Medium",
+    "Message",
+    "Speaker"
+  ],
+  "Supply": [
+    "Imposed_purpose",
+    "Recipient",
+    "Supplier",
+    "Theme"
+  ],
+  "Supporting": [
+    "Supported",
+    "Supporter"
+  ],
+  "Telling": [
+    "Addressee",
+    "Message",
+    "Speaker"
+  ],
+  "Terrorism": [
+    "Act",
+    "Instrument",
+    "Terrorist",
+    "Victim"
+  ],
+  "Testing": [
+    "Circumstances",
+    "Means",
+    "Product",
+    "Result",
+    "Tested_property",
+    "Tester"
+  ],
+  "Theft": [
+    "Goods",
+    "Instrument",
+    "Means",
+    "Perpetrator",
+    "Source",
+    "Victim"
+  ],
+  "Traveling": [
+    "Area",
+    "Distance",
+    "Entity",
+    "Goal",
+    "Means",
+    "Path",
+    "Purpose",
+    "Traveler"
+  ],
+  "Using": [
+    "Agent",
+    "Instrument",
+    "Means",
+    "Purpose"
+  ],
+  "Wearing": [
+    "Body_location",
+    "Clothing",
+    "Wearer"
+  ],
+  "Writing": [
+    "Addressee",
+    "Author",
+    "Instrument",
+    "Text"
+  ]
+}

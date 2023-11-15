@@ -1,0 +1,197 @@
+{
+  "artifact": [
+    "Entity"
+  ],
+  "artifactmoney": [
+    "Entity"
+  ],
+  "attacker": [
+    "Entity"
+  ],
+  "ballot": [
+    "Entity"
+  ],
+  "beneficiary": [
+    "Entity"
+  ],
+  "candidate": [
+    "Entity"
+  ],
+  "communicator": [
+    "Entity"
+  ],
+  "crashobject": [
+    "Entity"
+  ],
+  "crime": [
+    "Entity"
+  ],
+  "damager": [
+    "Entity"
+  ],
+  "damagerdestroyer": [
+    "Entity"
+  ],
+  "deceased": [
+    "Entity"
+  ],
+  "defendant": [
+    "Entity"
+  ],
+  "demonstrator": [
+    "Entity"
+  ],
+  "destination": [
+    "Entity"
+  ],
+  "destroyer": [
+    "Entity"
+  ],
+  "detainee": [
+    "Entity"
+  ],
+  "driverpassenger": [
+    "Entity"
+  ],
+  "employee": [
+    "Entity"
+  ],
+  "executioner": [
+    "Entity"
+  ],
+  "extraditer": [
+    "Entity"
+  ],
+  "fireexplosionobject": [
+    "Entity"
+  ],
+  "founder": [
+    "Entity"
+  ],
+  "giver": [
+    "Entity"
+  ],
+  "governmentbody": [
+    "Entity"
+  ],
+  "gpe": [
+    "Entity"
+  ],
+  "granter": [
+    "Entity"
+  ],
+  "hidingplace": [
+    "Entity"
+  ],
+  "injurer": [
+    "Entity"
+  ],
+  "inspectedentity": [
+    "Entity"
+  ],
+  "inspector": [
+    "Entity"
+  ],
+  "instrument": [
+    "Entity"
+  ],
+  "investigator": [
+    "Entity"
+  ],
+  "jailer": [
+    "Entity"
+  ],
+  "judgecourt": [
+    "Entity"
+  ],
+  "killer": [
+    "Entity"
+  ],
+  "law": [
+    "Entity"
+  ],
+  "manufacturer": [
+    "Entity"
+  ],
+  "money": [
+    "Entity"
+  ],
+  "monitor": [
+    "Entity"
+  ],
+  "monitoredentity": [
+    "Entity"
+  ],
+  "observedentity": [
+    "Entity"
+  ],
+  "observer": [
+    "Entity"
+  ],
+  "origin": [
+    "Entity"
+  ],
+  "otherparticipant": [
+    "Entity"
+  ],
+  "participant": [
+    "Entity"
+  ],
+  "passenger": [
+    "Entity"
+  ],
+  "place": [
+    "Entity"
+  ],
+  "placeofemployment": [
+    "Entity"
+  ],
+  "preventer": [
+    "Entity"
+  ],
+  "prosecutor": [
+    "Entity"
+  ],
+  "recipient": [
+    "Entity"
+  ],
+  "rejecternullifier": [
+    "Entity"
+  ],
+  "result": [
+    "Entity"
+  ],
+  "retreater": [
+    "Entity"
+  ],
+  "spy": [
+    "Entity"
+  ],
+  "surrenderer": [
+    "Entity"
+  ],
+  "target": [
+    "Entity"
+  ],
+  "territoryorfacility": [
+    "Entity"
+  ],
+  "transporter": [
+    "Entity"
+  ],
+  "vehicle": [
+    "Entity"
+  ],
+  "victim": [
+    "Entity"
+  ],
+  "violator": [
+    "Entity"
+  ],
+  "voter": [
+    "Entity"
+  ],
+  "yielder": [
+    "Entity"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "ART": [
+    "WEA",
+    "PER",
+    "VEH",
+    "FAC",
+    "ORG",
+    "GPE"
+  ],
+  "GEN-AFF": [
+    "LOC",
+    "PER",
+    "FAC",
+    "ORG",
+    "GPE"
+  ],
+  "ORG-AFF": [
+    "ORG",
+    "PER",
+    "GPE",
+    "FAC"
+  ],
+  "PART-WHOLE": [
+    "LOC",
+    "WEA",
+    "PER",
+    "FAC",
+    "VEH",
+    "ORG",
+    "GPE"
+  ],
+  "PER-SOC": [
+    "ORG",
+    "PER"
+  ],
+  "PHYS": [
+    "LOC",
+    "PER",
+    "FAC",
+    "VEH",
+    "ORG",
+    "GPE"
+  ]
+}

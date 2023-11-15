@@ -1,0 +1,662 @@
+{
+  "Act": [
+    "UNK"
+  ],
+  "Action": [
+    "UNK"
+  ],
+  "Activity": [
+    "UNK"
+  ],
+  "Actor": [
+    "UNK"
+  ],
+  "Addressee": [
+    "UNK"
+  ],
+  "Affected": [
+    "UNK"
+  ],
+  "Affliction": [
+    "UNK"
+  ],
+  "Agent": [
+    "UNK"
+  ],
+  "Agreement": [
+    "UNK"
+  ],
+  "Area": [
+    "UNK"
+  ],
+  "Arguer": [
+    "UNK"
+  ],
+  "Arguer2": [
+    "UNK"
+  ],
+  "Arguers": [
+    "UNK"
+  ],
+  "Assailant": [
+    "UNK"
+  ],
+  "Asset": [
+    "UNK"
+  ],
+  "Attendees": [
+    "UNK"
+  ],
+  "Attribute": [
+    "UNK"
+  ],
+  "Author": [
+    "UNK"
+  ],
+  "Authorities": [
+    "UNK"
+  ],
+  "Avenger": [
+    "UNK"
+  ],
+  "Barrier": [
+    "UNK"
+  ],
+  "Behavior": [
+    "UNK"
+  ],
+  "Beneficiary": [
+    "UNK"
+  ],
+  "Benefited_party": [
+    "UNK"
+  ],
+  "Body": [
+    "UNK"
+  ],
+  "Body_location": [
+    "UNK"
+  ],
+  "Body_part": [
+    "UNK"
+  ],
+  "Buyer": [
+    "UNK"
+  ],
+  "Carrier": [
+    "UNK"
+  ],
+  "Cause": [
+    "UNK"
+  ],
+  "Charges": [
+    "UNK"
+  ],
+  "Chosen": [
+    "UNK"
+  ],
+  "Circumstances": [
+    "UNK"
+  ],
+  "Clothing": [
+    "UNK"
+  ],
+  "Cognizer": [
+    "UNK"
+  ],
+  "Communicator": [
+    "UNK"
+  ],
+  "Competition": [
+    "UNK"
+  ],
+  "Components": [
+    "UNK"
+  ],
+  "Configuration": [
+    "UNK"
+  ],
+  "Conqueror": [
+    "UNK"
+  ],
+  "Container": [
+    "UNK"
+  ],
+  "Content": [
+    "UNK"
+  ],
+  "Contents": [
+    "UNK"
+  ],
+  "Controlling_variable": [
+    "UNK"
+  ],
+  "Course": [
+    "UNK"
+  ],
+  "Created_entity": [
+    "UNK"
+  ],
+  "Creator": [
+    "UNK"
+  ],
+  "Crime": [
+    "UNK"
+  ],
+  "Culture": [
+    "UNK"
+  ],
+  "Deceased": [
+    "UNK"
+  ],
+  "Decision": [
+    "UNK"
+  ],
+  "Defender": [
+    "UNK"
+  ],
+  "Dependent_variable": [
+    "UNK"
+  ],
+  "Destroyer": [
+    "UNK"
+  ],
+  "Difference": [
+    "UNK"
+  ],
+  "Dimension": [
+    "UNK"
+  ],
+  "Direction": [
+    "UNK"
+  ],
+  "Distance": [
+    "UNK"
+  ],
+  "Domain": [
+    "UNK"
+  ],
+  "Donor": [
+    "UNK"
+  ],
+  "Duration": [
+    "UNK"
+  ],
+  "Earner": [
+    "UNK"
+  ],
+  "Earnings": [
+    "UNK"
+  ],
+  "Effect": [
+    "UNK"
+  ],
+  "Employee": [
+    "UNK"
+  ],
+  "Employer": [
+    "UNK"
+  ],
+  "Entity": [
+    "UNK"
+  ],
+  "Evaluee": [
+    "UNK"
+  ],
+  "Event": [
+    "UNK"
+  ],
+  "Evidence": [
+    "UNK"
+  ],
+  "Exchanger_1": [
+    "UNK"
+  ],
+  "Exchanger_2": [
+    "UNK"
+  ],
+  "Exchangers": [
+    "UNK"
+  ],
+  "Experiencer": [
+    "UNK"
+  ],
+  "Fact": [
+    "UNK"
+  ],
+  "Factory": [
+    "UNK"
+  ],
+  "Field": [
+    "UNK"
+  ],
+  "Figures": [
+    "UNK"
+  ],
+  "Final_category": [
+    "UNK"
+  ],
+  "Final_quality": [
+    "UNK"
+  ],
+  "Final_subevent": [
+    "UNK"
+  ],
+  "Final_value": [
+    "UNK"
+  ],
+  "Focal_entity": [
+    "UNK"
+  ],
+  "Goal": [
+    "UNK"
+  ],
+  "Goal_area": [
+    "UNK"
+  ],
+  "Goods": [
+    "UNK"
+  ],
+  "Ground": [
+    "UNK"
+  ],
+  "Group": [
+    "UNK"
+  ],
+  "Helper": [
+    "UNK"
+  ],
+  "Hindrance": [
+    "UNK"
+  ],
+  "Host": [
+    "UNK"
+  ],
+  "Imposed_purpose": [
+    "UNK"
+  ],
+  "Incident": [
+    "UNK"
+  ],
+  "Individuals": [
+    "UNK"
+  ],
+  "Information": [
+    "UNK"
+  ],
+  "Ingestibles": [
+    "UNK"
+  ],
+  "Ingestor": [
+    "UNK"
+  ],
+  "Inherent_purpose": [
+    "UNK"
+  ],
+  "Initial_category": [
+    "UNK"
+  ],
+  "Initial_size": [
+    "UNK"
+  ],
+  "Initial_subevent": [
+    "UNK"
+  ],
+  "Injured_party": [
+    "UNK"
+  ],
+  "Injury": [
+    "UNK"
+  ],
+  "Inspector": [
+    "UNK"
+  ],
+  "Instrument": [
+    "UNK"
+  ],
+  "Intended_event": [
+    "UNK"
+  ],
+  "Interlocutors": [
+    "UNK"
+  ],
+  "Investigator": [
+    "UNK"
+  ],
+  "Issue": [
+    "UNK"
+  ],
+  "Item": [
+    "UNK"
+  ],
+  "Killer": [
+    "UNK"
+  ],
+  "Label": [
+    "UNK"
+  ],
+  "Location": [
+    "UNK"
+  ],
+  "Manipulator": [
+    "UNK"
+  ],
+  "Manner": [
+    "UNK"
+  ],
+  "Means": [
+    "UNK"
+  ],
+  "Medication": [
+    "UNK"
+  ],
+  "Medium": [
+    "UNK"
+  ],
+  "Member": [
+    "UNK"
+  ],
+  "Message": [
+    "UNK"
+  ],
+  "Money": [
+    "UNK"
+  ],
+  "New_leader": [
+    "UNK"
+  ],
+  "New_member": [
+    "UNK"
+  ],
+  "Object": [
+    "UNK"
+  ],
+  "Occasion": [
+    "UNK"
+  ],
+  "Offender": [
+    "UNK"
+  ],
+  "Offense": [
+    "UNK"
+  ],
+  "Offerer": [
+    "UNK"
+  ],
+  "Old_leader": [
+    "UNK"
+  ],
+  "Old_order": [
+    "UNK"
+  ],
+  "Part_1": [
+    "UNK"
+  ],
+  "Part_2": [
+    "UNK"
+  ],
+  "Participants": [
+    "UNK"
+  ],
+  "Partners": [
+    "UNK"
+  ],
+  "Parts": [
+    "UNK"
+  ],
+  "Path": [
+    "UNK"
+  ],
+  "Patient": [
+    "UNK"
+  ],
+  "Payer": [
+    "UNK"
+  ],
+  "Perceiver_agentive": [
+    "UNK"
+  ],
+  "Perpetrator": [
+    "UNK"
+  ],
+  "Phenomenon": [
+    "UNK"
+  ],
+  "Place": [
+    "UNK"
+  ],
+  "Place_of_employment": [
+    "UNK"
+  ],
+  "Position": [
+    "UNK"
+  ],
+  "Possibilities": [
+    "UNK"
+  ],
+  "Potential_hindrance": [
+    "UNK"
+  ],
+  "Problem": [
+    "UNK"
+  ],
+  "Process": [
+    "UNK"
+  ],
+  "Producer": [
+    "UNK"
+  ],
+  "Product": [
+    "UNK"
+  ],
+  "Project": [
+    "UNK"
+  ],
+  "Proposal": [
+    "UNK"
+  ],
+  "Proposed_action": [
+    "UNK"
+  ],
+  "Protagonist": [
+    "UNK"
+  ],
+  "Punishment": [
+    "UNK"
+  ],
+  "Purpose": [
+    "UNK"
+  ],
+  "Rate": [
+    "UNK"
+  ],
+  "Ratifier": [
+    "UNK"
+  ],
+  "Reason": [
+    "UNK"
+  ],
+  "Recipient": [
+    "UNK"
+  ],
+  "Researcher": [
+    "UNK"
+  ],
+  "Resource": [
+    "UNK"
+  ],
+  "Responding_entity": [
+    "UNK"
+  ],
+  "Response": [
+    "UNK"
+  ],
+  "Result": [
+    "UNK"
+  ],
+  "Result_size": [
+    "UNK"
+  ],
+  "Role": [
+    "UNK"
+  ],
+  "Selector": [
+    "UNK"
+  ],
+  "Self_mover": [
+    "UNK"
+  ],
+  "Seller": [
+    "UNK"
+  ],
+  "Sender": [
+    "UNK"
+  ],
+  "Side_1": [
+    "UNK"
+  ],
+  "Side_2": [
+    "UNK"
+  ],
+  "Sides": [
+    "UNK"
+  ],
+  "Signatory": [
+    "UNK"
+  ],
+  "Situation": [
+    "UNK"
+  ],
+  "Skill": [
+    "UNK"
+  ],
+  "Social_event": [
+    "UNK"
+  ],
+  "Source": [
+    "UNK"
+  ],
+  "Speaker": [
+    "UNK"
+  ],
+  "Specified_entity": [
+    "UNK"
+  ],
+  "Speed": [
+    "UNK"
+  ],
+  "State": [
+    "UNK"
+  ],
+  "Student": [
+    "UNK"
+  ],
+  "Subject": [
+    "UNK"
+  ],
+  "Supplier": [
+    "UNK"
+  ],
+  "Supported": [
+    "UNK"
+  ],
+  "Supporter": [
+    "UNK"
+  ],
+  "Suspect": [
+    "UNK"
+  ],
+  "Task": [
+    "UNK"
+  ],
+  "Teacher": [
+    "UNK"
+  ],
+  "Terrorist": [
+    "UNK"
+  ],
+  "Tested_property": [
+    "UNK"
+  ],
+  "Tester": [
+    "UNK"
+  ],
+  "Text": [
+    "UNK"
+  ],
+  "Theme": [
+    "UNK"
+  ],
+  "Theme_1": [
+    "UNK"
+  ],
+  "Theme_2": [
+    "UNK"
+  ],
+  "Themes": [
+    "UNK"
+  ],
+  "Time": [
+    "UNK"
+  ],
+  "Topic": [
+    "UNK"
+  ],
+  "Transferors": [
+    "UNK"
+  ],
+  "Traveler": [
+    "UNK"
+  ],
+  "Traveller": [
+    "UNK"
+  ],
+  "Treatment": [
+    "UNK"
+  ],
+  "Trigger": [
+    "UNK"
+  ],
+  "Type": [
+    "UNK"
+  ],
+  "Unconfirmed_content": [
+    "UNK"
+  ],
+  "Undertaking": [
+    "UNK"
+  ],
+  "Undesirable_event": [
+    "UNK"
+  ],
+  "Unwanted_entity": [
+    "UNK"
+  ],
+  "Useful_location": [
+    "UNK"
+  ],
+  "Value_1": [
+    "UNK"
+  ],
+  "Value_2": [
+    "UNK"
+  ],
+  "Vehicle": [
+    "UNK"
+  ],
+  "Venue": [
+    "UNK"
+  ],
+  "Victim": [
+    "UNK"
+  ],
+  "Weapon": [
+    "UNK"
+  ],
+  "Wearer": [
+    "UNK"
+  ],
+  "Whole": [
+    "UNK"
+  ]
+}

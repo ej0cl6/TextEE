@@ -1,0 +1,104 @@
+{
+  "Business_START-ORG": [
+    "Agent",
+    "Organization",
+    "Place",
+    "Time"
+  ],
+  "Conflict_Attack": [
+    "Attacker",
+    "Instrument",
+    "Place",
+    "Target",
+    "Time"
+  ],
+  "Conflict_Demonstrate": [
+    "Entity",
+    "Place",
+    "Time"
+  ],
+  "Contact_Meet": [
+    "Entity",
+    "Place",
+    "Time"
+  ],
+  "Contact_Phone-Write": [
+    "Entity",
+    "Time"
+  ],
+  "Justice_Arrest-Jail": [
+    "Agent",
+    "Crime",
+    "Person",
+    "Place",
+    "Time"
+  ],
+  "Life_Be-Born": [
+    "Person",
+    "Place",
+    "Time"
+  ],
+  "Life_Die": [
+    "Agent",
+    "Instrument",
+    "Place",
+    "Time",
+    "Victim"
+  ],
+  "Life_Divorce": [
+    "Person",
+    "Place",
+    "Time"
+  ],
+  "Life_Injure": [
+    "Agent",
+    "Instrument",
+    "Place",
+    "Time",
+    "Victim"
+  ],
+  "Life_Marry": [
+    "Person",
+    "Place",
+    "Time"
+  ],
+  "Movement_Transport": [
+    "Agent",
+    "Artifact",
+    "Destination",
+    "Origin",
+    "Time",
+    "Vehicle"
+  ],
+  "Personnel_End-Position": [
+    "Entity",
+    "Person",
+    "Place",
+    "Position",
+    "Time"
+  ],
+  "Personnel_Start-Position": [
+    "Entity",
+    "Person",
+    "Place",
+    "Position",
+    "Time"
+  ],
+  "Transaction_Transfer-Money": [
+    "Beneficiary",
+    "Giver",
+    "Money",
+    "Place",
+    "Recipient",
+    "Time"
+  ],
+  "Transaction_Transfer-Ownership": [
+    "Artifact",
+    "Beneficiary",
+    "Buyer",
+    "Place",
+    "Price",
+    "Seller",
+    "Time"
+  ]
+}

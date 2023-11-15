@@ -1,0 +1,270 @@
+{
+  "AcquiredEntity": [
+    "COM",
+    "MON",
+    "VEH",
+    "WEA"
+  ],
+  "Artifact": [
+    "COM",
+    "FAC",
+    "LOC",
+    "VEH",
+    "WEA"
+  ],
+  "ArtifactMoney": [
+    "MON"
+  ],
+  "Attacker": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "BodyPart": [
+    "BOD"
+  ],
+  "Communicator": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "Components": [
+    "COM",
+    "VEH",
+    "WEA"
+  ],
+  "CrashObject": [
+    "FAC",
+    "VEH",
+    "WEA"
+  ],
+  "Damager": [
+    "ORG",
+    "PER"
+  ],
+  "DamagerDestroyer": [
+    "ORG",
+    "PER"
+  ],
+  "Defeated": [
+    "ORG",
+    "PER"
+  ],
+  "Defendant": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "Demonstrator": [
+    "ORG",
+    "PER"
+  ],
+  "Destination": [
+    "FAC",
+    "GPE",
+    "LOC",
+    "VEH"
+  ],
+  "Destroyer": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "Detainee": [
+    "PER"
+  ],
+  "Disabler": [
+    "GPE",
+    "PER"
+  ],
+  "Dismantler": [
+    "PER"
+  ],
+  "Employee": [
+    "PER"
+  ],
+  "ExplosiveDevice": [
+    "COM",
+    "WEA"
+  ],
+  "Giver": [
+    "ORG",
+    "PER"
+  ],
+  "IdentifiedObject": [
+    "BOD",
+    "COM",
+    "PER",
+    "VEH",
+    "WEA"
+  ],
+  "IdentifiedRole": [
+    "COM",
+    "PER"
+  ],
+  "Identifier": [
+    "ORG",
+    "PER"
+  ],
+  "Impeder": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "Injurer": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "Instrument": [
+    "COM",
+    "VEH",
+    "WEA"
+  ],
+  "Investigator": [
+    "ORG",
+    "PER"
+  ],
+  "Jailer": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "JudgeCourt": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "Killer": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "Learner": [
+    "PER"
+  ],
+  "ManufacturerAssembler": [
+    "ORG",
+    "PER"
+  ],
+  "ObservedEntity": [
+    "COM",
+    "FAC",
+    "ORG",
+    "PER",
+    "VEH",
+    "WEA"
+  ],
+  "Observer": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "Origin": [
+    "FAC",
+    "GPE",
+    "LOC"
+  ],
+  "Participant": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "PassengerArtifact": [
+    "BOD",
+    "COM",
+    "PER",
+    "VEH",
+    "WEA"
+  ],
+  "Patient": [
+    "PER"
+  ],
+  "PaymentBarter": [
+    "MON"
+  ],
+  "Perpetrator": [
+    "ORG",
+    "PER"
+  ],
+  "Place": [
+    "FAC",
+    "GPE",
+    "LOC"
+  ],
+  "PlaceOfEmployment": [
+    "GPE",
+    "ORG"
+  ],
+  "Position": [
+    "TTL"
+  ],
+  "Preventer": [
+    "PER"
+  ],
+  "Prosecutor": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "Recipient": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "Regulator": [
+    "ORG"
+  ],
+  "Researcher": [
+    "ORG",
+    "PER"
+  ],
+  "Subject": [
+    "ABS",
+    "PER",
+    "WEA"
+  ],
+  "Target": [
+    "FAC",
+    "GPE",
+    "LOC",
+    "ORG",
+    "PER",
+    "VEH",
+    "WEA"
+  ],
+  "TeacherTrainer": [
+    "PER"
+  ],
+  "Topic": [
+    "ABS",
+    "COM",
+    "FAC",
+    "GPE",
+    "INF",
+    "ORG",
+    "PER",
+    "VAL",
+    "WEA"
+  ],
+  "Transporter": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "Treater": [
+    "ORG",
+    "PER"
+  ],
+  "Vehicle": [
+    "VEH"
+  ],
+  "Victim": [
+    "PER"
+  ],
+  "Victor": [
+    "GPE",
+    "ORG",
+    "PER"
+  ]
+}

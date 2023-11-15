@@ -1,0 +1,109 @@
+{
+  "Adjudicator": [
+    "ORG",
+    "PER",
+    "GPE"
+  ],
+  "Agent": [
+    "ORG",
+    "PER",
+    "GPE"
+  ],
+  "Artifact": [
+    "WEA",
+    "PER",
+    "VEH",
+    "FAC",
+    "ORG"
+  ],
+  "Attacker": [
+    "ORG",
+    "PER",
+    "GPE"
+  ],
+  "Beneficiary": [
+    "ORG",
+    "PER",
+    "GPE"
+  ],
+  "Buyer": [
+    "ORG",
+    "PER",
+    "GPE"
+  ],
+  "Defendant": [
+    "ORG",
+    "PER",
+    "GPE"
+  ],
+  "Destination": [
+    "LOC",
+    "GPE",
+    "FAC"
+  ],
+  "Entity": [
+    "ORG",
+    "PER",
+    "GPE"
+  ],
+  "Giver": [
+    "ORG",
+    "PER",
+    "GPE"
+  ],
+  "Instrument": [
+    "WEA",
+    "VEH"
+  ],
+  "Org": [
+    "ORG",
+    "PER"
+  ],
+  "Origin": [
+    "LOC",
+    "GPE",
+    "FAC"
+  ],
+  "Person": [
+    "PER"
+  ],
+  "Place": [
+    "LOC",
+    "GPE",
+    "FAC"
+  ],
+  "Plaintiff": [
+    "ORG",
+    "PER",
+    "GPE"
+  ],
+  "Prosecutor": [
+    "ORG",
+    "PER",
+    "GPE"
+  ],
+  "Recipient": [
+    "ORG",
+    "PER",
+    "GPE"
+  ],
+  "Seller": [
+    "ORG",
+    "PER",
+    "GPE"
+  ],
+  "Target": [
+    "LOC",
+    "WEA",
+    "PER",
+    "FAC",
+    "VEH",
+    "ORG"
+  ],
+  "Vehicle": [
+    "VEH"
+  ],
+  "Victim": [
+    "PER"
+  ]
+}

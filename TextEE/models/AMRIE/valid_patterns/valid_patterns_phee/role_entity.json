@@ -1,0 +1,50 @@
+{
+  "Combination_Drug": [
+    "Entity"
+  ],
+  "Effect": [
+    "Entity"
+  ],
+  "Subject": [
+    "Entity"
+  ],
+  "Subject_Age": [
+    "Entity"
+  ],
+  "Subject_Disorder": [
+    "Entity"
+  ],
+  "Subject_Gender": [
+    "Entity"
+  ],
+  "Subject_Population": [
+    "Entity"
+  ],
+  "Subject_Race": [
+    "Entity"
+  ],
+  "Treatment": [
+    "Entity"
+  ],
+  "Treatment_Disorder": [
+    "Entity"
+  ],
+  "Treatment_Dosage": [
+    "Entity"
+  ],
+  "Treatment_Drug": [
+    "Entity"
+  ],
+  "Treatment_Duration": [
+    "Entity"
+  ],
+  "Treatment_Freq": [
+    "Entity"
+  ],
+  "Treatment_Route": [
+    "Entity"
+  ],
+  "Treatment_Time_elapsed": [
+    "Entity"
+  ]
+}

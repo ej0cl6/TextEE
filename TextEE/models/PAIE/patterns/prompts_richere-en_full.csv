@@ -1,0 +1,38 @@
+Business.Declare-Bankruptcy:prompt start, Org ( and Org ) declared bankruptcy ,end 
+Business.End-Org:prompt start, Org ( and Org ) shut down at Place ( and Place ) ,end 
+Business.Merge-Org:prompt start, Org merged with Org ,end
+Business.Start-Org:prompt start, Agent ( and Agent ) started Org ( and Org ) at Place ( and Place ) ,end 
+Conflict.Attack:prompt start, Attacker ( and Attacker ) attacked Target ( and Target ) hurting victims using Instrument ( and Instrument )  at Place ( and Place ) ,end 
+Conflict.Demonstrate:prompt start, Entity ( and Entity ) demonstrated at Place ( and Place ) ,end 
+Contact.Broadcast:prompt start, Entity ( and Entity ) broadcasted to Audience ( and Audience ) at Place ( and Place ) ,end 
+Contact.Contact:prompt start, Entity ( and Entity ) contacted with Entity ( and Entity ) at Place ( and Place ) ,end  
+Contact.Correspondence:prompt start, Entity ( and Entity ) corresponded with Entity ( and Entity ) at Place ( and Place ) ,end  
+Contact.Meet:prompt start, Entity ( and Entity ) met with Entity ( and Entity ) at Place ( and Place ) ,end  
+Justice.Acquit:prompt start, Adjudicator ( and Adjudicator ) court or judge acquitted Defendant ( and Defendant ) at Place ( and Place ) ,end  
+Justice.Appeal:prompt start, Prosecutor ( and Prosecutor ) sued Defendant ( and Defendant ) appealed to Adjudicator ( and Adjudicator ) court or judge at Place ( and Place ) ,end 
+Justice.Arrest-Jail:prompt start, Agent ( and Agent ) arrested Person ( and Person ) at Place ( and Place ) ,end  
+Justice.Charge-Indict:prompt start, Prosecutor ( and Prosecutor ) charged or indicted Defendant ( and Defendant ) before Adjudicator ( and Adjudicator ) court or judge at Place ( and Place ) ,end 
+Justice.Convict:prompt start, Adjudicator ( and Adjudicator ) court or judge convicted Defendant ( and Defendant ) at Place ( and Place ) ,end 
+Justice.Execute:prompt start, Agent ( and Agent ) executed Person at Place ( and Place ) ,end  
+Justice.Extradite:prompt start, Agent ( and Agent ) extradited Person from Origin place to Destination place ,end  
+Justice.Fine:prompt start, Adjudicator ( and Adjudicator ) court or judge fined Entity ( and Entity ) at Place ( and Place ) ,end 
+Justice.Pardon:prompt start, Adjudicator ( and Adjudicator ) court or judge pardoned Defendant ( and Defendant ) at Place ( and Place ) ,end 
+Justice.Release-Parole:prompt start, Agent ( and Agent ) released or paroled Person ( and Person ) at Place ( and Place ) ,end  
+Justice.Sentence:prompt start, Adjudicator ( and Adjudicator ) court or judge sentenced to Defendant ( and Defendant ) at Place ( and Place ) ,end 
+Justice.Sue:prompt start, Plaintiff ( and Plaintiff ) sued Defendant ( and Defendant ) before Adjudicator ( and Adjudicator ) court or judge at Place ( and Place ) ,end  
+Justice.Trial-Hearing:prompt start, Prosecutor tried Defendant ( and Defendant ) before Adjudicator ( and Adjudicator ) court or judge at Place ( and Place ) ,end  
+Life.Be-Born:prompt start, Person ( and Person ) was born at Place ( and Place ) ,end 
+Life.Die:prompt start, Agent ( and Agent ) killed Victim ( and Victim ) with Instrument ( and Instrument )  at Place ( and Place ) ,end  
+Life.Divorce:prompt start, Person divorced Person at Place ( and Place ) ,end  
+Life.Injure:prompt start, Agent ( and Agent ) injured Victim ( and Victim ) with Instrument ( and Instrument ) at Place ( and Place ) ,end  
+Life.Marry:prompt start, Person married Person at Place ( and Place ) ,end 
+Manufacture.Artifact:prompt start, Agent ( and Agent ) built Artifact ( and Artifact ) at Place ( and Place ) ,end 
+Movement.Transport-Artifact:prompt start, Agent ( and Agent ) transported Artifact ( and Artifact ) from Origin place ( and Origin ) to Destination place ( and Destination , Destination ) ,end  
+Movement.Transport-Person:prompt start, Agent ( and Agent ) transported Person ( and Person ) with Instrument ( and Instrument ) from Origin place ( and Origin ) to Destination place ( and Destination , Destination ) ,end  
+Personnel.Elect:prompt start, Agent ( and Agent ) elected Person ( and Person ) at Place ( and Place ) ,end  
+Personnel.End-Position:prompt start, Person ( and Person ) stopped working of Entity organization ( and Entity organization ) at Place ( and Place ) ,end  
+Personnel.Nominate:prompt start, Agent ( and Agent ) nominated Person at Place ( and Place ) ,end 
+Personnel.Start-Position:prompt start, Person ( and Person ) started working at Entity organization ( and Entity organization ) at Place ( and Place ) ,end  
+Transaction.Transaction:prompt start, Giver ( and Giver ) gave something to Recipient ( and Recipient ) for the benefit of Beneficiary ( and Beneficiary ) at Place ( and Place ) ,end 
+Transaction.Transfer-Money:prompt start, Giver ( and Giver ) gave money to Recipient ( and Recipient ) for the benefit of Beneficiary ( and Beneficiary ) at Place ( and Place ) ,end 
+Transaction.Transfer-Ownership:prompt start, Giver ( and Giver ) gave Thing to Recipient ( and Recipient ) for the benefit of Beneficiary ( and Beneficiary ) at Place ( and Place ) ,end 

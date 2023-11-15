@@ -1,0 +1,195 @@
+{
+  "Business:Declare-Bankruptcy": [
+    "Org"
+  ],
+  "Business:End-Org": [
+    "Org",
+    "Place"
+  ],
+  "Business:Merge-Org": [
+    "Org"
+  ],
+  "Business:Start-Org": [
+    "Agent",
+    "Org",
+    "Place"
+  ],
+  "Conflict:Attack": [
+    "Attacker",
+    "Instrument",
+    "Place",
+    "Target"
+  ],
+  "Conflict:Demonstrate": [
+    "Entity",
+    "Place"
+  ],
+  "Contact:Broadcast": [
+    "Audience",
+    "Entity",
+    "Place"
+  ],
+  "Contact:Contact": [
+    "Entity",
+    "Place"
+  ],
+  "Contact:Correspondence": [
+    "Entity",
+    "Place"
+  ],
+  "Contact:Meet": [
+    "Entity",
+    "Place"
+  ],
+  "Justice:Acquit": [
+    "Adjudicator",
+    "Defendant",
+    "Place"
+  ],
+  "Justice:Appeal": [
+    "Adjudicator",
+    "Defendant",
+    "Place",
+    "Prosecutor"
+  ],
+  "Justice:Arrest-Jail": [
+    "Agent",
+    "Person",
+    "Place"
+  ],
+  "Justice:Charge-Indict": [
+    "Adjudicator",
+    "Defendant",
+    "Place",
+    "Prosecutor"
+  ],
+  "Justice:Convict": [
+    "Adjudicator",
+    "Defendant",
+    "Place"
+  ],
+  "Justice:Execute": [
+    "Agent",
+    "Person",
+    "Place"
+  ],
+  "Justice:Extradite": [
+    "Agent",
+    "Destination",
+    "Origin",
+    "Person"
+  ],
+  "Justice:Fine": [
+    "Adjudicator",
+    "Entity",
+    "Place"
+  ],
+  "Justice:Pardon": [
+    "Adjudicator",
+    "Defendant",
+    "Place"
+  ],
+  "Justice:Release-Parole": [
+    "Agent",
+    "Person",
+    "Place"
+  ],
+  "Justice:Sentence": [
+    "Adjudicator",
+    "Defendant",
+    "Place"
+  ],
+  "Justice:Sue": [
+    "Adjudicator",
+    "Defendant",
+    "Place",
+    "Plaintiff"
+  ],
+  "Justice:Trial-Hearing": [
+    "Adjudicator",
+    "Defendant",
+    "Place",
+    "Prosecutor"
+  ],
+  "Life:Be-Born": [
+    "Person",
+    "Place"
+  ],
+  "Life:Die": [
+    "Agent",
+    "Instrument",
+    "Place",
+    "Victim"
+  ],
+  "Life:Divorce": [
+    "Person",
+    "Place"
+  ],
+  "Life:Injure": [
+    "Agent",
+    "Instrument",
+    "Place",
+    "Victim"
+  ],
+  "Life:Marry": [
+    "Person",
+    "Place"
+  ],
+  "Manufacture:Artifact": [
+    "Agent",
+    "Artifact",
+    "Place"
+  ],
+  "Movement:Transport-Artifact": [
+    "Agent",
+    "Artifact",
+    "Destination",
+    "Origin"
+  ],
+  "Movement:Transport-Person": [
+    "Agent",
+    "Destination",
+    "Instrument",
+    "Origin",
+    "Person"
+  ],
+  "Personnel:Elect": [
+    "Agent",
+    "Person",
+    "Place"
+  ],
+  "Personnel:End-Position": [
+    "Entity",
+    "Person",
+    "Place"
+  ],
+  "Personnel:Nominate": [
+    "Agent",
+    "Person",
+    "Place"
+  ],
+  "Personnel:Start-Position": [
+    "Entity",
+    "Person",
+    "Place"
+  ],
+  "Transaction:Transaction": [
+    "Beneficiary",
+    "Giver",
+    "Place",
+    "Recipient"
+  ],
+  "Transaction:Transfer-Money": [
+    "Beneficiary",
+    "Giver",
+    "Place",
+    "Recipient"
+  ],
+  "Transaction:Transfer-Ownership": [
+    "Beneficiary",
+    "Giver",
+    "Place",
+    "Recipient",
+    "Thing"
+  ]
+}

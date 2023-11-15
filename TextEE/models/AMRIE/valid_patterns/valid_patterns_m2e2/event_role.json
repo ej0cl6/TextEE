@@ -1,0 +1,43 @@
+{
+  "Conflict:Attack": [
+    "Attacker",
+    "Instrument",
+    "Place",
+    "Target"
+  ],
+  "Conflict:Demonstrate": [
+    "Entity",
+    "Place",
+    "Police"
+  ],
+  "Contact:Meet": [
+    "Entity",
+    "Place"
+  ],
+  "Contact:Phone-Write": [
+    "Entity",
+    "Place"
+  ],
+  "Justice:Arrest-Jail": [
+    "Agent",
+    "Person",
+    "Place"
+  ],
+  "Life:Die": [
+    "Agent",
+    "Instrument",
+    "Place",
+    "Victim"
+  ],
+  "Movement:Transport": [
+    "Agent",
+    "Artifact",
+    "Destination",
+    "Origin",
+    "Vehicle"
+  ],
+  "Transaction:Transfer-Money": [
+    "Giver",
+    "Recipient"
+  ]
+}

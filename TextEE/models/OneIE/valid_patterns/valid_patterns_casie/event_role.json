@@ -1,0 +1,60 @@
+{
+  "Attack:Databreach": [
+    "Attack-Pattern",
+    "Attacker",
+    "Compromised-Data",
+    "Damage-Amount",
+    "Number-of-Data",
+    "Number-of-Victim",
+    "Place",
+    "Purpose",
+    "Time",
+    "Tool",
+    "Victim"
+  ],
+  "Attack:Phishing": [
+    "Attack-Pattern",
+    "Attacker",
+    "Damage-Amount",
+    "Place",
+    "Purpose",
+    "Time",
+    "Tool",
+    "Trusted-Entity",
+    "Victim"
+  ],
+  "Attack:Ransom": [
+    "Attack-Pattern",
+    "Attacker",
+    "Damage-Amount",
+    "Payment-Method",
+    "Place",
+    "Price",
+    "Time",
+    "Tool",
+    "Victim"
+  ],
+  "Vulnerability-related:DiscoverVulnerability": [
+    "CVE",
+    "Capabilities",
+    "Discoverer",
+    "Supported_Platform",
+    "Time",
+    "Vulnerability",
+    "Vulnerable_System",
+    "Vulnerable_System_Owner",
+    "Vulnerable_System_Version"
+  ],
+  "Vulnerability-related:PatchVulnerability": [
+    "CVE",
+    "Issues-Addressed",
+    "Patch",
+    "Patch-Number",
+    "Releaser",
+    "Supported_Platform",
+    "Time",
+    "Vulnerability",
+    "Vulnerable_System",
+    "Vulnerable_System_Version"
+  ]
+}

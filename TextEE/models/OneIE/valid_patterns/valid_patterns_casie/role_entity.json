@@ -1,0 +1,80 @@
+{
+  "Attack-Pattern": [
+    "Entity"
+  ],
+  "Attacker": [
+    "Entity"
+  ],
+  "CVE": [
+    "Entity"
+  ],
+  "Capabilities": [
+    "Entity"
+  ],
+  "Compromised-Data": [
+    "Entity"
+  ],
+  "Damage-Amount": [
+    "Entity"
+  ],
+  "Discoverer": [
+    "Entity"
+  ],
+  "Issues-Addressed": [
+    "Entity"
+  ],
+  "Number-of-Data": [
+    "Entity"
+  ],
+  "Number-of-Victim": [
+    "Entity"
+  ],
+  "Patch": [
+    "Entity"
+  ],
+  "Patch-Number": [
+    "Entity"
+  ],
+  "Payment-Method": [
+    "Entity"
+  ],
+  "Place": [
+    "Entity"
+  ],
+  "Price": [
+    "Entity"
+  ],
+  "Purpose": [
+    "Entity"
+  ],
+  "Releaser": [
+    "Entity"
+  ],
+  "Supported_Platform": [
+    "Entity"
+  ],
+  "Time": [
+    "Entity"
+  ],
+  "Tool": [
+    "Entity"
+  ],
+  "Trusted-Entity": [
+    "Entity"
+  ],
+  "Victim": [
+    "Entity"
+  ],
+  "Vulnerability": [
+    "Entity"
+  ],
+  "Vulnerable_System": [
+    "Entity"
+  ],
+  "Vulnerable_System_Owner": [
+    "Entity"
+  ],
+  "Vulnerable_System_Version": [
+    "Entity"
+  ]
+}

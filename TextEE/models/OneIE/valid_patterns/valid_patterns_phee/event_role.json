@@ -1,0 +1,38 @@
+{
+  "Adverse_event": [
+    "Combination_Drug",
+    "Effect",
+    "Subject",
+    "Subject_Age",
+    "Subject_Disorder",
+    "Subject_Gender",
+    "Subject_Population",
+    "Subject_Race",
+    "Treatment",
+    "Treatment_Disorder",
+    "Treatment_Dosage",
+    "Treatment_Drug",
+    "Treatment_Duration",
+    "Treatment_Freq",
+    "Treatment_Route",
+    "Treatment_Time_elapsed"
+  ],
+  "Potential_therapeutic_event": [
+    "Combination_Drug",
+    "Effect",
+    "Subject",
+    "Subject_Age",
+    "Subject_Disorder",
+    "Subject_Gender",
+    "Subject_Population",
+    "Subject_Race",
+    "Treatment",
+    "Treatment_Disorder",
+    "Treatment_Dosage",
+    "Treatment_Drug",
+    "Treatment_Duration",
+    "Treatment_Freq",
+    "Treatment_Route",
+    "Treatment_Time_elapsed"
+  ]
+}

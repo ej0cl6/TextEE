@@ -1,0 +1,168 @@
+{
+  "Business:Declare-Bankruptcy": [
+    "Place",
+    "Org"
+  ],
+  "Business:End-Org": [
+    "Place",
+    "Org"
+  ],
+  "Business:Merge-Org": [
+    "Org"
+  ],
+  "Business:Start-Org": [
+    "Agent",
+    "Place",
+    "Org"
+  ],
+  "Conflict:Attack": [
+    "Target",
+    "Place",
+    "Victim",
+    "Instrument",
+    "Attacker"
+  ],
+  "Conflict:Demonstrate": [
+    "Place",
+    "Entity"
+  ],
+  "Contact:Meet": [
+    "Place",
+    "Entity"
+  ],
+  "Contact:Phone-Write": [
+    "Place",
+    "Entity"
+  ],
+  "Justice:Acquit": [
+    "Defendant",
+    "Adjudicator"
+  ],
+  "Justice:Appeal": [
+    "Adjudicator",
+    "Plaintiff",
+    "Place"
+  ],
+  "Justice:Arrest-Jail": [
+    "Agent",
+    "Place",
+    "Person"
+  ],
+  "Justice:Charge-Indict": [
+    "Prosecutor",
+    "Adjudicator",
+    "Place",
+    "Defendant"
+  ],
+  "Justice:Convict": [
+    "Defendant",
+    "Place",
+    "Adjudicator"
+  ],
+  "Justice:Execute": [
+    "Agent",
+    "Place",
+    "Person"
+  ],
+  "Justice:Extradite": [
+    "Agent",
+    "Origin",
+    "Destination"
+  ],
+  "Justice:Fine": [
+    "Adjudicator",
+    "Place",
+    "Entity"
+  ],
+  "Justice:Pardon": [
+    "Adjudicator",
+    "Place",
+    "Defendant"
+  ],
+  "Justice:Release-Parole": [
+    "Place",
+    "Person",
+    "Entity"
+  ],
+  "Justice:Sentence": [
+    "Adjudicator",
+    "Place",
+    "Defendant"
+  ],
+  "Justice:Sue": [
+    "Defendant",
+    "Plaintiff",
+    "Adjudicator",
+    "Place"
+  ],
+  "Justice:Trial-Hearing": [
+    "Prosecutor",
+    "Defendant",
+    "Place",
+    "Adjudicator"
+  ],
+  "Life:Be-Born": [
+    "Place",
+    "Person"
+  ],
+  "Life:Die": [
+    "Person",
+    "Agent",
+    "Place",
+    "Victim",
+    "Instrument"
+  ],
+  "Life:Divorce": [
+    "Place",
+    "Person"
+  ],
+  "Life:Injure": [
+    "Agent",
+    "Place",
+    "Victim",
+    "Instrument"
+  ],
+  "Life:Marry": [
+    "Place",
+    "Person"
+  ],
+  "Movement:Transport": [
+    "Vehicle",
+    "Artifact",
+    "Agent",
+    "Origin",
+    "Destination"
+  ],
+  "Personnel:Elect": [
+    "Place",
+    "Person",
+    "Entity"
+  ],
+  "Personnel:End-Position": [
+    "Place",
+    "Person",
+    "Entity"
+  ],
+  "Personnel:Nominate": [
+    "Agent",
+    "Person"
+  ],
+  "Personnel:Start-Position": [
+    "Place",
+    "Person",
+    "Entity"
+  ],
+  "Transaction:Transfer-Money": [
+    "Giver",
+    "Place",
+    "Recipient",
+    "Beneficiary"
+  ],
+  "Transaction:Transfer-Ownership": [
+    "Artifact",
+    "Beneficiary",
+    "Buyer",
+    "Place",
+    "Seller"
+  ]
+}

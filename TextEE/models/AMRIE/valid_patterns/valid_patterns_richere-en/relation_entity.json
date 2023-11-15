@@ -1,0 +1,27 @@
+{
+  "GEN-AFF": [
+    "GPE",
+    "LOC",
+    "ORG",
+    "PER"
+  ],
+  "ORG-AFF": [
+    "GPE",
+    "ORG",
+    "PER"
+  ],
+  "PART-WHOLE": [
+    "GPE",
+    "ORG"
+  ],
+  "PER-SOC": [
+    "PER"
+  ],
+  "PHYS": [
+    "FAC",
+    "GPE",
+    "LOC",
+    "ORG",
+    "PER"
+  ]
+}

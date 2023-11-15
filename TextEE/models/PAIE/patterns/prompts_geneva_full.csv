@@ -1,0 +1,115 @@
+Achieve:prompt start, Agent ( and Agent ) Goal ( and Goal ) Means ( and Means )  ,end 
+Action:prompt start, Act ( and Act ) Agent ( and Agent ) Domain ( and Domain ) Manner ( and Manner )  ,end 
+Adducing:prompt start, Medium ( and Medium ) Role ( and Role ) Speaker ( and Speaker ) Specified_entity ( and Specified_entity )  ,end 
+Agree.or.refuse.to.act:prompt start, Proposed_action ( and Proposed_action ) Speaker ( and Speaker )  ,end 
+Arranging:prompt start, Agent ( and Agent ) Configuration ( and Configuration ) Location ( and Location ) Theme ( and Theme )  ,end 
+Arrest:prompt start, Authorities ( and Authorities ) Charges ( and Charges ) Offense ( and Offense ) Suspect ( and Suspect )  ,end 
+Arriving:prompt start, Goal ( and Goal ) Means ( and Means ) Path ( and Path ) Place ( and Place ) Purpose ( and Purpose ) Source ( and Source ) Theme ( and Theme )  ,end 
+Assistance:prompt start, Benefited_party ( and Benefited_party ) Focal_entity ( and Focal_entity ) Goal ( and Goal ) Helper ( and Helper ) Means ( and Means )  ,end 
+Attack:prompt start, Assailant ( and Assailant ) Means ( and Means ) Victim ( and Victim ) Weapon ( and Weapon )  ,end 
+Bearing.arms:prompt start, Protagonist ( and Protagonist ) Weapon ( and Weapon )  ,end 
+Becoming:prompt start, Entity ( and Entity ) Final_category ( and Final_category ) Final_quality ( and Final_quality )  ,end 
+Becoming.a.member:prompt start, Group ( and Group ) New_member ( and New_member )  ,end 
+Bodily.harm:prompt start, Agent ( and Agent ) Body_part ( and Body_part ) Cause ( and Cause ) Instrument ( and Instrument ) Victim ( and Victim )  ,end 
+Bringing:prompt start, Agent ( and Agent ) Area ( and Area ) Carrier ( and Carrier ) Goal ( and Goal ) Source ( and Source ) Theme ( and Theme )  ,end 
+Building:prompt start, Agent ( and Agent ) Components ( and Components ) Created_entity ( and Created_entity ) Place ( and Place )  ,end 
+Catastrophe:prompt start, Cause ( and Cause ) Patient ( and Patient ) Place ( and Place ) Undesirable_event ( and Undesirable_event )  ,end 
+Causation:prompt start, Actor ( and Actor ) Affected ( and Affected ) Cause ( and Cause ) Effect ( and Effect ) Means ( and Means )  ,end 
+Cause.change.of.position.on.a.scale:prompt start, Agent ( and Agent ) Attribute ( and Attribute ) Cause ( and Cause ) Difference ( and Difference ) Item ( and Item ) Value_1 ( and Value_1 ) Value_2 ( and Value_2 )  ,end 
+Cause.to.amalgamate:prompt start, Agent ( and Agent ) Part_1 ( and Part_1 ) Part_2 ( and Part_2 ) Parts ( and Parts ) Whole ( and Whole )  ,end 
+Cause.to.make.progress:prompt start, Agent ( and Agent ) Project ( and Project )  ,end 
+Change:prompt start, Agent ( and Agent ) Attribute ( and Attribute ) Cause ( and Cause ) Entity ( and Entity ) Final_category ( and Final_category ) Final_value ( and Final_value ) Initial_category ( and Initial_category )  ,end 
+Change.of.leadership:prompt start, Body ( and Body ) New_leader ( and New_leader ) Old_leader ( and Old_leader ) Old_order ( and Old_order ) Role ( and Role ) Selector ( and Selector )  ,end 
+Check:prompt start, Inspector ( and Inspector ) Means ( and Means ) Unconfirmed_content ( and Unconfirmed_content )  ,end 
+Choosing:prompt start, Chosen ( and Chosen ) Cognizer ( and Cognizer ) Possibilities ( and Possibilities )  ,end 
+Collaboration:prompt start, Partners ( and Partners ) Undertaking ( and Undertaking )  ,end 
+Come.together:prompt start, Configuration ( and Configuration ) Individuals ( and Individuals ) Place ( and Place )  ,end 
+Coming.to.be:prompt start, Components ( and Components ) Entity ( and Entity ) Place ( and Place ) Time ( and Time )  ,end 
+Coming.to.believe:prompt start, Cognizer ( and Cognizer ) Content ( and Content ) Means ( and Means )  ,end 
+Commerce.buy:prompt start, Buyer ( and Buyer ) Goods ( and Goods ) Seller ( and Seller )  ,end 
+Commerce.pay:prompt start, Buyer ( and Buyer ) Goods ( and Goods ) Money ( and Money ) Seller ( and Seller )  ,end 
+Commerce.sell:prompt start, Buyer ( and Buyer ) Goods ( and Goods ) Money ( and Money ) Seller ( and Seller )  ,end 
+Commitment:prompt start, Addressee ( and Addressee ) Message ( and Message ) Speaker ( and Speaker )  ,end 
+Committing.crime:prompt start, Crime ( and Crime ) Instrument ( and Instrument ) Perpetrator ( and Perpetrator )  ,end 
+Communication:prompt start, Addressee ( and Addressee ) Interlocutors ( and Interlocutors ) Message ( and Message ) Speaker ( and Speaker ) Topic ( and Topic ) Trigger ( and Trigger )  ,end 
+Competition:prompt start, Competition ( and Competition ) Participants ( and Participants ) Venue ( and Venue )  ,end 
+Confronting.problem:prompt start, Activity ( and Activity ) Experiencer ( and Experiencer )  ,end 
+Connect:prompt start, Figures ( and Figures ) Ground ( and Ground )  ,end 
+Conquering:prompt start, Conqueror ( and Conqueror ) Means ( and Means ) Theme ( and Theme )  ,end 
+Containing:prompt start, Container ( and Container ) Contents ( and Contents )  ,end 
+Control:prompt start, Controlling_variable ( and Controlling_variable ) Dependent_variable ( and Dependent_variable )  ,end 
+Convincing:prompt start, Addressee ( and Addressee ) Content ( and Content ) Speaker ( and Speaker ) Topic ( and Topic )  ,end 
+Cost:prompt start, Asset ( and Asset ) Goods ( and Goods ) Intended_event ( and Intended_event ) Payer ( and Payer ) Rate ( and Rate )  ,end 
+Create.artwork:prompt start, Activity ( and Activity ) Culture ( and Culture )  ,end 
+Creating:prompt start, Cause ( and Cause ) Created_entity ( and Created_entity ) Creator ( and Creator )  ,end 
+Criminal.investigation:prompt start, Incident ( and Incident ) Investigator ( and Investigator ) Suspect ( and Suspect )  ,end 
+Cure:prompt start, Affliction ( and Affliction ) Medication ( and Medication ) Patient ( and Patient ) Treatment ( and Treatment )  ,end 
+Damaging:prompt start, Agent ( and Agent ) Cause ( and Cause ) Patient ( and Patient )  ,end 
+Death:prompt start, Deceased ( and Deceased )  ,end 
+Deciding:prompt start, Cognizer ( and Cognizer ) Decision ( and Decision )  ,end 
+Defending:prompt start, Assailant ( and Assailant ) Defender ( and Defender ) Instrument ( and Instrument ) Victim ( and Victim )  ,end 
+Departing:prompt start, Goal ( and Goal ) Path ( and Path ) Source ( and Source ) Traveller ( and Traveller )  ,end 
+Destroying:prompt start, Cause ( and Cause ) Destroyer ( and Destroyer ) Means ( and Means ) Patient ( and Patient )  ,end 
+Dispersal:prompt start, Agent ( and Agent ) Cause ( and Cause ) Goal_area ( and Goal_area ) Individuals ( and Individuals )  ,end 
+Earnings.and.losses:prompt start, Earner ( and Earner ) Earnings ( and Earnings ) Goods ( and Goods )  ,end 
+Education.teaching:prompt start, Course ( and Course ) Fact ( and Fact ) Role ( and Role ) Skill ( and Skill ) Student ( and Student ) Subject ( and Subject ) Teacher ( and Teacher )  ,end 
+Emergency:prompt start, Place ( and Place ) Undesirable_event ( and Undesirable_event )  ,end 
+Employment:prompt start, Employee ( and Employee ) Employer ( and Employer ) Field ( and Field ) Place_of_employment ( and Place_of_employment ) Position ( and Position ) Task ( and Task ) Type ( and Type )  ,end 
+Emptying:prompt start, Agent ( and Agent ) Cause ( and Cause ) Source ( and Source ) Theme ( and Theme )  ,end 
+Exchange:prompt start, Exchanger_1 ( and Exchanger_1 ) Exchanger_2 ( and Exchanger_2 ) Exchangers ( and Exchangers ) Theme_1 ( and Theme_1 ) Theme_2 ( and Theme_2 ) Themes ( and Themes )  ,end 
+Expansion:prompt start, Agent ( and Agent ) Dimension ( and Dimension ) Initial_size ( and Initial_size ) Item ( and Item ) Result_size ( and Result_size )  ,end 
+Filling:prompt start, Agent ( and Agent ) Cause ( and Cause ) Goal ( and Goal ) Theme ( and Theme )  ,end 
+GetReady:prompt start, Activity ( and Activity ) Protagonist ( and Protagonist )  ,end 
+Getting:prompt start, Means ( and Means ) Recipient ( and Recipient ) Source ( and Source ) Theme ( and Theme )  ,end 
+Giving:prompt start, Offerer ( and Offerer ) Recipient ( and Recipient ) Theme ( and Theme )  ,end 
+Hindering:prompt start, Action ( and Action ) Hindrance ( and Hindrance ) Protagonist ( and Protagonist )  ,end 
+Hold:prompt start, Entity ( and Entity ) Manipulator ( and Manipulator )  ,end 
+Hostile.encounter:prompt start, Instrument ( and Instrument ) Issue ( and Issue ) Purpose ( and Purpose ) Side_1 ( and Side_1 ) Side_2 ( and Side_2 ) Sides ( and Sides )  ,end 
+Influence:prompt start, Action ( and Action ) Agent ( and Agent ) Behavior ( and Behavior ) Cognizer ( and Cognizer ) Product ( and Product ) Situation ( and Situation )  ,end 
+Ingestion:prompt start, Ingestibles ( and Ingestibles ) Ingestor ( and Ingestor )  ,end 
+Judgment.communication:prompt start, Addressee ( and Addressee ) Communicator ( and Communicator ) Evaluee ( and Evaluee ) Medium ( and Medium ) Reason ( and Reason ) Topic ( and Topic )  ,end 
+Killing:prompt start, Cause ( and Cause ) Instrument ( and Instrument ) Killer ( and Killer ) Means ( and Means ) Victim ( and Victim )  ,end 
+Know:prompt start, Cognizer ( and Cognizer ) Evidence ( and Evidence ) Instrument ( and Instrument ) Means ( and Means ) Phenomenon ( and Phenomenon ) Topic ( and Topic )  ,end 
+Labeling:prompt start, Entity ( and Entity ) Label ( and Label ) Speaker ( and Speaker )  ,end 
+Legality:prompt start, Action ( and Action ) Object ( and Object )  ,end 
+Manufacturing:prompt start, Factory ( and Factory ) Instrument ( and Instrument ) Producer ( and Producer ) Product ( and Product ) Resource ( and Resource )  ,end 
+Motion:prompt start, Agent ( and Agent ) Area ( and Area ) Cause ( and Cause ) Distance ( and Distance ) Goal ( and Goal ) Means ( and Means ) Path ( and Path ) Source ( and Source ) Speed ( and Speed ) Theme ( and Theme )  ,end 
+Motion.directional:prompt start, Area ( and Area ) Direction ( and Direction ) Goal ( and Goal ) Path ( and Path ) Source ( and Source ) Theme ( and Theme )  ,end 
+Openness:prompt start, Barrier ( and Barrier ) Theme ( and Theme ) Useful_location ( and Useful_location )  ,end 
+Participation:prompt start, Event ( and Event ) Participants ( and Participants )  ,end 
+Perception.active:prompt start, Direction ( and Direction ) Perceiver_agentive ( and Perceiver_agentive ) Phenomenon ( and Phenomenon )  ,end 
+Placing:prompt start, Agent ( and Agent ) Cause ( and Cause ) Location ( and Location ) Theme ( and Theme )  ,end 
+Practice:prompt start, Action ( and Action ) Agent ( and Agent ) Occasion ( and Occasion )  ,end 
+Presence:prompt start, Circumstances ( and Circumstances ) Duration ( and Duration ) Entity ( and Entity ) Inherent_purpose ( and Inherent_purpose ) Place ( and Place ) Time ( and Time )  ,end 
+Preventing.or.letting:prompt start, Agent ( and Agent ) Event ( and Event ) Means ( and Means ) Potential_hindrance ( and Potential_hindrance )  ,end 
+Process.end:prompt start, Agent ( and Agent ) Cause ( and Cause ) Final_subevent ( and Final_subevent ) Process ( and Process ) State ( and State ) Time ( and Time )  ,end 
+Process.start:prompt start, Agent ( and Agent ) Event ( and Event ) Initial_subevent ( and Initial_subevent ) Time ( and Time )  ,end 
+Protest:prompt start, Addressee ( and Addressee ) Arguer ( and Arguer ) Content ( and Content )  ,end 
+Quarreling:prompt start, Arguer2 ( and Arguer2 ) Arguers ( and Arguers ) Issue ( and Issue )  ,end 
+Ratification:prompt start, Proposal ( and Proposal ) Ratifier ( and Ratifier )  ,end 
+Receiving:prompt start, Donor ( and Donor ) Recipient ( and Recipient ) Theme ( and Theme )  ,end 
+Recovering:prompt start, Agent ( and Agent ) Entity ( and Entity ) Means ( and Means )  ,end 
+Removing:prompt start, Agent ( and Agent ) Cause ( and Cause ) Goal ( and Goal ) Source ( and Source ) Theme ( and Theme )  ,end 
+Request:prompt start, Addressee ( and Addressee ) Medium ( and Medium ) Message ( and Message ) Speaker ( and Speaker )  ,end 
+Research:prompt start, Field ( and Field ) Researcher ( and Researcher ) Topic ( and Topic )  ,end 
+Resolve.problem:prompt start, Agent ( and Agent ) Cause ( and Cause ) Means ( and Means ) Problem ( and Problem )  ,end 
+Response:prompt start, Agent ( and Agent ) Responding_entity ( and Responding_entity ) Response ( and Response ) Trigger ( and Trigger )  ,end 
+Reveal.secret:prompt start, Addressee ( and Addressee ) Information ( and Information ) Speaker ( and Speaker ) Topic ( and Topic )  ,end 
+Revenge:prompt start, Avenger ( and Avenger ) Injured_party ( and Injured_party ) Injury ( and Injury ) Offender ( and Offender ) Punishment ( and Punishment )  ,end 
+Rite:prompt start, Member ( and Member ) Object ( and Object ) Type ( and Type )  ,end 
+Scrutiny:prompt start, Cognizer ( and Cognizer ) Ground ( and Ground ) Instrument ( and Instrument ) Phenomenon ( and Phenomenon ) Unwanted_entity ( and Unwanted_entity )  ,end 
+Self.motion:prompt start, Direction ( and Direction ) Distance ( and Distance ) Goal ( and Goal ) Path ( and Path ) Self_mover ( and Self_mover ) Source ( and Source )  ,end 
+Sending:prompt start, Goal ( and Goal ) Means ( and Means ) Recipient ( and Recipient ) Sender ( and Sender ) Source ( and Source ) Theme ( and Theme ) Transferors ( and Transferors ) Vehicle ( and Vehicle )  ,end 
+Sign.agreement:prompt start, Agreement ( and Agreement ) Signatory ( and Signatory )  ,end 
+Social.event:prompt start, Attendees ( and Attendees ) Beneficiary ( and Beneficiary ) Host ( and Host ) Occasion ( and Occasion ) Social_event ( and Social_event )  ,end 
+Statement:prompt start, Addressee ( and Addressee ) Medium ( and Medium ) Message ( and Message ) Speaker ( and Speaker )  ,end 
+Supply:prompt start, Imposed_purpose ( and Imposed_purpose ) Recipient ( and Recipient ) Supplier ( and Supplier ) Theme ( and Theme )  ,end 
+Supporting:prompt start, Supported ( and Supported ) Supporter ( and Supporter )  ,end 
+Telling:prompt start, Addressee ( and Addressee ) Message ( and Message ) Speaker ( and Speaker )  ,end 
+Terrorism:prompt start, Act ( and Act ) Instrument ( and Instrument ) Terrorist ( and Terrorist ) Victim ( and Victim )  ,end 
+Testing:prompt start, Circumstances ( and Circumstances ) Means ( and Means ) Product ( and Product ) Result ( and Result ) Tested_property ( and Tested_property ) Tester ( and Tester )  ,end 
+Theft:prompt start, Goods ( and Goods ) Instrument ( and Instrument ) Means ( and Means ) Perpetrator ( and Perpetrator ) Source ( and Source ) Victim ( and Victim )  ,end 
+Traveling:prompt start, Area ( and Area ) Distance ( and Distance ) Entity ( and Entity ) Goal ( and Goal ) Means ( and Means ) Path ( and Path ) Purpose ( and Purpose ) Traveler ( and Traveler )  ,end 
+Using:prompt start, Agent ( and Agent ) Instrument ( and Instrument ) Means ( and Means ) Purpose ( and Purpose )  ,end 
+Wearing:prompt start, Body_location ( and Body_location ) Clothing ( and Clothing ) Wearer ( and Wearer )  ,end 
+Writing:prompt start, Addressee ( and Addressee ) Author ( and Author ) Instrument ( and Instrument ) Text ( and Text )  ,end 
