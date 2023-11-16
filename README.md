@@ -17,6 +17,7 @@ TextEE is a standardized, fair, and reproducible benchmark for evaluating event 
 - Standardized data splits for reducing performance variance.
 - 10+ implemented event extraction approaches published in recent years.
 - Comprehensive reevaluation results for future references. 
+
 We will keep adding new datasets and new models!
 
 ## Updates
