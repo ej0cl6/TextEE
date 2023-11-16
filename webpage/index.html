@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="TextEE: A Standardized, Fair, and Reliable Benchmark for Event Extraction">
+  <meta name="keywords" content="TextEE, Event Extraction, Event Detection, Event Argument Extraction">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TextEE: A Standardized, Fair, and Reliable Benchmark for Event Extraction</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">TextEE: A Standardized, Fair, and Reliable Benchmark for Event Extraction</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://khhuang.me/">Kuan-Hao Huang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=OtSSwJgAAAAJ&hl=en">I-Hung Hsu</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://tanmayparekh.github.io/">Tanmay Parekh</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Zhiyu Xie</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://zhangzx-uiuc.github.io/">Zixuan Zhang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Premkumar Natarajan</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://web.cs.ucla.edu/~kwchang/">Kai-Wei Chang</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://vnpeng.net/">Nanyun Peng</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://blender.cs.illinois.edu/hengji.html">Heng Ji</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Illinois Urbana-Champaign</span>,
+            <span class="author-block"><sup>2</sup>University of Southern California</span>,
+            <span class="author-block"><sup>3</sup>University of California, Los Angeles</span>,
+            <span class="author-block"><sup>4</sup>Standford University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/ej0cl6/TextEE"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Introduction</h3>
+        <div class="content has-text-justified">
+          <p>
+            <strong>TextEE</strong> is a standardized, fair, and reproducible benchmark for evaluating event extraction approaches.
+          </p>
+          <ul>
+            <li>Standardized data preprocessing for 10+ datasets.</li>
+            <li>Standardized data splits for reducing performance variance.</li>
+            <li>10+ implemented event extraction approaches published in recent years.</li>
+            <li>Comprehensive reevaluation results for future references.</li>
+          </ul>
+          <p>
+            We will keep adding new datasets and new models!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: #fafafa;">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">News</h3>
+        <div class="content has-text-justified">
+          <ul>
+            <li><strong>[2023/11/15]</strong> We release TextEE. Feel free to contact us if you want to contribute your models or datasets!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Supported Datasets</h3>
+        <div class="content has-text-justified">
+          <ul>
+            <li><strong>ACE05</strong>: <a href="https://aclanthology.org/L04-1011/">The Automatic Content Extraction (ACE) Program - Tasks, Data, and Evaluation</a>, LREC 2004</li>
+            <li><strong>RichERE</strong>: <a href="https://aclanthology.org/W15-0812/">From Light to Rich ERE: Annotation of Entities, Relations, and Events</a>, EVENTS@NAACL 2015</li>
+            <li><strong>M2E2</strong>: <a href="https://arxiv.org/abs/2005.02472">Cross-media Structured Common Space for Multimedia Event Extraction</a>, ACL 2020</li>
+            <li><strong>CASIE</strong>: <a href="https://ojs.aaai.org/index.php/AAAI/article/view/6401">CASIE: Extracting Cybersecurity Event Information from Text</a>, AAAI 2020</li>
+            <li><strong>PHEE</strong>: <a href="https://arxiv.org/abs/2210.12560">PHEE: A Dataset for Pharmacovigilance Event Extraction from Text</a>, EMNLP 2022</li>
+            <li><strong>MEE</strong>: <a href="https://arxiv.org/abs/2211.05955">MEE: A Novel Multilingual Event Extraction Dataset</a>, EMNLP 2022</li>
+            <li><strong>FewEvent</strong>: <a href="https://arxiv.org/abs/1910.11621">Meta-Learning with Dynamic-Memory-Based Prototypical Network for Few-Shot Event Detection</a>, WSDM 2020</li>
+            <li><strong>MAVEN</strong>: <a href="https://arxiv.org/abs/2004.13590">MAVEN: A Massive General Domain Event Detection Dataset</a>, EMNLP 2020</li>
+            <li><strong>RAMS</strong>: <a href="https://arxiv.org/abs/1911.03766">Multi-Sentence Argument Linking</a>, ACL 2020</li>
+            <li><strong>WikiEvents</strong>: <a href="https://arxiv.org/abs/2104.05919">Document-Level Event Argument Extraction by Conditional Generation</a>, NAACL 2021</li>
+            <li><strong>GENEVA</strong>: <a href="https://arxiv.org/abs/2205.12505">GENEVA: Benchmarking Generalizability for Event Argument Extraction with Hundreds of Event Types and Argument Roles</a>, ACL 2023</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: #fafafa;">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Supported Models</h3>
+        <div class="content has-text-justified">
+          <ul>
+            <li><strong>DyGIE++</strong>: <a href="https://arxiv.org/abs/1909.03546">Entity, Relation, and Event Extraction with Contextualized Span Representations</a>, EMNLP 2019</li>
+            <li><strong>OneIE</strong>: <a href="https://aclanthology.org/2020.acl-main.713/">A Joint Neural Model for Information Extraction with Global Features</a>, ACL 2020</li>
+            <li><strong>AMR-IE</strong>: <a href="https://aclanthology.org/2021.naacl-main.4/">Abstract Meaning Representation Guided Graph Encoding and Decoding for Joint Information Extraction</a>, NAACL 2021</li>
+            <li><strong>DEGREE</strong>: <a href="https://arxiv.org/abs/2108.12724">DEGREE: A Data-Efficient Generation-Based Event Extraction Model</a>, NAACL 2022</li>
+            <li><strong>EEQA</strong>: <a href="https://arxiv.org/abs/2004.13625">Event Extraction by Answering (Almost) Natural Questions</a>, EMNLP 2020</li>
+            <li><strong>RCEE</strong>: <a href="https://aclanthology.org/2020.emnlp-main.128/">Event Extraction as Machine Reading Comprehension</a>, EMNLP 2020</li>
+            <li><strong>Query&Extract</strong>: <a href="https://arxiv.org/abs/2110.07476">Query and Extract: Refining Event Extraction as Type-oriented Binary Decoding</a>, ACL-Findings 2022</li>
+            <li><strong>TagPrime</strong>: <a href="https://arxiv.org/abs/2205.12585">TAGPRIME: A Unified Framework for Relational Structure Extraction</a>, ACL 2023</li>
+            <li><strong>UniST</strong>: <a href="https://arxiv.org/abs/2205.01826">Unified Semantic Typing with Meaningful Label Inference</a>, NAACL 2022</li>
+            <li><strong>BART-Gen</strong>: <a href="https://arxiv.org/abs/2104.05919">Document-Level Event Argument Extraction by Conditional Generation</a>, NAACL 2021</li>
+            <li><strong>PAIE</strong>: <a href="https://arxiv.org/abs/2202.12109">Prompt for Extraction? PAIE: Prompting Argument Interaction for Event Argument Extraction</a>, ACL 2022</li>
+            <li><strong>X-Gear</strong>: <a href="https://arxiv.org/abs/2203.08308">Multilingual Generative Language Models for Zero-Shot Cross-Lingual Event Argument Extraction</a>, ACL 2022</li>
+            <li><strong>AMPERE</strong>: <a href="https://arxiv.org/abs/2305.16734">AMPERE: AMR-Aware Prefix for Generation-Based Event Argument Extraction Model</a>, ACL 2023</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Results</h3>
+
+        <h3 style="margin-bottom: 10px;">End-to-End Event Extraction</h3>
+        <div style="margin-bottom: 40px;"><img src="static/images/e2e.png" class="center"></div>
+
+        <h3 style="margin-bottom: 10px;">Event Detection</h3>
+        <div style="margin-bottom: 40px;"><img src="static/images/ed.png" class="center"></div>
+
+        <h3 style="margin-bottom: 10px;">Event Argument Extraction</h3>
+        <div><img src="static/images/eae.png" class="center"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{Huang23textee,
+  author       = {Kuan{-}Hao Huang and
+                  I{-}Hung Hsu and
+                  Tanmay Parekh and 
+                  Zhiyu Xie and
+                  Zixuan Zhang and
+                  Premkumar Natarajan and
+                  Kai{-}Wei Chang and
+                  Nanyun Peng and
+                  Heng Ji},
+  title        = {A Reevaluation of Event Extraction: Past, Present, and Future Challenges},
+  journal      = {arXiv preprint},
+  year         = {2023},
+}
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="#">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/ej0cl6/TextEE" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
