@@ -7,7 +7,7 @@
 [**Running**](#running) |
 [**Results**](https://khhuang.me/TextEE/index.html#results) |
 [**Website**](https://khhuang.me/TextEE/) |
-[**Paper**](#) 
+[**Paper**](https://arxiv.org/abs/2311.09562) 
 
 **Authors**: [Kuan-Hao Huang](https://khhuang.me/), [I-Hung Hsu](https://scholar.google.com/citations?user=OtSSwJgAAAAJ&hl=en), [Tanmay Parekh](https://tanmayparekh.github.io/), Zhiyu Xie, [Zixuan Zhang](https://zhangzx-uiuc.github.io/), Premkumar Natarajan, [Kai-Wei Chang](https://web.cs.ucla.edu/~kwchang/), [Nanyun Peng](https://vnpeng.net/), [Heng Ji](https://blender.cs.illinois.edu/hengji.html)
 
@@ -291,7 +291,7 @@ python TextEE/evaluate_pipeline.py --task E2E --data [eval_data] --ed_model [sav
                   Nanyun Peng and
                   Heng Ji},
   title        = {A Reevaluation of Event Extraction: Past, Present, and Future Challenges},
-  journal      = {arXiv preprint},
+  journal      = {arXiv preprint arXiv:2311.09562},
   year         = {2023},
 }
 ```
