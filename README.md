@@ -19,7 +19,7 @@ TextEE is a standardized, fair, and reproducible benchmark for evaluating event 
 - 10+ implemented event extraction approaches published in recent years.
 - Comprehensive reevaluation results for future references. 
 
-We will keep adding new datasets and new models!
+Please check mroe details our paper [A Reevaluation of Event Extraction: Past, Present, and Future Challenges](https://arxiv.org/abs/2311.09562). We will keep adding new datasets and new models!
 
 ## Updates
 
