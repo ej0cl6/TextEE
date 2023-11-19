@@ -5,8 +5,8 @@ PHEE dataset comes from EMNLP 2022 paper [DPHEE: A Dataset for Pharmacovigilance
 ### Preprocessing Steps
 
 - Download dataset from
-  - [https://raw.githubusercontent.com/ZhaoyueSun/PHEE/master/data/eeqa/test.json](https://raw.githubusercontent.com/ZhaoyueSun/PHEE/master/data/eeqa/train.json)
-  - [https://raw.githubusercontent.com/ZhaoyueSun/PHEE/master/data/eeqa/test.json](https://raw.githubusercontent.com/ZhaoyueSun/PHEE/master/data/eeqa/dev.json)
+  - [https://raw.githubusercontent.com/ZhaoyueSun/PHEE/master/data/eeqa/train.json](https://raw.githubusercontent.com/ZhaoyueSun/PHEE/master/data/eeqa/train.json)
+  - [https://raw.githubusercontent.com/ZhaoyueSun/PHEE/master/data/eeqa/dev.json](https://raw.githubusercontent.com/ZhaoyueSun/PHEE/master/data/eeqa/dev.json)
   - [https://raw.githubusercontent.com/ZhaoyueSun/PHEE/master/data/eeqa/test.json](https://raw.githubusercontent.com/ZhaoyueSun/PHEE/master/data/eeqa/test.json)
 - Set `PHEE_PATH` in `process_phee.sh`
 - Run `process_phee.sh`
