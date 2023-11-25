@@ -190,12 +190,6 @@ class EEQAEAETrainer(BasicTrainer):
             progress.close()
             logger.info(f"Average training loss: {np.mean(cummulate_loss)}")
             
-            if epoch < 10:
-                logger.info("Saving best model")
-                state = dict(model=self.model.state_dict(), tokenizer=self.tokenizer, type_set=self.type_set)
-                torch.save(state, os.path.join(self.config.output_dir, "best_model.state"))
-                continue
-            
             # eval dev
             predictions = self.internal_predict(internal_dev_data, split="Dev")
             dev_scores = compute_EAE_scores(predictions, internal_dev_data, metrics={"argument_id", "argument_cls", "argument_attached_id", "argument_attached_cls"})
