@@ -9,7 +9,7 @@
 [**Website**](https://khhuang.me/TextEE/) |
 [**Paper**](https://arxiv.org/abs/2311.09562) 
 
-**Authors**: [Kuan-Hao Huang](https://khhuang.me/), [I-Hung Hsu](https://scholar.google.com/citations?user=OtSSwJgAAAAJ&hl=en), [Tanmay Parekh](https://tanmayparekh.github.io/), Zhiyu Xie, [Zixuan Zhang](https://zhangzx-uiuc.github.io/), Premkumar Natarajan, [Kai-Wei Chang](https://web.cs.ucla.edu/~kwchang/), [Nanyun Peng](https://vnpeng.net/), [Heng Ji](https://blender.cs.illinois.edu/hengji.html)
+**Authors**: [Kuan-Hao Huang](https://khhuang.me/), [I-Hung Hsu](https://scholar.google.com/citations?user=OtSSwJgAAAAJ&hl=en), [Tanmay Parekh](https://tanmayparekh.github.io/), [Zhiyu Xie](https://www.linkedin.com/in/zhiyu-xie-607125283/), [Zixuan Zhang](https://zhangzx-uiuc.github.io/), [Premkumar Natarajan](https://www.linkedin.com/in/natarajan/), [Kai-Wei Chang](https://web.cs.ucla.edu/~kwchang/), [Nanyun Peng](https://vnpeng.net/), [Heng Ji](https://blender.cs.illinois.edu/hengji.html)
 
 ## Introduction
 
