@@ -1,6 +1,6 @@
 ## GENEVA
 
-GENEVA dataset comes from ACL 2023 paper [GENEVA: Benchmarking Generalizability for Event Argument Extraction with Hundreds of Event Types and Argument Roles](https://aclanthology.org/2023.acl-long.203.pdf). GENEVA extends MAVEN into the event argument extraction task. Our splits are generated with the complete data released as part of their work.
+The GENEVA dataset comes from ACL 2023 paper [GENEVA: Benchmarking Generalizability for Event Argument Extraction with Hundreds of Event Types and Argument Roles](https://aclanthology.org/2023.acl-long.203.pdf). GENEVA extends MAVEN into the event argument extraction task. Our splits are generated with the complete data released as part of their work.
 
 ### Preprocessing Steps
 

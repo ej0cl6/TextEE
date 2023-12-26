@@ -1,6 +1,6 @@
 ## ACE05
 
-ACE05 dataset comes from LREC 2004 paper [The Automatic Content Extraction (ACE) Program - Tasks, Data, and Evaluation](https://aclanthology.org/L04-1011/). ACE05 is an end-to-end event extraction dataset.
+The ACE05 dataset comes from LREC 2004 paper [The Automatic Content Extraction (ACE) Program - Tasks, Data, and Evaluation](https://aclanthology.org/L04-1011/). ACE05 is an end-to-end event extraction dataset.
 
 ### Preprocessing Steps
 

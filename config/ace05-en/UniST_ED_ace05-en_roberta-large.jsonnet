@@ -32,6 +32,7 @@ local pretrained_model_alias = {
     "multi_piece_strategy": "average", 
     "max_length": 175, 
     "margin": 0.1,
+    "max_sample_trigger": 20, 
     
     // train config
     "max_epoch": 90,

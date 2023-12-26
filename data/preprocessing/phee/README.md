@@ -1,6 +1,6 @@
 ## PHEE
 
-PHEE dataset comes from EMNLP 2022 paper [DPHEE: A Dataset for Pharmacovigilance Event Extraction from Text](https://arxiv.org/abs/2210.12560). PHEE is an end-to-end event extraction dataset.
+The PHEE dataset comes from EMNLP 2022 paper [DPHEE: A Dataset for Pharmacovigilance Event Extraction from Text](https://arxiv.org/abs/2210.12560). PHEE is an end-to-end event extraction dataset.
 
 ### Preprocessing Steps
 

@@ -1,0 +1,61 @@
+{
+  "Acetylation": [
+    "Site",
+    "Theme"
+  ],
+  "Binding": [
+    "Site",
+    "Site2",
+    "Theme",
+    "Theme2"
+  ],
+  "Deacetylation": [
+    "Cause",
+    "Site",
+    "Theme"
+  ],
+  "Gene_expression": [
+    "Theme"
+  ],
+  "Localization": [
+    "Theme",
+    "ToLoc"
+  ],
+  "Negative_regulation": [
+    "CSite",
+    "Cause",
+    "Site",
+    "Theme"
+  ],
+  "Phosphorylation": [
+    "Cause",
+    "Site",
+    "Theme"
+  ],
+  "Positive_regulation": [
+    "CSite",
+    "Cause",
+    "Site",
+    "Theme"
+  ],
+  "Protein_catabolism": [
+    "Theme"
+  ],
+  "Protein_modification": [
+    "Theme"
+  ],
+  "Regulation": [
+    "CSite",
+    "Cause",
+    "Site",
+    "Theme"
+  ],
+  "Transcription": [
+    "Theme"
+  ],
+  "Ubiquitination": [
+    "Cause",
+    "Site",
+    "Theme"
+  ]
+}

@@ -1847,4 +1847,214 @@ patterns = {
             "roles": ['CVE', 'Issues-Addressed', 'Patch', 'Patch-Number', 'Releaser', 'Supported_Platform', 'Time', 'Vulnerability', 'Vulnerable_System', 'Vulnerable_System_Version'],
         },
     },
+    "mlee": {
+        "Acetylation": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Binding": {
+            "template": "<arg1> site <arg2> theme <arg3> theme 2",
+            "roles": ['Site', 'Theme', 'Theme2'],
+        },
+        "Blood_vessel_development": {
+            "template": "<arg1> at loc <arg2> from loc <arg3> theme",
+            "roles": ['AtLoc', 'FromLoc', 'Theme'],
+        },
+        "Breakdown": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Catabolism": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Cell_division": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Cell_proliferation": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "DNA_methylation": {
+            "template": "<arg1> site <arg2> theme",
+            "roles": ['Site', 'Theme'],
+        },
+        "Death": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Dephosphorylation": {
+            "template": "<arg1> site <arg2> theme",
+            "roles": ['Site', 'Theme'],
+        },
+        "Development": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Dissociation": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Gene_expression": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Growth": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Localization": {
+            "template": "<arg1> at loc <arg2> from loc <arg3> theme <arg4> to loc",
+            "roles": ['AtLoc', 'FromLoc', 'Theme', 'ToLoc'],
+        },
+        "Metabolism": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Negative_regulation": {
+            "template": "<arg1> csite <arg2> cause <arg3> site <arg4> theme",
+            "roles": ['CSite', 'Cause', 'Site', 'Theme'],
+        },
+        "Pathway": {
+            "template": "<arg1> participant <arg2> participant 2 <arg3> participant 3 <arg4> participant 4",
+            "roles": ['Participant', 'Participant2', 'Participant3', 'Participant4'],
+        },
+        "Phosphorylation": {
+            "template": "<arg1> site <arg2> theme",
+            "roles": ['Site', 'Theme'],
+        },
+        "Planned_process": {
+            "template": "<arg1> instrument <arg2> instrument 2 <arg3> theme <arg4> theme 2",
+            "roles": ['Instrument', 'Instrument2', 'Theme', 'Theme2'],
+        },
+        "Positive_regulation": {
+            "template": "<arg1> csite <arg2> cause <arg3> site <arg4> theme <arg5> theme 2",
+            "roles": ['CSite', 'Cause', 'Site', 'Theme', 'Theme2'],
+        },
+        "Protein_processing": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Regulation": {
+            "template": "<arg1> csite <arg2> cause <arg3> site <arg4> theme",
+            "roles": ['CSite', 'Cause', 'Site', 'Theme'],
+        },
+        "Remodeling": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Reproduction": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Synthesis": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Transcription": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Translation": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Ubiquitination": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+    },
+    "genia2011": {
+        "Binding": {
+            "template": "<arg1> site <arg2> site 2 <arg3> theme <arg4> theme 2 <arg5> theme 3 <arg6> theme 4",
+            "roles": ['Site', 'Site2', 'Theme', 'Theme2', 'Theme3', 'Theme4'],
+        },
+        "Gene_expression": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Localization": {
+            "template": "<arg1> at loc <arg2> theme <arg3> to loc",
+            "roles": ['AtLoc', 'Theme', 'ToLoc'],
+        },
+        "Negative_regulation": {
+            "template": "<arg1> csite <arg2> cause <arg3> site <arg4> theme",
+            "roles": ['CSite', 'Cause', 'Site', 'Theme'],
+        },
+        "Phosphorylation": {
+            "template": "<arg1> site <arg2> theme",
+            "roles": ['Site', 'Theme'],
+        },
+        "Positive_regulation": {
+            "template": "<arg1> csite <arg2> cause <arg3> site <arg4> theme",
+            "roles": ['CSite', 'Cause', 'Site', 'Theme'],
+        },
+        "Protein_catabolism": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Regulation": {
+            "template": "<arg1> csite <arg2> cause <arg3> site <arg4> theme",
+            "roles": ['CSite', 'Cause', 'Site', 'Theme'],
+        },
+        "Transcription": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+    },
+    "genia2013": {
+        "Acetylation": {
+            "template": "<arg1> site <arg2> theme",
+            "roles": ['Site', 'Theme'],
+        },
+        "Binding": {
+            "template": "<arg1> site <arg2> site 2 <arg3> theme <arg4> theme 2",
+            "roles": ['Site', 'Site2', 'Theme', 'Theme2'],
+        },
+        "Deacetylation": {
+            "template": "<arg1> cause <arg2> site <arg3> theme",
+            "roles": ['Cause', 'Site', 'Theme'],
+        },
+        "Gene_expression": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Localization": {
+            "template": "<arg1> theme <arg2> to loc",
+            "roles": ['Theme', 'ToLoc'],
+        },
+        "Negative_regulation": {
+            "template": "<arg1> csite <arg2> cause <arg3> site <arg4> theme",
+            "roles": ['CSite', 'Cause', 'Site', 'Theme'],
+        },
+        "Phosphorylation": {
+            "template": "<arg1> cause <arg2> site <arg3> theme",
+            "roles": ['Cause', 'Site', 'Theme'],
+        },
+        "Positive_regulation": {
+            "template": "<arg1> csite <arg2> cause <arg3> site <arg4> theme",
+            "roles": ['CSite', 'Cause', 'Site', 'Theme'],
+        },
+        "Protein_catabolism": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Protein_modification": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Regulation": {
+            "template": "<arg1> csite <arg2> cause <arg3> site <arg4> theme",
+            "roles": ['CSite', 'Cause', 'Site', 'Theme'],
+        },
+        "Transcription": {
+            "template": "<arg1> theme",
+            "roles": ['Theme'],
+        },
+        "Ubiquitination": {
+            "template": "<arg1> cause <arg2> site <arg3> theme",
+            "roles": ['Cause', 'Site', 'Theme'],
+        },
+    },
 }

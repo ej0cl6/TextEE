@@ -4,7 +4,6 @@ from argparse import ArgumentParser
 from tqdm import tqdm
 from collections import defaultdict
 from pprint import pprint
-import stanza
 import ipdb
 
 def read_docs(path):
@@ -268,10 +267,10 @@ def main():
     
     objs = read_docs(args.in_folder)
     
-    with open("token_map.json") as fp:
+    with open(args.token_map) as fp:
         token_map = json.load(fp)
     
-    with open("seg_map.json") as fp:
+    with open(args.seg_map) as fp:
         seg_map = json.load(fp)
         
     train_objs, dev_objs, test_objs = get_split(objs, args.split)

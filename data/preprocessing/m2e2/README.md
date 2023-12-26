@@ -1,6 +1,6 @@
 ## M2E2
 
-M2E2 dataset comes from ACL 2020 paper [Cross-media Structured Common Space for Multimedia Event Extraction](https://arxiv.org/abs/2005.02472). We only consider the text part of M2E2. M2E2 is an end-to-end event extraction dataset.
+The M2E2 dataset comes from ACL 2020 paper [Cross-media Structured Common Space for Multimedia Event Extraction](https://arxiv.org/abs/2005.02472). We only consider the text part of M2E2. M2E2 is an end-to-end event extraction dataset.
 
 ### Preprocessing Steps
 

@@ -1,0 +1,99 @@
+{
+  "AtLoc": [
+    "Anatomical_system",
+    "Cell",
+    "Cellular_component",
+    "Immaterial_anatomical_entity",
+    "Multi-tissue_structure",
+    "Organ",
+    "Organism",
+    "Organism_subdivision",
+    "Pathological_formation",
+    "Tissue"
+  ],
+  "CSite": [
+    "DNA_domain_or_region",
+    "Protein_domain_or_region"
+  ],
+  "Cause": [
+    "Cell",
+    "Cellular_component",
+    "DNA_domain_or_region",
+    "Drug_or_compound",
+    "Gene_or_gene_product",
+    "Organism",
+    "Organism_substance",
+    "Pathological_formation",
+    "Tissue"
+  ],
+  "FromLoc": [
+    "Cell",
+    "Multi-tissue_structure",
+    "Pathological_formation",
+    "Tissue"
+  ],
+  "Instrument": [
+    "Cell",
+    "Cellular_component",
+    "DNA_domain_or_region",
+    "Drug_or_compound",
+    "Gene_or_gene_product",
+    "Multi-tissue_structure",
+    "Organ",
+    "Organism",
+    "Organism_substance",
+    "Pathological_formation",
+    "Tissue"
+  ],
+  "Instrument2": [
+    "Gene_or_gene_product"
+  ],
+  "Participant": [
+    "Drug_or_compound",
+    "Gene_or_gene_product"
+  ],
+  "Participant2": [
+    "Gene_or_gene_product"
+  ],
+  "Participant3": [
+    "Gene_or_gene_product"
+  ],
+  "Participant4": [
+    "Drug_or_compound",
+    "Gene_or_gene_product"
+  ],
+  "Site": [
+    "DNA_domain_or_region",
+    "Protein_domain_or_region"
+  ],
+  "Theme": [
+    "Anatomical_system",
+    "Cell",
+    "Cellular_component",
+    "DNA_domain_or_region",
+    "Developing_anatomical_structure",
+    "Drug_or_compound",
+    "Gene_or_gene_product",
+    "Immaterial_anatomical_entity",
+    "Multi-tissue_structure",
+    "Organ",
+    "Organism",
+    "Organism_subdivision",
+    "Organism_substance",
+    "Pathological_formation",
+    "Tissue"
+  ],
+  "Theme2": [
+    "Cell",
+    "Gene_or_gene_product"
+  ],
+  "ToLoc": [
+    "Cell",
+    "Cellular_component",
+    "Multi-tissue_structure",
+    "Organ",
+    "Organism_substance",
+    "Pathological_formation",
+    "Tissue"
+  ]
+}

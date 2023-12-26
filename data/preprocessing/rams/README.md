@@ -1,6 +1,6 @@
 ## RAMS
 
-RAMS dataset comes from ACL 2020 paper [Multi-Sentence Argument Linking](https://arxiv.org/abs/1911.03766). RAMS is an event argument extraction dataset.
+The RAMS dataset comes from ACL 2020 paper [Multi-Sentence Argument Linking](https://arxiv.org/abs/1911.03766). RAMS is an event argument extraction dataset.
 
 ### Preprocessing Steps
 

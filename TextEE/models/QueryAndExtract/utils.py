@@ -6,7 +6,10 @@ def token_to_berttokens(sent, tokenizer, omit=True, template=False):
     '''
     Generate Bert subtokens, and return first subword index list
     '''
-    bert_tokens = [tokenizer.tokenize(x) for x in sent]
+    if template:
+        bert_tokens = [tokenizer.tokenize(x) for x in sent]
+    else:
+        bert_tokens = [tokenizer.tokenize(x, is_split_into_words=True) for x in sent]
     to_collect = [[1] + [0 for i in range(len(x[1:]))] for x in bert_tokens]
     if template:
         second_sep_idx = [i for i in range(len(sent)) if sent[i] == tokenizer.sep_token][-1]

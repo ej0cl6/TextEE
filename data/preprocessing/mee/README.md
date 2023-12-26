@@ -1,6 +1,6 @@
 ## MEE
 
-MEE dataset comes from EMNLP 2022 paper [MEE: A Novel Multilingual Event Extraction Dataset](https://arxiv.org/abs/2211.05955). MEE is an end-to-end event extraction dataset.
+The MEE dataset comes from EMNLP 2022 paper [MEE: A Novel Multilingual Event Extraction Dataset](https://arxiv.org/abs/2211.05955). MEE is an end-to-end event extraction dataset.
 
 ### Preprocessing Steps
 

@@ -1,6 +1,6 @@
 ## CASIE
 
-CASIE dataset comes from AAAI 2020 paper [CASIE: Extracting Cybersecurity Event Information from Text](https://ojs.aaai.org/index.php/AAAI/article/view/6401). CASIE is an end-to-end event extraction dataset.
+The CASIE dataset comes from AAAI 2020 paper [CASIE: Extracting Cybersecurity Event Information from Text](https://ojs.aaai.org/index.php/AAAI/article/view/6401). CASIE is an end-to-end event extraction dataset.
 
 ### Preprocessing Steps
 

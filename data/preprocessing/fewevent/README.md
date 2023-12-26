@@ -1,6 +1,6 @@
 ## FewEvent
 
-FewEvent dataset comes from WSDM 2020 paper [Meta-Learning with Dynamic-Memory-Based Prototypical Network for Few-Shot Event Detection](https://arxiv.org/abs/1910.11621). FewEvent supports the event detection task only.
+The FewEvent dataset comes from WSDM 2020 paper [Meta-Learning with Dynamic-Memory-Based Prototypical Network for Few-Shot Event Detection](https://arxiv.org/abs/1910.11621). FewEvent supports the event detection task only.
 
 ### Preprocessing Steps
 

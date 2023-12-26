@@ -1,0 +1,14 @@
+{
+  "frag": [
+    "Cell",
+    "Cellular_component",
+    "Drug_or_compound",
+    "Gene_or_gene_product",
+    "Multi-tissue_structure",
+    "Organism",
+    "Organism_subdivision",
+    "Pathological_formation",
+    "Protein_domain_or_region",
+    "Tissue"
+  ]
+}

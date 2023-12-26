@@ -1,6 +1,6 @@
 ## ERE
 
-ERE dataset comes from the paper [From Light to Rich ERE: Annotation of Entities, Relations, and Events](https://aclanthology.org/W15-0812/). ERE is an end-to-end event extraction dataset. There are two versions of ERE data: light and rich. Currently, we consider the rich ERE.
+The ERE dataset comes from the paper [From Light to Rich ERE: Annotation of Entities, Relations, and Events](https://aclanthology.org/W15-0812/). ERE is an end-to-end event extraction dataset. There are two versions of ERE data: light and rich. Currently, we consider the rich ERE.
 
 ### Preprocessing Steps
 

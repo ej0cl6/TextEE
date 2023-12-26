@@ -1,0 +1,9 @@
+Binding:prompt start, Site ( and Site ) Site2 ( and Site2 ) Theme ( and Theme ) Theme2 ( and Theme2 ) Theme3 ( and Theme3 ) Theme4 ( and Theme4 ) ,end
+Gene.expression:prompt start, Theme ( and Theme ) ,end
+Localization:prompt start, AtLoc ( and AtLoc ) Theme ( and Theme ) ToLoc ( and ToLoc ) ,end
+Negative.regulation:prompt start, CSite ( and CSite ) Cause ( and Cause ) Site ( and Site ) Theme ( and Theme ) ,end
+Phosphorylation:prompt start, Site ( and Site ) Theme ( and Theme ) ,end
+Positive.regulation:prompt start, CSite ( and CSite ) Cause ( and Cause ) Site ( and Site ) Theme ( and Theme ) ,end
+Protein.catabolism:prompt start, Theme ( and Theme ) ,end
+Regulation:prompt start, CSite ( and CSite ) Cause ( and Cause ) Site ( and Site ) Theme ( and Theme ) ,end
+Transcription:prompt start, Theme ( and Theme ) ,end

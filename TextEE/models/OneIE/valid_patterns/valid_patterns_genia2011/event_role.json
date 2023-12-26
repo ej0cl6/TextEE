@@ -1,0 +1,46 @@
+{
+  "Binding": [
+    "Site",
+    "Site2",
+    "Theme",
+    "Theme2",
+    "Theme3",
+    "Theme4"
+  ],
+  "Gene_expression": [
+    "Theme"
+  ],
+  "Localization": [
+    "AtLoc",
+    "Theme",
+    "ToLoc"
+  ],
+  "Negative_regulation": [
+    "CSite",
+    "Cause",
+    "Site",
+    "Theme"
+  ],
+  "Phosphorylation": [
+    "Site",
+    "Theme"
+  ],
+  "Positive_regulation": [
+    "CSite",
+    "Cause",
+    "Site",
+    "Theme"
+  ],
+  "Protein_catabolism": [
+    "Theme"
+  ],
+  "Regulation": [
+    "CSite",
+    "Cause",
+    "Site",
+    "Theme"
+  ],
+  "Transcription": [
+    "Theme"
+  ]
+}

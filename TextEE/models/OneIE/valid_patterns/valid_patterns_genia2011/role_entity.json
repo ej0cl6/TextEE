@@ -1,0 +1,32 @@
+{
+  "AtLoc": [
+    "Entity"
+  ],
+  "CSite": [
+    "Entity"
+  ],
+  "Cause": [
+    "Protein"
+  ],
+  "Site": [
+    "Entity"
+  ],
+  "Site2": [
+    "Entity"
+  ],
+  "Theme": [
+    "Protein"
+  ],
+  "Theme2": [
+    "Protein"
+  ],
+  "Theme3": [
+    "Protein"
+  ],
+  "Theme4": [
+    "Protein"
+  ],
+  "ToLoc": [
+    "Entity"
+  ]
+}

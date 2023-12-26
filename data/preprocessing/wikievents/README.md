@@ -1,6 +1,6 @@
 ## WikiEvents
 
-WikiEvents dataset comes from NAACL 2021 paper [Document-Level Event Argument Extraction by Conditional Generation](https://arxiv.org/abs/2104.05919). WikiEvents is an event argument extraction dataset.
+The WikiEvents dataset comes from NAACL 2021 paper [Document-Level Event Argument Extraction by Conditional Generation](https://arxiv.org/abs/2104.05919). WikiEvents is an event argument extraction dataset.
 
 ### Preprocessing Steps
 

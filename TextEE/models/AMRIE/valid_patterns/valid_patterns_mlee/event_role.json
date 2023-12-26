@@ -1,0 +1,115 @@
+{
+  "Acetylation": [
+    "Theme"
+  ],
+  "Binding": [
+    "Site",
+    "Theme",
+    "Theme2"
+  ],
+  "Blood_vessel_development": [
+    "AtLoc",
+    "FromLoc",
+    "Theme"
+  ],
+  "Breakdown": [
+    "Theme"
+  ],
+  "Catabolism": [
+    "Theme"
+  ],
+  "Cell_division": [
+    "Theme"
+  ],
+  "Cell_proliferation": [
+    "Theme"
+  ],
+  "DNA_methylation": [
+    "Site",
+    "Theme"
+  ],
+  "Death": [
+    "Theme"
+  ],
+  "Dephosphorylation": [
+    "Site",
+    "Theme"
+  ],
+  "Development": [
+    "Theme"
+  ],
+  "Dissociation": [
+    "Theme"
+  ],
+  "Gene_expression": [
+    "Theme"
+  ],
+  "Growth": [
+    "Theme"
+  ],
+  "Localization": [
+    "AtLoc",
+    "FromLoc",
+    "Theme",
+    "ToLoc"
+  ],
+  "Metabolism": [
+    "Theme"
+  ],
+  "Negative_regulation": [
+    "CSite",
+    "Cause",
+    "Site",
+    "Theme"
+  ],
+  "Pathway": [
+    "Participant",
+    "Participant2",
+    "Participant3",
+    "Participant4"
+  ],
+  "Phosphorylation": [
+    "Site",
+    "Theme"
+  ],
+  "Planned_process": [
+    "Instrument",
+    "Instrument2",
+    "Theme",
+    "Theme2"
+  ],
+  "Positive_regulation": [
+    "CSite",
+    "Cause",
+    "Site",
+    "Theme",
+    "Theme2"
+  ],
+  "Protein_processing": [
+    "Theme"
+  ],
+  "Regulation": [
+    "CSite",
+    "Cause",
+    "Site",
+    "Theme"
+  ],
+  "Remodeling": [
+    "Theme"
+  ],
+  "Reproduction": [
+    "Theme"
+  ],
+  "Synthesis": [
+    "Theme"
+  ],
+  "Transcription": [
+    "Theme"
+  ],
+  "Translation": [
+    "Theme"
+  ],
+  "Ubiquitination": [
+    "Theme"
+  ]
+}

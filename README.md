@@ -50,6 +50,24 @@ Please check mroe details our paper [A Reevaluation of Event Extraction: Past, P
   <td> EVENTS@NAACL 2015 </td>
 </tr>
 <tr>
+  <td><code>MLEE</code></td>
+  <td> E2E, ED, EAE </td>
+  <td> Event extraction across multiple levels of biological organization </td>
+  <td> Bioinformatics 2012 </td>
+</tr>
+<tr>
+  <td><code>Genia2011</code></td>
+  <td> E2E, ED, EAE </td>
+  <td> Overview of Genia Event Task in BioNLP Shared Task 2011 </td>
+  <td> BioNLP Shared Task 2011 Workshop </td>
+</tr>
+<tr>
+  <td><code>Genia2013</code></td>
+  <td> E2E, ED, EAE </td>
+  <td> The Genia Event Extraction Shared Task, 2013 Edition - Overview </td>
+  <td> BioNLP Shared Task 2013 Workshop </td>
+</tr>
+<tr>
   <td><code>M2E2</code></td>
   <td> E2E, ED, EAE </td>
   <td> Cross-media Structured Common Space for Multimedia Event Extraction </td>

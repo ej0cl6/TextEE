@@ -1,0 +1,23 @@
+{
+  "CSite": [
+    "Entity"
+  ],
+  "Cause": [
+    "Protein"
+  ],
+  "Site": [
+    "Entity"
+  ],
+  "Site2": [
+    "Entity"
+  ],
+  "Theme": [
+    "Protein"
+  ],
+  "Theme2": [
+    "Protein"
+  ],
+  "ToLoc": [
+    "Entity"
+  ]
+}

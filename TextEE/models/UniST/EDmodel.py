@@ -53,7 +53,10 @@ class UniSTModel(nn.Module):
         pos_texts = []
         neg_texts = []
         for tokens, triggers in zip(batch.batch_tokens, batch.batch_triggers):
-            for trigger in triggers:
+            sample_idxs = np.arange(len(triggers))
+            np.random.shuffle(sample_idxs)
+            triggers_ = [triggers[i] for i in sample_idxs[:self.config.max_sample_trigger]]
+            for trigger in triggers_:
                 text = tokens[:trigger[0]] + ["<t>"] + tokens[trigger[0]:trigger[1]]+ ["</t>"] + tokens[trigger[1]:]
                 text = " ".join(text)
                 sent_texts.append(text)

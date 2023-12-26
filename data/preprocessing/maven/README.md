@@ -1,6 +1,6 @@
 ## MAVEN
 
-MAVEN dataset comes from EMNLP 2020 paper [MAVEN: A Massive General Domain Event Detection Dataset](https://arxiv.org/abs/2004.13590). MAVEN targets the event detection task only. Since the testing ground truths are not public, our splits are generated with the training set and the validation set.
+The MAVEN dataset comes from EMNLP 2020 paper [MAVEN: A Massive General Domain Event Detection Dataset](https://arxiv.org/abs/2004.13590). MAVEN targets the event detection task only. Since the testing ground truths are not public, our splits are generated with the training set and the validation set.
 
 ### Preprocessing Steps
 

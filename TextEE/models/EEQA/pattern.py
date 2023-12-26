@@ -2594,4 +2594,232 @@ patterns = {
             },
         },
     },
+    "mlee": {
+        "arg": {
+            "Acetylation": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Binding": {
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+                "Theme2": "Theme 2 in [trigger]",
+            },
+            "Blood_vessel_development": {
+                "AtLoc": "At loc in [trigger]",
+                "FromLoc": "From loc in [trigger]",
+                "Theme": "Theme in [trigger]",
+            },
+            "Breakdown": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Catabolism": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Cell_division": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Cell_proliferation": {
+                "Theme": "Theme in [trigger]",
+            },
+            "DNA_methylation": {
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+            },
+            "Death": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Dephosphorylation": {
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+            },
+            "Development": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Dissociation": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Gene_expression": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Growth": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Localization": {
+                "AtLoc": "At loc in [trigger]",
+                "FromLoc": "From loc in [trigger]",
+                "Theme": "Theme in [trigger]",
+                "ToLoc": "To loc in [trigger]",
+            },
+            "Metabolism": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Negative_regulation": {
+                "CSite": "Csite in [trigger]",
+                "Cause": "Cause in [trigger]",
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+            },
+            "Pathway": {
+                "Participant": "Participant in [trigger]",
+                "Participant2": "Participant 2 in [trigger]",
+                "Participant3": "Participant 3 in [trigger]",
+                "Participant4": "Participant 4 in [trigger]",
+            },
+            "Phosphorylation": {
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+            },
+            "Planned_process": {
+                "Instrument": "Instrument in [trigger]",
+                "Instrument2": "Instrument 2 in [trigger]",
+                "Theme": "Theme in [trigger]",
+                "Theme2": "Theme 2 in [trigger]",
+            },
+            "Positive_regulation": {
+                "CSite": "Csite in [trigger]",
+                "Cause": "Cause in [trigger]",
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+                "Theme2": "Theme 2 in [trigger]",
+            },
+            "Protein_processing": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Regulation": {
+                "CSite": "Csite in [trigger]",
+                "Cause": "Cause in [trigger]",
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+            },
+            "Remodeling": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Reproduction": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Synthesis": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Transcription": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Translation": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Ubiquitination": {
+                "Theme": "Theme in [trigger]",
+            },
+        },
+    },
+    "genia2011": {
+        "arg": {
+            "Binding": {
+                "Site": "Site in [trigger]",
+                "Site2": "Site 2 in [trigger]",
+                "Theme": "Theme in [trigger]",
+                "Theme2": "Theme 2 in [trigger]",
+                "Theme3": "Theme 3 in [trigger]",
+                "Theme4": "Theme 4 in [trigger]",
+            },
+            "Gene_expression": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Localization": {
+                "AtLoc": "At loc in [trigger]",
+                "Theme": "Theme in [trigger]",
+                "ToLoc": "To loc in [trigger]",
+            },
+            "Negative_regulation": {
+                "CSite": "Csite in [trigger]",
+                "Cause": "Cause in [trigger]",
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+            },
+            "Phosphorylation": {
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+            },
+            "Positive_regulation": {
+                "CSite": "Csite in [trigger]",
+                "Cause": "Cause in [trigger]",
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+            },
+            "Protein_catabolism": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Regulation": {
+                "CSite": "Csite in [trigger]",
+                "Cause": "Cause in [trigger]",
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+            },
+            "Transcription": {
+                "Theme": "Theme in [trigger]",
+            },
+        },
+    },
+    "genia2013": {
+        "arg": {
+            "Acetylation": {
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+            },
+            "Binding": {
+                "Site": "Site in [trigger]",
+                "Site2": "Site 2 in [trigger]",
+                "Theme": "Theme in [trigger]",
+                "Theme2": "Theme 2 in [trigger]",
+            },
+            "Deacetylation": {
+                "Cause": "Cause in [trigger]",
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+            },
+            "Gene_expression": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Localization": {
+                "Theme": "Theme in [trigger]",
+                "ToLoc": "To loc in [trigger]",
+            },
+            "Negative_regulation": {
+                "CSite": "Csite in [trigger]",
+                "Cause": "Cause in [trigger]",
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+            },
+            "Phosphorylation": {
+                "Cause": "Cause in [trigger]",
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+            },
+            "Positive_regulation": {
+                "CSite": "Csite in [trigger]",
+                "Cause": "Cause in [trigger]",
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+            },
+            "Protein_catabolism": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Protein_modification": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Regulation": {
+                "CSite": "Csite in [trigger]",
+                "Cause": "Cause in [trigger]",
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+            },
+            "Transcription": {
+                "Theme": "Theme in [trigger]",
+            },
+            "Ubiquitination": {
+                "Cause": "Cause in [trigger]",
+                "Site": "Site in [trigger]",
+                "Theme": "Theme in [trigger]",
+            },
+        },
+    },
 }

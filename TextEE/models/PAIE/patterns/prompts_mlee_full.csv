@@ -1,0 +1,29 @@
+Acetylation:prompt start, Theme ( and Theme ) ,end
+Binding:prompt start, Site ( and Site ) Theme ( and Theme ) Theme2 ( and Theme2 ) ,end
+Blood.vessel.development:prompt start, AtLoc ( and AtLoc ) FromLoc ( and FromLoc ) Theme ( and Theme ) ,end
+Breakdown:prompt start, Theme ( and Theme ) ,end
+Catabolism:prompt start, Theme ( and Theme ) ,end
+Cell.division:prompt start, Theme ( and Theme ) ,end
+Cell.proliferation:prompt start, Theme ( and Theme ) ,end
+DNA.methylation:prompt start, Site ( and Site ) Theme ( and Theme ) ,end
+Death:prompt start, Theme ( and Theme ) ,end
+Dephosphorylation:prompt start, Site ( and Site ) Theme ( and Theme ) ,end
+Development:prompt start, Theme ( and Theme ) ,end
+Dissociation:prompt start, Theme ( and Theme ) ,end
+Gene.expression:prompt start, Theme ( and Theme ) ,end
+Growth:prompt start, Theme ( and Theme ) ,end
+Localization:prompt start, AtLoc ( and AtLoc ) FromLoc ( and FromLoc ) Theme ( and Theme ) ToLoc ( and ToLoc ) ,end
+Metabolism:prompt start, Theme ( and Theme ) ,end
+Negative.regulation:prompt start, CSite ( and CSite ) Cause ( and Cause ) Site ( and Site ) Theme ( and Theme ) ,end
+Pathway:prompt start, Participant ( and Participant ) Participant2 ( and Participant2 ) Participant3 ( and Participant3 ) Participant4 ( and Participant4 ) ,end
+Phosphorylation:prompt start, Site ( and Site ) Theme ( and Theme ) ,end
+Planned.process:prompt start, Instrument ( and Instrument ) Instrument2 ( and Instrument2 ) Theme ( and Theme ) Theme2 ( and Theme2 ) ,end
+Positive.regulation:prompt start, CSite ( and CSite ) Cause ( and Cause ) Site ( and Site ) Theme ( and Theme ) Theme2 ( and Theme2 ) ,end
+Protein.processing:prompt start, Theme ( and Theme ) ,end
+Regulation:prompt start, CSite ( and CSite ) Cause ( and Cause ) Site ( and Site ) Theme ( and Theme ) ,end
+Remodeling:prompt start, Theme ( and Theme ) ,end
+Reproduction:prompt start, Theme ( and Theme ) ,end
+Synthesis:prompt start, Theme ( and Theme ) ,end
+Transcription:prompt start, Theme ( and Theme ) ,end
+Translation:prompt start, Theme ( and Theme ) ,end
+Ubiquitination:prompt start, Theme ( and Theme ) ,end
