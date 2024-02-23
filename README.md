@@ -23,6 +23,7 @@ Please check mroe details our paper [A Reevaluation of Event Extraction: Past, P
 
 ## Updates
 
+- **[2023/12/26]** TextEE support three more datasets: MLEE, Genia2011, Genia2013!
 - **[2023/11/15]** We release TextEE, a framework for reevaluation and benchmark for event extraction. Feel free to contact us (khhuang@illinois.edu) if you want to contribute your models or datasets!
 
 ## Supported Datasets
