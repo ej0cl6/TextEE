@@ -1,15 +1,179 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from transformers import BertConfig, RobertaConfig, XLMRobertaConfig, BertModel, RobertaModel, XLMRobertaModel
+import numpy as np
+from .pattern import event_type_tags
+from transformers import BertConfig, RobertaConfig, BertModel, RobertaModel
 import ipdb
 
-class CRFTaggingEDModel(nn.Module):
+class ETCModel(nn.Module):
+    def __init__(self, config, tokenizer):
+        super().__init__()
+        self.config = config
+        self.tokenizer = tokenizer
+        
+        # base encoder
+        if self.config.pretrained_model_name.startswith('bert-'):
+            self.tokenizer.bos_token = self.tokenizer.cls_token
+            self.tokenizer.eos_token = self.tokenizer.sep_token
+            self.base_config = BertConfig.from_pretrained(self.config.pretrained_model_name, 
+                                                          cache_dir=self.config.cache_dir)
+            self.base_model = BertModel.from_pretrained(self.config.pretrained_model_name, 
+                                                        cache_dir=self.config.cache_dir, 
+                                                        output_hidden_states=True)
+        elif self.config.pretrained_model_name.startswith('roberta-'):
+            self.base_config = RobertaConfig.from_pretrained(self.config.pretrained_model_name, 
+                                                             cache_dir=self.config.cache_dir)
+            self.base_model = RobertaModel.from_pretrained(self.config.pretrained_model_name, 
+                                                           cache_dir=self.config.cache_dir, 
+                                                           output_hidden_states=True)
+        else:
+            raise ValueError(f"pretrained_model_name is not supported.")
+        
+        self.base_model.resize_token_embeddings(len(self.tokenizer))
+        self.linear = nn.Linear(self.base_config.hidden_size, 2, bias=True)
+        
+    def forward(self, batch):
+        res = self.tokenizer(batch.batch_etc_text, padding=True, return_tensors="pt")
+        input_ids = res["input_ids"].cuda()
+        attention_mask = res["attention_mask"].cuda()
+        outputs = self.base_model(input_ids, attention_mask=attention_mask, return_dict=True)
+        
+        outputs = self.linear(outputs['pooler_output'])
+        labels = torch.tensor(batch.batch_etc_label).cuda()
+        loss = F.cross_entropy(outputs, labels)
+        
+        return loss
+    
+    def predict(self, batch):
+        self.eval()
+
+        with torch.no_grad():
+            res = self.tokenizer(batch.batch_etc_text, padding=True, return_tensors="pt")
+            input_ids = res["input_ids"].cuda()
+            attention_mask = res["attention_mask"].cuda()
+            outputs = self.base_model(input_ids, attention_mask=attention_mask, return_dict=True)
+            outputs = self.linear(outputs['pooler_output'])
+        preds = outputs.argmax(dim=1).cpu().numpy()
+        self.train()
+            
+        return preds
+        
+class ETRModel(nn.Module):
     def __init__(self, config, tokenizer, type_set):
         super().__init__()
         self.config = config
         self.tokenizer = tokenizer
         self.type_set = type_set
+        self.label_list = [x for x in sorted(self.type_set["trigger"])]
+        self.label_set = set([x for x in sorted(self.type_set["trigger"])])
+        self.sent_start = "[SENT]"
+        self.event_start = "[EVENT]"
+        
+        # base encoder
+        if self.config.pretrained_model_name.startswith('bert-'):
+            self.tokenizer.bos_token = self.tokenizer.cls_token
+            self.tokenizer.eos_token = self.tokenizer.sep_token
+            self.base_config = BertConfig.from_pretrained(self.config.pretrained_model_name, 
+                                                          cache_dir=self.config.cache_dir)
+            self.base_model = BertModel.from_pretrained(self.config.pretrained_model_name, 
+                                                        cache_dir=self.config.cache_dir, 
+                                                        output_hidden_states=True)
+        elif self.config.pretrained_model_name.startswith('roberta-'):
+            self.base_config = RobertaConfig.from_pretrained(self.config.pretrained_model_name, 
+                                                             cache_dir=self.config.cache_dir)
+            self.base_model = RobertaModel.from_pretrained(self.config.pretrained_model_name, 
+                                                           cache_dir=self.config.cache_dir, 
+                                                           output_hidden_states=True)
+        else:
+            raise ValueError(f"pretrained_model_name is not supported.")
+        
+        self.base_model.resize_token_embeddings(len(self.tokenizer))
+        self.linear = nn.Linear(self.base_config.hidden_size, self.config.etr_linear_hidden_num, bias=False)
+        
+    def process_data(self, batch):
+        
+        batch_texts = []
+        batch_pos = []
+        batch_neg = []
+        
+        for tokens, triggers in zip(batch.batch_tokens, batch.batch_triggers):
+            idxs = np.arange(len(triggers))
+            np.random.shuffle(idxs)
+            pos_examples = [f"{self.event_start} {event_type_tags[self.config.dataset][triggers[i][2]]}" for i in idxs]
+            pos_set = set(pos_examples)
+            pos_examples = pos_examples[:self.config.etr_max_pos]
+                
+            neg_examples = list(self.label_set - pos_set)
+            np.random.shuffle(neg_examples)
+            neg_examples = [f"{self.event_start} {event_type_tags[self.config.dataset][t]}" for t in neg_examples[:self.config.etr_max_neg]]
+            if len(neg_examples) < self.config.etr_max_neg:
+                neg_examples += [""]*(self.config.etr_max_neg - len(neg_examples))
+            
+            batch_texts.append(" ".join([self.sent_start] + tokens))
+            batch_pos.append(pos_examples)
+            batch_neg.append(neg_examples)
+            
+            
+        return batch_texts, batch_pos, batch_neg
+
+    def embed(self, texts):
+        res = self.tokenizer(texts, padding=True, return_tensors="pt")
+        input_ids = res["input_ids"].cuda()
+        attention_mask = res["attention_mask"].cuda()
+        outputs = self.base_model(input_ids, attention_mask=attention_mask, return_dict=True)
+        embeddings = outputs["last_hidden_state"]
+        embeddings = self.linear(embeddings)
+        embeddings = nn.functional.normalize(embeddings, p=2, dim=2) 
+        return embeddings
+    
+    def forward(self, batch):
+        # process data
+        batch_texts, batch_pos, batch_neg = self.process_data(batch)
+        
+        batch_size = len(batch_texts)
+        text_embeddings = self.embed(batch_texts)
+        
+        loss = 0
+        for bid in range(batch_size):
+            pos_texts = batch_pos[bid]
+            neg_texts = batch_neg[bid]
+            et_embeddings = self.embed(pos_texts+neg_texts)
+            scores = (text_embeddings[bid].unsqueeze(0) @ et_embeddings.permute(0, 2, 1)).max(2).values.sum(1)
+            pos_scores = scores[:len(pos_texts)]
+            neg_scores = scores[len(pos_texts):]
+            max_neg_score = neg_scores.max()
+            loss += torch.max(torch.tensor(.0).cuda(), (torch.tensor(self.config.etr_margin) - pos_scores + max_neg_score)).mean()
+        
+        return loss
+    
+    def predict(self, batch):
+        self.eval()
+        with torch.no_grad():
+            batch_texts = [" ".join([self.sent_start] + tokens) for tokens in batch.batch_tokens]
+            batch_size = len(batch_texts)
+            text_embeddings = self.embed(batch_texts)
+            scores = torch.zeros(batch_size, len(self.label_list))
+            for i, label in enumerate(self.label_list):
+                et_embeddings = self.embed([event_type_tags[self.config.dataset][label]]).repeat(batch_size, 1, 1)
+                scores[:, i] = (text_embeddings @ et_embeddings.permute(0, 2, 1)).max(2).values.sum(1)
+                
+            arg_idxs = scores.argsort(dim=1, descending=True).cpu().numpy()
+        
+        preds = []
+        for arg_idx in arg_idxs:
+            p = [self.label_list[a] for a in arg_idx[:self.config.etr_max_select]]
+            preds.append(p)
+                
+        self.train()
+            
+        return preds
+
+class TIModel(nn.Module):
+    def __init__(self, config, tokenizer):
+        super().__init__()
+        self.config = config
+        self.tokenizer = tokenizer
         self.generate_tagging_vocab()
         
         # base encoder
@@ -27,62 +191,54 @@ class CRFTaggingEDModel(nn.Module):
             self.base_model = RobertaModel.from_pretrained(self.config.pretrained_model_name, 
                                                            cache_dir=self.config.cache_dir, 
                                                            output_hidden_states=True)
-        elif self.config.pretrained_model_name.startswith('xlm-'):
-            self.base_config = XLMRobertaConfig.from_pretrained(self.config.pretrained_model_name, 
-                                                                cache_dir=self.config.cache_dir)
-            self.base_model = XLMRobertaModel.from_pretrained(self.config.pretrained_model_name, 
-                                                              cache_dir=self.config.cache_dir, 
-                                                              output_hidden_states=True)
         else:
             raise ValueError(f"pretrained_model_name is not supported.")
         
         self.base_model.resize_token_embeddings(len(self.tokenizer))
         self.base_model_dim = self.base_config.hidden_size
-        self.base_model_dropout = nn.Dropout(p=self.config.base_model_dropout)
+        self.base_model_dropout = nn.Dropout(p=self.config.ti_base_model_dropout)
         
         # local classifiers
-        self.dropout = nn.Dropout(p=self.config.linear_dropout)
+        self.dropout = nn.Dropout(p=self.config.ti_linear_dropout)
         feature_dim = self.base_model_dim
 
-        self.trigger_label_ffn = Linears([feature_dim, self.config.linear_hidden_num, len(self.label_stoi["trigger"])],
-                                      dropout_prob=self.config.linear_dropout, 
-                                      bias=self.config.linear_bias, 
-                                      activation=self.config.linear_activation)
-        if self.config.use_crf:
-            self.trigger_crf = CRF(self.label_stoi["trigger"], bioes=False)
+        self.span_label_ffn = Linears([feature_dim, self.config.ti_linear_hidden_num, len(self.label_stoi)],
+                                      dropout_prob=self.config.ti_linear_dropout, 
+                                      bias=self.config.ti_linear_bias, 
+                                      activation=self.config.ti_linear_activation)
+        if self.config.ti_use_crf:
+            self.span_crf = CRF(self.label_stoi, bioes=False)
             
     def generate_tagging_vocab(self):
         prefix = ['B', 'I']
-        trigger_label_stoi = {'O': 0}
-        for t in sorted(self.type_set["trigger"]):
+        span_label_stoi = {'O': 0}
+        for t in ["Span"]:
             for p in prefix:
-                trigger_label_stoi['{}-{}'.format(p, t)] = len(trigger_label_stoi)
+                span_label_stoi['{}-{}'.format(p, t)] = len(span_label_stoi)
 
-        self.label_stoi = {"trigger": trigger_label_stoi}
+        self.label_stoi = span_label_stoi
+        self.type_stoi = {t: i for i, t in enumerate(["Span"])}
         
-        trigger_type_stoi = {t: i for i, t in enumerate(sorted(self.type_set["trigger"]))}
-        self.type_stoi = {"trigger": trigger_type_stoi}
-        
-    def get_trigger_seqlabels(self, triggers, token_num, specify_trigger=None):
+    def get_span_seqlabels(self, spans, token_num, specify_span=None):
         labels = ['O'] * token_num
         count = 0
-        for trigger in triggers:
-            start, end = trigger[0], trigger[1]
+        for span in spans:
+            start, end = span[0], span[1]
             if end > token_num:
                 continue
-            trigger_type = trigger[2]
+            span_type = span[2]
 
-            if specify_trigger is not None:
-                if trigger_type != specify_trigger:
+            if specify_span is not None:
+                if span_type != specify_span:
                     continue
 
             if any([labels[i] != 'O' for i in range(start, end)]):
                 count += 1
                 continue
 
-            labels[start] = 'B-{}'.format(trigger_type)
+            labels[start] = 'B-{}'.format(span_type)
             for i in range(start + 1, end):
-                labels[i] = 'I-{}'.format(trigger_type)
+                labels[i] = 'I-{}'.format(span_type)
                 
         return labels
     
@@ -182,12 +338,12 @@ class CRFTaggingEDModel(nn.Module):
     def process_data(self, batch):
         enc_idxs = []
         enc_attn = []
-        trigger_seqidxs = []
+        span_seqidxs = []
         token_lens = []
         token_nums = []
         max_token_num = max(batch.batch_token_num)
         
-        for tokens, pieces, triggers, token_len, token_num in zip(batch.batch_tokens, batch.batch_pieces, batch.batch_triggers, 
+        for tokens, pieces, spans, token_len, token_num in zip(batch.batch_tokens, batch.batch_pieces, batch.batch_spans, 
                                                                       batch.batch_token_lens, batch.batch_token_num):
             
             piece_id = self.tokenizer.convert_tokens_to_ids(pieces)
@@ -196,20 +352,20 @@ class CRFTaggingEDModel(nn.Module):
             enc_idxs.append(enc_idx)
             enc_attn.append([1]*len(enc_idx))  
             
-            trigger_seq = self.get_trigger_seqlabels(triggers, len(tokens))
+            span_seq = self.get_span_seqlabels(spans, len(tokens))
             token_lens.append(token_len)
             token_nums.append(token_num)
-            if self.config.use_crf:
-                trigger_seqidxs.append([self.label_stoi["trigger"][s] for s in trigger_seq] + [0] * (max_token_num-len(tokens)))
+            if self.config.ti_use_crf:
+                span_seqidxs.append([self.label_stoi[s] for s in span_seq] + [0] * (max_token_num-len(tokens)))
             else:
-                trigger_seqidxs.append([self.label_stoi["trigger"][s] for s in trigger_seq] + [-100] * (max_token_num-len(tokens)))
+                span_seqidxs.append([self.label_stoi[s] for s in span_seq] + [-100] * (max_token_num-len(tokens)))
         max_len = max([len(enc_idx) for enc_idx in enc_idxs])
         enc_idxs = torch.LongTensor([enc_idx + [self.tokenizer.convert_tokens_to_ids(self.tokenizer.pad_token)]*(max_len-len(enc_idx)) for enc_idx in enc_idxs])
         enc_attn = torch.LongTensor([enc_att + [0]*(max_len-len(enc_att)) for enc_att in enc_attn])
         enc_idxs = enc_idxs.cuda()
         enc_attn = enc_attn.cuda()
-        trigger_seqidxs = torch.cuda.LongTensor(trigger_seqidxs)
-        return enc_idxs, enc_attn, trigger_seqidxs, token_lens, torch.cuda.LongTensor(token_nums)
+        span_seqidxs = torch.cuda.LongTensor(span_seqidxs)
+        return enc_idxs, enc_attn, span_seqidxs, token_lens, torch.cuda.LongTensor(token_nums)
         
     def encode(self, piece_idxs, attention_masks, token_lens):
         """Encode input sequences with BERT
@@ -220,14 +376,14 @@ class CRFTaggingEDModel(nn.Module):
         batch_size, _ = piece_idxs.size()
         all_base_model_outputs = self.base_model(piece_idxs, attention_mask=attention_masks)
         base_model_outputs = all_base_model_outputs[0]
-        if self.config.multi_piece_strategy == 'first':
+        if self.config.ti_multi_piece_strategy == 'first':
             # select the first piece for multi-piece words
             offsets = token_lens_to_offsets(token_lens)
             offsets = piece_idxs.new(offsets) # batch x max_token_num
             # + 1 because the first vector is for [CLS]
             offsets = offsets.unsqueeze(-1).expand(batch_size, -1, self.bert_dim) + 1
             base_model_outputs = torch.gather(base_model_outputs, 1, offsets)
-        elif self.config.multi_piece_strategy == 'average':
+        elif self.config.ti_multi_piece_strategy == 'average':
             # average all pieces for multi-piece words
             idxs, masks, token_num, token_len = self.token_lens_to_idxs(token_lens)
             idxs = piece_idxs.new(idxs).unsqueeze(-1).expand(batch_size, -1, self.base_model_dim) + 1
@@ -243,38 +399,38 @@ class CRFTaggingEDModel(nn.Module):
     def span_id(self, base_model_outputs, token_nums, target=None, predict=False):
         loss = 0.0
         entities = None
-        entity_label_scores = self.trigger_label_ffn(base_model_outputs)
-        if self.config.use_crf:
-            entity_label_scores_ = self.trigger_crf.pad_logits(entity_label_scores)
+        entity_label_scores = self.span_label_ffn(base_model_outputs)
+        if self.config.ti_use_crf:
+            entity_label_scores_ = self.span_crf.pad_logits(entity_label_scores)
             if predict:
-                _, entity_label_preds = self.trigger_crf.viterbi_decode(entity_label_scores_,
+                _, entity_label_preds = self.span_crf.viterbi_decode(entity_label_scores_,
                                                                         token_nums)
                 entities = self.tag_paths_to_spans(entity_label_preds, 
                                                    token_nums, 
-                                                   self.label_stoi["trigger"])
+                                                   self.label_stoi)
             else: 
-                entity_label_loglik = self.trigger_crf.loglik(entity_label_scores_, 
+                entity_label_loglik = self.span_crf.loglik(entity_label_scores_, 
                                                            target, 
                                                            token_nums)
                 loss -= entity_label_loglik.mean()
         else:
             if predict:
                 entity_label_preds = torch.argmax(entity_label_scores, dim=-1)
-                entities = self.tag_paths_to_spans(entity_label_preds, 
+                entities = tag_paths_to_spans(entity_label_preds, 
                                               token_nums, 
-                                              self.label_stoi["trigger"])
+                                              self.label_stoi)
             else:
-                loss = F.cross_entropy(entity_label_scores.view(-1, len(self.label_stoi["trigger"])), target.view(-1))
+                loss = F.cross_entropy(entity_label_scores.view(-1, self.span_label_num), target.view(-1))
 
         return loss, entities
 
     def forward(self, batch):
         # process data
-        enc_idxs, enc_attn, trigger_seqidxs, token_lens, token_nums = self.process_data(batch)
+        enc_idxs, enc_attn, span_seqidxs, token_lens, token_nums = self.process_data(batch)
         
         # encoding
         base_model_outputs = self.encode(enc_idxs, enc_attn, token_lens)
-        span_id_loss, _ = self.span_id(base_model_outputs, token_nums, trigger_seqidxs, predict=False)
+        span_id_loss, _ = self.span_id(base_model_outputs, token_nums, span_seqidxs, predict=False)
         loss = span_id_loss
 
         return loss
@@ -287,9 +443,9 @@ class CRFTaggingEDModel(nn.Module):
             
             # encoding
             base_model_outputs = self.encode(enc_idxs, enc_attn, token_lens)
-            _, triggers = self.span_id(base_model_outputs, token_nums, predict=True)
+            _, spans = self.span_id(base_model_outputs, token_nums, predict=True)
         self.train()
-        return triggers
+        return spans
 
     
 

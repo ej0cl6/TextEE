@@ -64,7 +64,7 @@ class UniSTEDTrainer(BasicTrainer):
     def process_data(self, data):
         assert self.tokenizer, "Please load model and tokneizer before processing data!"
         
-        logger.info("Removing overlapping triggers and over-length examples")
+        logger.info("Removing over-length examples")
         
         # greedily remove overlapping triggers
         n_total = 0
@@ -100,7 +100,7 @@ class UniSTEDTrainer(BasicTrainer):
             
             new_data.append(new_dt)
                 
-        logger.info(f"There are {len(new_data)}/{n_total} ED instances after removing overlapping triggers and over-length examples")
+        logger.info(f"There are {len(new_data)}/{n_total} ED instances after removing over-length examples")
 
         return new_data
 
@@ -123,8 +123,8 @@ class UniSTEDTrainer(BasicTrainer):
         ]
         span_optimizer = AdamW(params=span_param_groups)
         span_scheduler = get_linear_schedule_with_warmup(span_optimizer,
-                                                    num_warmup_steps=train_batch_num*self.config.warmup_epoch,
-                                                    num_training_steps=train_batch_num*self.config.max_epoch)
+                                                    num_warmup_steps=train_batch_num*self.config.span_warmup_epoch,
+                                                    num_training_steps=train_batch_num*self.config.span_max_epoch)
         
         
         span_best_scores = {"trigger_id": {"f1": 0.0}}
@@ -136,7 +136,7 @@ class UniSTEDTrainer(BasicTrainer):
             # training step
             progress = tqdm.tqdm(total=train_batch_num, ncols=100, desc='Train Span {}'.format(epoch))
             
-            self.model.train()
+            self.span_model.train()
             span_optimizer.zero_grad()
             cummulate_span_loss = []
             for batch_idx, batch in enumerate(DataLoader(internal_train_data, batch_size=self.config.span_train_batch_size // self.config.span_accumulate_step, 

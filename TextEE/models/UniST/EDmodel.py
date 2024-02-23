@@ -187,17 +187,17 @@ class SpanModel(nn.Module):
         
         self.base_model.resize_token_embeddings(len(self.tokenizer))
         self.base_model_dim = self.base_config.hidden_size
-        self.base_model_dropout = nn.Dropout(p=self.config.base_model_dropout)
+        self.base_model_dropout = nn.Dropout(p=self.config.span_base_model_dropout)
         
         # local classifiers
-        self.dropout = nn.Dropout(p=self.config.linear_dropout)
+        self.dropout = nn.Dropout(p=self.config.span_linear_dropout)
         feature_dim = self.base_model_dim
 
-        self.span_label_ffn = Linears([feature_dim, self.config.linear_hidden_num, len(self.label_stoi)],
-                                      dropout_prob=self.config.linear_dropout, 
-                                      bias=self.config.linear_bias, 
-                                      activation=self.config.linear_activation)
-        if self.config.use_crf:
+        self.span_label_ffn = Linears([feature_dim, self.config.span_linear_hidden_num, len(self.label_stoi)],
+                                      dropout_prob=self.config.span_linear_dropout, 
+                                      bias=self.config.span_linear_bias, 
+                                      activation=self.config.span_linear_activation)
+        if self.config.span_use_crf:
             self.span_crf = CRF(self.label_stoi, bioes=False)
             
     def generate_tagging_vocab(self):
@@ -346,7 +346,7 @@ class SpanModel(nn.Module):
             span_seq = self.get_span_seqlabels(spans, len(tokens))
             token_lens.append(token_len)
             token_nums.append(token_num)
-            if self.config.use_crf:
+            if self.config.span_use_crf:
                 span_seqidxs.append([self.label_stoi[s] for s in span_seq] + [0] * (max_token_num-len(tokens)))
             else:
                 span_seqidxs.append([self.label_stoi[s] for s in span_seq] + [-100] * (max_token_num-len(tokens)))
@@ -367,14 +367,14 @@ class SpanModel(nn.Module):
         batch_size, _ = piece_idxs.size()
         all_base_model_outputs = self.base_model(piece_idxs, attention_mask=attention_masks)
         base_model_outputs = all_base_model_outputs[0]
-        if self.config.multi_piece_strategy == 'first':
+        if self.config.span_multi_piece_strategy == 'first':
             # select the first piece for multi-piece words
             offsets = token_lens_to_offsets(token_lens)
             offsets = piece_idxs.new(offsets) # batch x max_token_num
             # + 1 because the first vector is for [CLS]
             offsets = offsets.unsqueeze(-1).expand(batch_size, -1, self.bert_dim) + 1
             base_model_outputs = torch.gather(base_model_outputs, 1, offsets)
-        elif self.config.multi_piece_strategy == 'average':
+        elif self.config.span_multi_piece_strategy == 'average':
             # average all pieces for multi-piece words
             idxs, masks, token_num, token_len = self.token_lens_to_idxs(token_lens)
             idxs = piece_idxs.new(idxs).unsqueeze(-1).expand(batch_size, -1, self.base_model_dim) + 1
@@ -391,7 +391,7 @@ class SpanModel(nn.Module):
         loss = 0.0
         entities = None
         entity_label_scores = self.span_label_ffn(base_model_outputs)
-        if self.config.use_crf:
+        if self.config.span_use_crf:
             entity_label_scores_ = self.span_crf.pad_logits(entity_label_scores)
             if predict:
                 _, entity_label_preds = self.span_crf.viterbi_decode(entity_label_scores_,

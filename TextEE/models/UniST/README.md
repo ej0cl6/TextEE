@@ -1,6 +1,6 @@
 ## UniST
 
-We implement the model from [QUnified Semantic Typing with Meaningful Label Inference](https://arxiv.org/abs/2205.01826). This model suports event detection. The code is adapted from the original [codebase](https://github.com/luka-group/unist). 
+We implement the model from [Unified Semantic Typing with Meaningful Label Inference](https://arxiv.org/abs/2205.01826). This model suports event detection. The code is adapted from the original [codebase](https://github.com/luka-group/unist). 
 
 Since the origin model supports semantic typing only, we learn an additional span recognition model during training and use the predicted trigger spans for trigger span typing during testing.
 

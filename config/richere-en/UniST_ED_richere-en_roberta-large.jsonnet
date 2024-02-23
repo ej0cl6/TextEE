@@ -22,14 +22,6 @@ local pretrained_model_alias = {
     
     // model config
     "pretrained_model_name": pretrained_model_name,
-    "base_model_dropout": 0.2,
-    "use_crf": true,
-    "type_feature_num": 100, 
-    "linear_hidden_num": 150,
-    "linear_dropout": 0.2,
-    "linear_bias": true, 
-    "linear_activation": "relu",
-    "multi_piece_strategy": "average", 
     "max_length": 350, 
     "margin": 0.1,
     "max_sample_trigger": 20, 
@@ -46,7 +38,7 @@ local pretrained_model_alias = {
     "base_model_weight_decay": 1e-05,
     "grad_clipping": 5.0,
     
-    // sapn model config
+    // span model config
     "span_base_model_dropout": 0.2,
     "span_use_crf": true,
     "span_type_feature_num": 100, 
@@ -56,7 +48,7 @@ local pretrained_model_alias = {
     "span_linear_activation": "relu",
     "span_multi_piece_strategy": "average", 
     
-    // sapn train config
+    // span train config
     "span_max_epoch": 30,
     "span_warmup_epoch": 5,
     "span_accumulate_step": 1,

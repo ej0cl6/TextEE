@@ -22,14 +22,6 @@ local pretrained_model_alias = {
     
     // model config
     "pretrained_model_name": pretrained_model_name,
-    "base_model_dropout": 0.2,
-    "use_crf": true,
-    "type_feature_num": 100, 
-    "linear_hidden_num": 150,
-    "linear_dropout": 0.2,
-    "linear_bias": true, 
-    "linear_activation": "relu",
-    "multi_piece_strategy": "average", 
     "max_length": 400, 
     "margin": 0.1,
     "max_sample_trigger": 20, 

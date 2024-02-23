@@ -26,6 +26,7 @@ TRAINER_MAP = {
     ("Degree", "ED"): DegreeEDTrainer,
     ("Degree", "EAE"): DegreeEAETrainer,
     ("UniST", "ED"): UniSTEDTrainer,
+    ("CEDAR", "ED"): CEDAREDTrainer,
     ("PAIE", "EAE"): PAIEEAETrainer, 
     ("XGear", "EAE"): XGearEAETrainer,
     ("BartGen", "EAE"): BartGenEAETrainer,
