@@ -19,11 +19,12 @@ TextEE is a standardized, fair, and reproducible benchmark for evaluating event 
 - 10+ implemented event extraction approaches published in recent years.
 - Comprehensive reevaluation results for future references. 
 
-Please check mroe details our paper [A Reevaluation of Event Extraction: Past, Present, and Future Challenges](https://arxiv.org/abs/2311.09562). We will keep adding new datasets and new models!
+Please check mroe details our paper [TextEE: Benchmark, Reevaluation, Reflections, and Future Challenges in Event Extraction](https://arxiv.org/abs/2311.09562). We will keep adding new datasets and new models!
 
 ## Updates
 
-- **[2023/12/26]** TextEE support three more datasets: MLEE, Genia2011, Genia2013!
+- **[2024/02/23]** TextEE supports the CEDAR approach now!
+- **[2023/12/26]** TextEE supports three more datasets: MLEE, Genia2011, Genia2013!
 - **[2023/11/15]** We release TextEE, a framework for reevaluation and benchmark for event extraction. Feel free to contact us (khhuang@illinois.edu) if you want to contribute your models or datasets!
 
 ## Supported Datasets
@@ -192,6 +193,12 @@ Please check mroe details our paper [A Reevaluation of Event Extraction: Past, P
   <td> NAACL 2022 </td>
 </tr>
 <tr>
+  <td><code>CEDAR</code></td>
+  <td> ED</td>
+  <td> GLEN: General-Purpose Event Detection for Thousands of Types </td>
+  <td> EMNLP 2023 </td>
+</tr>
+<tr>
   <td><code>BART-Gen</code></td>
   <td> EAE</td>
   <td> Document-Level Event Argument Extraction by Conditional Generation </td>
@@ -309,7 +316,7 @@ python TextEE/evaluate_pipeline.py --task E2E --data [eval_data] --ed_model [sav
                   Kai{-}Wei Chang and
                   Nanyun Peng and
                   Heng Ji},
-  title        = {A Reevaluation of Event Extraction: Past, Present, and Future Challenges},
+  title        = {TextEE: Benchmark, Reevaluation, Reflections, and Future Challenges in Event Extraction},
   journal      = {arXiv preprint arXiv:2311.09562},
   year         = {2023},
 }
