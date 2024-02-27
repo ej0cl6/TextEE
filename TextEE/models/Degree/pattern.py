@@ -267,7 +267,7 @@ patterns = {
             "keywords": ['named', 'nomination', 'nominate'],
             "event description": "The event is related to a person being nominated for a position.",
             "ED template": "Event trigger is {Trigger}.",
-            "EAE template": "{ROLE_Person} was nominated by {ROLE_Entity} to do a job.",
+            "EAE template": "{ROLE_Person} was nominated by {ROLE_Agent} to do a job.",
             "valid roles": ["Person", "Agent"], 
         },  
         "Personnel:Start-Position": {
