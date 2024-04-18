@@ -260,6 +260,7 @@ pip install
   - amrlib 0.7.1
   - cached_property 1.5.2
   - typing-extensions 4.4.0
+  - penman==1.2.2
 ```
    
   Alternatively, you can use the following command.
