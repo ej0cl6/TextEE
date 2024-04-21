@@ -321,8 +321,6 @@ class DegreeEDTrainer(BasicTrainer):
     
     def predict(self, data, **kwargs):
         assert self.tokenizer and self.model
-        
-        internal_data = self.process_data_for_testing(data)
         predictions = self.internal_predict(internal_data, split="Test")
         
         return predictions
