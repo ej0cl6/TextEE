@@ -23,9 +23,10 @@ Please check mroe details our paper [TextEE: Benchmark, Reevaluation, Reflection
 
 ## Updates
 
-- **[2024/02/23]** TextEE supports the CEDAR approach now!
-- **[2023/12/26]** TextEE supports three more datasets: MLEE, Genia2011, Genia2013!
-- **[2023/11/15]** We release TextEE, a framework for reevaluation and benchmark for event extraction. Feel free to contact us (khhuang@illinois.edu) if you want to contribute your models or datasets!
+- **[04/21/2024]** TextEE supports two more datasets: SPEED and MUC-4.
+- **[02/23/2024]** TextEE supports the CEDAR approach now.
+- **[12/26/2023]** TextEE supports three more datasets: MLEE, Genia2011, Genia2013.
+- **[11/15/2023]** We release TextEE, a framework for reevaluation and benchmark for event extraction. Feel free to contact us (khhuang@illinois.edu) if you want to contribute your models or datasets!
 
 ## Supported Datasets
 
@@ -104,6 +105,18 @@ Please check mroe details our paper [TextEE: Benchmark, Reevaluation, Reflection
   <td> ED </td>
   <td> MAVEN: A Massive General Domain Event Detection Dataset </td>
   <td> EMNLP 2020 </td>
+</tr>
+<tr>
+  <td><code>SPPED</code></td>
+  <td> ED </td>
+  <td> Event Detection from Social Media for Epidemic Prediction </td>
+  <td> NAACL 2024 </td>
+</tr>
+<tr>
+  <td><code>MUC-4</code></td>
+  <td> EAE </td>
+  <td> Fourth Message Understanding Conference </td>
+  <td> MUC-4 1992 </td>
 </tr>
 <tr>
   <td><code>RAMS</code></td>
