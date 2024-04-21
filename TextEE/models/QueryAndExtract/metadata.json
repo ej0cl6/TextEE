@@ -838,6 +838,15 @@
         "Regulation": ["CSite", "Cause", "Site", "Theme"],
         "Transcription": ["Theme"],
         "Ubiquitination": ["Cause", "Site", "Theme"]
+    },
+    "speed": {
+        "control": [], 
+        "cure": [], 
+        "death": [], 
+        "infect": [], 
+        "prevent": [], 
+        "spread": [], 
+        "symptom": []
     }
 }
 

@@ -5088,6 +5088,67 @@ patterns = {
             "valid roles": ['Cause', 'Site', 'Theme'],
         },
     },
+    "speed": {
+        "control": {
+            "event type": "Control",
+            "keywords": [],
+            "event description": "The event is related to control.",
+            "ED template": "Event trigger is {Trigger}.",
+            "valid roles": [],
+        },
+        "cure": {
+            "event type": "Cure",
+            "keywords": [],
+            "event description": "The event is related to cure.",
+            "ED template": "Event trigger is {Trigger}.",
+            "valid roles": [],
+        },
+        "death": {
+            "event type": "Death",
+            "keywords": [],
+            "event description": "The event is related to death.",
+            "ED template": "Event trigger is {Trigger}.",
+            "valid roles": [],
+        },
+        "infect": {
+            "event type": "Infect",
+            "keywords": [],
+            "event description": "The event is related to infect.",
+            "ED template": "Event trigger is {Trigger}.",
+            "valid roles": [],
+        },
+        "prevent": {
+            "event type": "Prevent",
+            "keywords": [],
+            "event description": "The event is related to prevent.",
+            "ED template": "Event trigger is {Trigger}.",
+            "valid roles": [],
+        },
+        "spread": {
+            "event type": "Spread",
+            "keywords": [],
+            "event description": "The event is related to spread.",
+            "ED template": "Event trigger is {Trigger}.",
+            "valid roles": [],
+        },
+        "symptom": {
+            "event type": "Symptom",
+            "keywords": [],
+            "event description": "The event is related to symptom.",
+            "ED template": "Event trigger is {Trigger}.",
+            "valid roles": [],
+        },
+    },
+    "muc4": {
+        "Dummy": {
+            "event type": "Dummy",
+            "keywords": [],
+            "event description": "This is a event.",
+            "ED template": "Event trigger is {Trigger}.",
+            "EAE template": "PerpInd {ROLE_PerpInd} PerpOrg {ROLE_PerpOrg} Target {ROLE_Target} Victim {ROLE_Victim} Weapon {ROLE_Weapon}",
+            "valid roles": ['PerpInd', 'PerpOrg', 'Target', 'Victim', 'Weapon'],
+        },
+    },
 }
 
 ROLE_PH_MAP = {
@@ -5595,4 +5656,13 @@ ROLE_PH_MAP = {
         "ROLE_Theme2": "some theme 2",
         "ROLE_ToLoc": "some to loc",
     },
+    "speed": {
+    },
+    "muc4": {
+        "ROLE_PerpInd": "some person",
+        "ROLE_PerpOrg": "some organization", 
+        "ROLE_Target": "some target",
+        "ROLE_Victim": "some victim", 
+        "ROLE_Weapon": "some weapon",
+    }, 
 }

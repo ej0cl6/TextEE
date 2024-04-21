@@ -1,0 +1,17 @@
+{
+  "PerpInd": [
+    "Entity"
+  ],
+  "PerpOrg": [
+    "Entity"
+  ],
+  "Target": [
+    "Entity"
+  ],
+  "Victim": [
+    "Entity"
+  ],
+  "Weapon": [
+    "Entity"
+  ]
+}

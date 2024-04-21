@@ -2057,4 +2057,10 @@ patterns = {
             "roles": ['Cause', 'Site', 'Theme'],
         },
     },
+    "muc4": {
+        "Dummy": {
+            "template": "<arg1> person <arg2> organization <arg3> target <arg4> victim <arg5> weapon",
+            "roles": ['PerpInd', 'PerpOrg', 'Target', 'Victim', 'Weapon'],
+        },
+    },
 }

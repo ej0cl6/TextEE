@@ -1,0 +1,252 @@
+import os, json
+import numpy as np
+from argparse import ArgumentParser
+from tqdm import tqdm
+from collections import defaultdict
+from pprint import pprint
+import ipdb
+
+WINDOW = 480
+
+def read_docs(path):
+    all_objs = []
+    with open(os.path.join(path, "train.json")) as fp:
+        lines = fp.readlines()
+    objs = [json.loads(l) for l in lines]
+    all_objs.extend(objs)
+    
+    with open(os.path.join(path, "dev.json")) as fp:
+        lines = fp.readlines()
+    objs = [json.loads(l) for l in lines]
+    all_objs.extend(objs)
+    
+    with open(os.path.join(path, "test.json")) as fp:
+        lines = fp.readlines()
+    objs = [json.loads(l) for l in lines]
+    all_objs.extend(objs)
+    
+    return all_objs
+
+def get_split(objs, split, token_map):
+    
+    with open(os.path.join(split, "train.txt")) as fp:
+        lines = fp.readlines()
+        train_doc_ids = set([l.strip() for l in lines])
+        
+    with open(os.path.join(split, "dev.txt")) as fp:
+        lines = fp.readlines()
+        dev_doc_ids = set([l.strip() for l in lines])
+        
+    with open(os.path.join(split, "test.txt")) as fp:
+        lines = fp.readlines()
+        test_doc_ids = set([l.strip() for l in lines])
+    
+    train_objs = []
+    dev_objs = []
+    test_objs = []
+    
+    for obj in objs:
+        if obj["docid"] in train_doc_ids:
+            train_objs.append(obj)
+        if obj["docid"] in dev_doc_ids:
+            dev_objs.append(obj)
+        if obj["docid"] in test_doc_ids:
+            test_objs.append(obj)
+    
+    train_objs.sort(key=lambda x: x["docid"])
+    dev_objs.sort(key=lambda x: x["docid"])
+    test_objs.sort(key=lambda x: x["docid"])
+    
+    return train_objs, dev_objs, test_objs
+
+def convert_format(objs, token_map, seg_map):
+    
+    data = []
+    n_drop_event = 0
+    n_drop_arg = 0
+    for obj in tqdm(objs, ncols=100):
+        
+        text_tokens = [[obj["doctext"][si:ei] for si, ei in sent] for sent in token_map[obj["docid"]]]
+        n_sent = len(text_tokens)
+        sent_lens = [len(s) for s in text_tokens]
+        
+        sents = seg_map[obj["docid"]]
+        n_seg = len(sents)
+        
+        entity_mentions = defaultdict(list)
+        event_mentions = defaultdict(list)
+        sent_offsets = token_map[obj["docid"]]
+        seg_offsets = []
+        for si, ei in sents:
+            segs = []
+            for i in range(si, ei):
+                segs.extend(sent_offsets[i])
+            seg_offsets.append(segs)
+                
+        roles = ['PerpInd', 'PerpOrg', 'Target', 'Victim', 'Weapon']
+        arguments = defaultdict(list)
+        for role in roles:
+            for arg_list in obj['extracts'][role]:
+                for arg in arg_list:
+                    arg_offset_start = arg[1]
+                    arg_offset_end = arg[1] + len(arg[0])
+                    arg_seg_id = -1
+                    for i, sent_offsets in enumerate(seg_offsets):
+                        if sent_offsets[0][0] <= arg_offset_start and arg_offset_end <= sent_offsets[-1][1]:
+                            arg_seg_id = i
+                            break
+                    if arg_seg_id == -1:
+                        n_drop_arg += 1
+                        continue
+                        
+                    tokens = [t for j in range(sents[arg_seg_id][0], sents[arg_seg_id][1]) for t in text_tokens[j]]
+
+                    start_id = -1
+                    end_id = -1
+                    for i, token_offsets in enumerate(seg_offsets[arg_seg_id]):
+                        if token_offsets[0] == arg_offset_start:
+                            start_id = i
+                            for j in range(i, len(seg_offsets[arg_seg_id])):
+                                if seg_offsets[arg_seg_id][j][1] == arg_offset_end:
+                                    end_id = j + 1
+                            break
+
+                    if start_id == -1 or end_id == -1:
+                        n_drop_arg += 1
+                        continue
+                        
+                    tokens = [t for j in range(sents[arg_seg_id][0], sents[arg_seg_id][1]) for t in text_tokens[j]]
+                    assert " ".join(tokens[start_id:end_id]).replace(" ", "") == arg[0].replace(" ", "")
+                        
+                    entity_id = f"{obj['docid']}_Seg{arg_seg_id}_Ent{len(entity_mentions[arg_seg_id])}"
+                    entity = {
+                        "id": entity_id, 
+                        "text": arg[0], 
+                        "entity_type": "Entity", 
+                        "start": start_id+1, 
+                        "end": end_id+1, 
+                    }
+                    entity_mentions[arg_seg_id].append(entity)
+
+                    argument = {
+                        "entity_id": entity_id, 
+                        "role": role, 
+                        "text": arg[0], 
+                        "start": start_id+1, 
+                        "end": end_id+1, 
+                    }
+                    arguments[arg_seg_id].append(argument)
+
+        for i in range(n_seg):
+            entity_mentions_ = entity_mentions[i]
+            event_mentions_ = event_mentions[i]
+            arguments_ = arguments[i]
+            
+            entity_mentions_ = sorted(entity_mentions_, key=lambda x: (x["start"], x["end"]))
+            event_mentions_ = sorted(event_mentions_, key=lambda x: (x["trigger"]["start"], x["trigger"]["end"]))
+            arguments_ = sorted(arguments_, key=lambda x: (x["start"], x["end"]))
+            tokens = [t for j in range(sents[i][0], sents[i][1]) for t in text_tokens[j]]
+            
+            dt = {
+                "doc_id": obj['docid'], 
+                "wnd_id": f"{obj['docid']}_{i}", 
+                "text": "[trigger] " + obj["doctext"][seg_offsets[i][0][0]:seg_offsets[i][-1][1]], 
+                "tokens": ["[trigger]"] + tokens, 
+                "event_mentions": [{
+                    "id": f"{obj['docid']}_Seg{i}_Evt",
+                    "event_type": "Dummy",
+                    "trigger": {
+                        "text": "[trigger]", 
+                        "start": 0, 
+                        "end": 1, 
+                    },
+                    "arguments": arguments_, 
+                }], 
+                "entity_mentions": entity_mentions_, 
+                "lang": "en", 
+            }
+            data.append(dt)
+        
+    print(f"Number of dropped events: {n_drop_event}")
+    print(f"Number of dropped arguments: {n_drop_arg}")
+            
+    return data
+            
+def get_statistics(data):
+    event_type_count = defaultdict(int)
+    role_type_count = defaultdict(int)
+    doc_ids = set()
+    max_len = 0
+    for dt in data:
+        max_len = max(max_len, len(dt["tokens"]))
+        doc_ids.add(dt["doc_id"])
+        for event in dt["event_mentions"]:
+            event_type_count[event["event_type"]] += 1
+            for argument in event["arguments"]:
+                role_type_count[argument["role"]] += 1
+    
+    print(f"# of Instances: {len(data)}")
+    print(f"# of Docs: {len(doc_ids)}")
+    print(f"Max Length: {max_len}")
+    print(f"# of Event Types: {len(event_type_count)}")
+    print(f"# of Events: {sum(event_type_count.values())}")
+    print(f"# of Role Types: {len(role_type_count)}")
+    print(f"# of Arguments: {sum(role_type_count.values())}")
+    # pprint(event_type_count)
+    print()
+    
+def save_data(out_path, split, train_data, dev_data, test_data):
+    data_path = os.path.join(out_path, f"{split}")
+    os.makedirs(data_path)
+    
+    with open(os.path.join(data_path, "train.json"), "w") as fp:
+        for data in train_data:
+            fp.write(json.dumps(data)+"\n")
+    
+    with open(os.path.join(data_path, "dev.json"), "w") as fp:
+        for data in dev_data:
+            fp.write(json.dumps(data)+"\n")
+    
+    with open(os.path.join(data_path, "test.json"), "w") as fp:
+        for data in test_data:
+            fp.write(json.dumps(data)+"\n")
+    
+def main():
+    parser = ArgumentParser()
+    parser.add_argument("-i", "--in_folder", help="Path to the input folder")
+    parser.add_argument("-o", "--out_folder", help="Path to the output folder")
+    parser.add_argument('--seed', type=int, default=0, help="Path to split folder")
+    parser.add_argument('--split', help="Path to split folder")
+    parser.add_argument('--token_map', default="token_map.json")
+    parser.add_argument('--seg_map', default="seg_map.json")
+    args = parser.parse_args()
+    
+    np.random.seed(args.seed)
+    
+    objs = read_docs(args.in_folder)
+    
+    with open(args.token_map) as fp:
+        token_map = json.load(fp)
+    
+    with open(args.seg_map) as fp:
+        seg_map = json.load(fp)
+        
+    train_objs, dev_objs, test_objs = get_split(objs, args.split, token_map)
+
+    train_data = convert_format(train_objs, token_map, seg_map)
+    dev_data = convert_format(dev_objs, token_map, seg_map)
+    test_data = convert_format(test_objs, token_map, seg_map)
+    
+    
+    print("Train")
+    get_statistics(train_data)
+    print("Dev")
+    get_statistics(dev_data)
+    print("Test")
+    get_statistics(test_data)
+    
+    save_data(args.out_folder, args.split, train_data, dev_data, test_data)
+    
+        
+if __name__ == "__main__":
+    main()

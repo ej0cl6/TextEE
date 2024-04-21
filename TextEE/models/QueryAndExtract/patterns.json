@@ -751,5 +751,14 @@
         "Regulation": "[CLS]-regulation-[SEP]",
         "Transcription": "[CLS]-transcription-[SEP]",
         "Ubiquitination": "[CLS]-ubiquitination-[SEP]"
+    },
+    "speed": {
+        "control": "[CLS]-control-[SEP]", 
+        "cure": "[CLS]-cure-[SEP]", 
+        "death": "[CLS]-death-[SEP]", 
+        "infect": "[CLS]-infect-[SEP]", 
+        "prevent": "[CLS]-prevent-[SEP]", 
+        "spread": "[CLS]-spread-[SEP]", 
+        "symptom": "[CLS]-symptom-[SEP]" 
     }
 }

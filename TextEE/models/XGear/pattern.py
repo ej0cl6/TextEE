@@ -737,4 +737,7 @@ patterns = {
         "Transcription": ["Theme"],
         "Ubiquitination": ["Cause", "Site", "Theme"],
     },
+    "muc4": {
+        "Dummy": ["PerpInd", "PerpOrg", "Target", "Victim", "Weapon"], 
+    },
 }

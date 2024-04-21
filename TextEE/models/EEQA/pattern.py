@@ -2822,4 +2822,15 @@ patterns = {
             },
         },
     },
+    "muc4": {
+        "arg": {
+            "Dummy": {
+                "PerpInd": "PerpInd in [trigger]",
+                "PerpOrg": "PerpOrg in [trigger]", 
+                "Target": "Target in [trigger]",
+                "Victim": "Victim in [trigger]", 
+                "Weapon": "Weapon in [trigger]",
+            },
+        },
+    },
 }

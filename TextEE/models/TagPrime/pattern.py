@@ -737,6 +737,18 @@ patterns = {
         "Transcription": ["Theme"],
         "Ubiquitination": ["Cause", "Site", "Theme"],
     },
+    "speed": {
+        "control": [], 
+        "cure": [], 
+        "death": [], 
+        "infect": [], 
+        "prevent": [], 
+        "spread": [], 
+        "symptom": [], 
+    }, 
+    "muc4": {
+        "Dummy": ["PerpInd", "PerpOrg", "Target", "Victim", "Weapon"],
+    }, 
 }
 
 event_type_tags = {
@@ -1493,6 +1505,18 @@ event_type_tags = {
         "Transcription": "Transcription",
         "Ubiquitination": "Ubiquitination",
     },
+    "speed": {
+        "control": "Control", 
+        "cure": "Cure", 
+        "death": "Death", 
+        "infect": "Infect", 
+        "prevent": "Prevent", 
+        "spread": "Spread", 
+        "symptom": "Symptom", 
+    }, 
+    "muc4": {
+        "Dummy": "Dummy", 
+    }
 }
 
 role_type_tags = {
@@ -2018,4 +2042,11 @@ role_type_tags = {
         "Theme2": "Theme 2",
         "ToLoc": "To Loc",
     },
+    "muc4": {
+        "PerpInd": "Person",
+        "PerpOrg": "Organization", 
+        "Target": "Target",
+        "Victim": "Victim", 
+        "Weapon": "Weapon",
+    }, 
 }
