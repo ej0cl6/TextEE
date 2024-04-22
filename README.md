@@ -306,7 +306,6 @@ python TextEE/evaluate_end2end.py --task EAE --data [eval_data] --model [saved_m
 
 ### Evaluation for Pipeline Model
 
-
 ```
 # Evaluating ED
 python TextEE/evaluate_pipeline.py --task ED --data [eval_data] --ed_model [saved_model_folder]
@@ -317,6 +316,21 @@ python TextEE/evaluate_pipeline.py --task EAE --data [eval_data] --eae_model [sa
 # Evaluating ED+EAE
 python TextEE/evaluate_pipeline.py --task E2E --data [eval_data] --ed_model [saved_model_folder] --eae_model [saved_model_folder]
 ```
+
+### Making Predictions for New Texts with End-to-End Model
+
+```
+# Predicting End-to-End
+python TextEE/predict_end2end.py --input_file demo_input.txt --model [saved_model_folder] --output_file demo_output.json
+```
+
+### Making Predictions for New Texts with Pipeline Model
+
+```
+# Predicting ED+EAE
+python TextEE/predict_pipeline.py --input_file demo_input.txt --ed_model [saved_model_folder] --eae_model [saved_model_folder] --output_file demo_output.json
+```
+
 
 ## Citation
 ```bib
