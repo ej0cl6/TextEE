@@ -32,6 +32,8 @@ TRAINER_MAP = {
     ("BartGen", "EAE"): BartGenEAETrainer,
     ("Ampere", "EAE"): AmpereEAETrainer,
     ("AMRIE", "E2E"): AMRIEE2ETrainer,
+    ("LLM", "ED"): LLMEDTrainer,
+    ("LLM", "EAE"): LLMEAETrainer,
 }
 
 def load_config(config_fn):
@@ -81,17 +83,30 @@ def parse_unknown_args(unknown_args):
     return args
 
 def load_data(task, file, add_extra_info_fn, config):
+    
+    with open(file, 'r', encoding='utf-8') as fp:
+        lines = fp.readlines()
+    objs = [json.loads(line) for line in lines]
+    
     if task == "E2E":
-        data, type_set = load_E2E_data(file, add_extra_info_fn, config)
+        data, type_set = load_E2E_data(objs, add_extra_info_fn, config)
+        logger.info('Loaded {} E2E instances ({} trigger types and {} role types) from {}'.format(
+            len(data), len(type_set["trigger"]), len(type_set["role"]), file))
         logger.info("There are {} trigger types and {} role types in total".format(len(type_set["trigger"]), len(type_set["role"])))
     elif task == "ED":
-        data, type_set = load_ED_data(file, add_extra_info_fn, config)
+        data, type_set = load_ED_data(objs, add_extra_info_fn, config)
+        logger.info('Loaded {} ED instances ({} trigger types) from {}'.format(
+            len(data), len(type_set["trigger"]), file))
         logger.info("There are {} trigger types in total".format(len(type_set["trigger"])))
     elif task == "EAE":
-        data, type_set = load_EAE_data(file, add_extra_info_fn, config)
+        data, type_set = load_EAE_data(objs, add_extra_info_fn, config)
+        logger.info('Loaded {} EAE instances ({} trigger types and {} role types) from {}'.format(
+            len(data), len(type_set["trigger"]), len(type_set["role"]), file))
         logger.info("There are {} trigger types and {} role types in total".format(len(type_set["trigger"]), len(type_set["role"])))
     elif task == "EARL":
-        data, type_set = load_EARL_data(file, add_extra_info_fn, config)
+        data, type_set = load_EARL_data(objs, add_extra_info_fn, config)
+        logger.info('Loaded {} EARL instances ({} trigger types and {} role types) from {}'.format(
+            len(data), len(type_set["trigger"]), len(type_set["role"]), file))
         logger.info("There are {} trigger types and {} role types in total".format(len(type_set["trigger"]), len(type_set["role"])))
     else:
         raise ValueError(f"Task {config.task} is not supported")
@@ -99,30 +114,67 @@ def load_data(task, file, add_extra_info_fn, config):
     return data, type_set
 
 def load_all_data(config, add_extra_info_fn):
+    
+    with open(config.train_file, 'r', encoding='utf-8') as fp:
+        lines = fp.readlines()
+    train_objs = [json.loads(line) for line in lines]
+    
+    with open(config.dev_file, 'r', encoding='utf-8') as fp:
+        lines = fp.readlines()
+    dev_objs = [json.loads(line) for line in lines]
+    
+    with open(config.test_file, 'r', encoding='utf-8') as fp:
+        lines = fp.readlines()
+    test_objs = [json.loads(line) for line in lines]
+    
     if config.task == "E2E":
-        train_data, train_type_set = load_E2E_data(config.train_file, add_extra_info_fn, config)
-        dev_data, dev_type_set = load_E2E_data(config.dev_file, add_extra_info_fn, config)
-        test_data, test_type_set = load_E2E_data(config.test_file, add_extra_info_fn, config)
+        train_data, train_type_set = load_E2E_data(train_objs, add_extra_info_fn, config)
+        logger.info('Loaded {} E2E instances ({} trigger types and {} role types) from {}'.format(
+            len(train_data), len(train_type_set["trigger"]), len(train_type_set["role"]), config.train_file))
+        dev_data, dev_type_set = load_E2E_data(dev_objs, add_extra_info_fn, config)
+        logger.info('Loaded {} E2E instances ({} trigger types and {} role types) from {}'.format(
+            len(dev_data), len(dev_type_set["trigger"]), len(dev_type_set["role"]), config.dev_file))
+        test_data, test_type_set = load_E2E_data(test_objs, add_extra_info_fn, config)
+        logger.info('Loaded {} E2E instances ({} trigger types and {} role types) from {}'.format(
+            len(test_data), len(test_type_set["trigger"]), len(test_type_set["role"]), config.test_file))
         type_set = {"trigger": train_type_set["trigger"] | dev_type_set["trigger"] | test_type_set["trigger"], 
                     "role": train_type_set["role"] | dev_type_set["role"] | test_type_set["role"]}
         logger.info("There are {} trigger types and {} role types in total".format(len(type_set["trigger"]), len(type_set["role"])))
     elif config.task == "ED":
-        train_data, train_type_set = load_ED_data(config.train_file, add_extra_info_fn, config)
-        dev_data, dev_type_set = load_ED_data(config.dev_file, add_extra_info_fn, config)
-        test_data, test_type_set = load_ED_data(config.test_file, add_extra_info_fn, config)
+        train_data, train_type_set = load_ED_data(train_objs, add_extra_info_fn, config)
+        logger.info('Loaded {} ED instances ({} trigger types) from {}'.format(
+            len(train_data), len(train_type_set["trigger"]), config.train_file))
+        dev_data, dev_type_set = load_ED_data(dev_objs, add_extra_info_fn, config)
+        logger.info('Loaded {} ED instances ({} trigger types) from {}'.format(
+            len(dev_data), len(dev_type_set["trigger"]), config.dev_file))
+        test_data, test_type_set = load_ED_data(test_objs, add_extra_info_fn, config)
+        logger.info('Loaded {} ED instances ({} trigger types) from {}'.format(
+            len(test_data), len(test_type_set["trigger"]), config.test_file))
         type_set = {"trigger": train_type_set["trigger"] | dev_type_set["trigger"] | test_type_set["trigger"]}
         logger.info("There are {} trigger types in total".format(len(type_set["trigger"])))
     elif config.task == "EAE":
-        train_data, train_type_set = load_EAE_data(config.train_file, add_extra_info_fn, config)
-        dev_data, dev_type_set = load_EAE_data(config.dev_file, add_extra_info_fn, config)
-        test_data, test_type_set = load_EAE_data(config.test_file, add_extra_info_fn, config)
+        train_data, train_type_set = load_EAE_data(train_objs, add_extra_info_fn, config)
+        logger.info('Loaded {} EAE instances ({} trigger types and {} role types) from {}'.format(
+            len(train_data), len(train_type_set["trigger"]), len(train_type_set["role"]), config.train_file))
+        dev_data, dev_type_set = load_EAE_data(dev_objs, add_extra_info_fn, config)
+        logger.info('Loaded {} EAE instances ({} trigger types and {} role types) from {}'.format(
+            len(dev_data), len(dev_type_set["trigger"]), len(dev_type_set["role"]), config.dev_file))
+        test_data, test_type_set = load_EAE_data(test_objs, add_extra_info_fn, config)
+        logger.info('Loaded {} EAE instances ({} trigger types and {} role types) from {}'.format(
+            len(test_data), len(test_type_set["trigger"]), len(test_type_set["role"]), config.test_file))
         type_set = {"trigger": train_type_set["trigger"] | dev_type_set["trigger"] | test_type_set["trigger"], 
                     "role": train_type_set["role"] | dev_type_set["role"] | test_type_set["role"]}
         logger.info("There are {} trigger types and {} role types in total".format(len(type_set["trigger"]), len(type_set["role"])))
     elif config.task == "EARL":
-        train_data, train_type_set = load_EARL_data(config.train_file, add_extra_info_fn, config)
-        dev_data, dev_type_set = load_EARL_data(config.dev_file, add_extra_info_fn, config)
-        test_data, test_type_set = load_EARL_data(config.test_file, add_extra_info_fn, config)
+        train_data, train_type_set = load_EARL_data(train_objs, add_extra_info_fn, config)
+        logger.info('Loaded {} EARL instances ({} trigger types and {} role types) from {}'.format(
+            len(train_data), len(train_type_set["trigger"]), len(train_type_set["role"]), config.train_file))
+        dev_data, dev_type_set = load_EARL_data(dev_objs, add_extra_info_fn, config)
+        logger.info('Loaded {} EARL instances ({} trigger types and {} role types) from {}'.format(
+            len(dev_data), len(dev_type_set["trigger"]), len(dev_type_set["role"]), config.dev_file))
+        test_data, test_type_set = load_EARL_data(test_objs, add_extra_info_fn, config)
+        logger.info('Loaded {} EARL instances ({} trigger types and {} role types) from {}'.format(
+            len(test_data), len(test_type_set["trigger"]), len(test_type_set["role"]), config.test_file))
         type_set = {"trigger": train_type_set["trigger"] | dev_type_set["trigger"] | test_type_set["trigger"], 
                     "role": train_type_set["role"] | dev_type_set["role"] | test_type_set["role"]}
         logger.info("There are {} trigger types and {} role types in total".format(len(type_set["trigger"]), len(type_set["role"])))
@@ -131,11 +183,45 @@ def load_all_data(config, add_extra_info_fn):
     
     return train_data, dev_data, test_data, type_set
 
-def load_E2E_data(file, add_extra_info_fn, config):
-
+def load_text(task, file, add_extra_info_fn, config):
+    
     with open(file, 'r', encoding='utf-8') as fp:
         lines = fp.readlines()
-    data = [json.loads(line) for line in lines]
+        
+    import stanza
+    nlp_en = stanza.Pipeline(lang='en', processors='tokenize')
+    
+    objs = []
+    offset_map = []
+    for i, line in enumerate(lines):
+        line = line.strip()
+        res_text = nlp_en(line)
+        text_tokens = [t.text for s in res_text.sentences for t in s.tokens]
+        text_offsets = [(t.start_char, t.end_char) for s in res_text.sentences for t in s.tokens]
+        obj = {
+            "doc_id": f"DOC_{i:06d}", 
+            "wnd_id": f"DOC_{i:06d}", 
+            "text": line, 
+            "lang": "en", 
+            "tokens": text_tokens,
+            "entity_mentions": [], 
+            "event_mentions": [], 
+        }
+        objs.append(obj)
+        offset_map.append(text_offsets)
+
+    if task == "E2E":
+        data, _ = load_E2E_data(objs, add_extra_info_fn, config)
+        logger.info('Loaded {} E2E instances from {}'.format(len(data), file))
+    elif task == "ED":
+        data, _ = load_ED_data(objs, add_extra_info_fn, config)
+        logger.info('Loaded {} ED instances from {}'.format(len(data), file))
+        
+    assert len(data) == len(offset_map)
+        
+    return data, offset_map
+
+def load_E2E_data(data, add_extra_info_fn, config):
     
     instances = []
     for dt in data:
@@ -193,17 +279,10 @@ def load_E2E_data(file, add_extra_info_fn, config):
     new_instances = add_extra_info_fn(instances, data, config)
     assert len(new_instances) == len(instances)
     
-    logger.info('Loaded {} E2E instances ({} trigger types and {} role types) from {}'.format(
-        len(new_instances), len(trigger_type_set), len(role_type_set), file))
-    
     return new_instances, type_set
 
-def load_ED_data(file, add_extra_info_fn, config):
+def load_ED_data(data, add_extra_info_fn, config):
 
-    with open(file, 'r', encoding='utf-8') as fp:
-        lines = fp.readlines()
-    data = [json.loads(line) for line in lines]
-    
     instances = []
     for dt in data:
 
@@ -242,17 +321,10 @@ def load_ED_data(file, add_extra_info_fn, config):
     new_instances = add_extra_info_fn(instances, data, config)
     assert len(new_instances) == len(instances)
     
-    logger.info('Loaded {} ED instances ({} trigger types) from {}'.format(
-        len(new_instances), len(trigger_type_set), file))
-    
     return new_instances, type_set
 
-def load_EAE_data(file, add_extra_info_fn, config):
+def load_EAE_data(data, add_extra_info_fn, config):
 
-    with open(file, 'r', encoding='utf-8') as fp:
-        lines = fp.readlines()
-    data = [json.loads(line) for line in lines]
-    
     instances = []
     for dt in data:
         
@@ -304,17 +376,10 @@ def load_EAE_data(file, add_extra_info_fn, config):
     new_instances = add_extra_info_fn(instances, data, config)
     assert len(new_instances) == len(instances)
     
-    logger.info('Loaded {} EAE instances ({} trigger types and {} role types) from {}'.format(
-        len(new_instances), len(trigger_type_set), len(role_type_set), file))
-    
     return new_instances, type_set
 
-def load_EARL_data(file, add_extra_info_fn, config):
+def load_EARL_data(data, add_extra_info_fn, config):
 
-    with open(file, 'r', encoding='utf-8') as fp:
-        lines = fp.readlines()
-    data = [json.loads(line) for line in lines]
-    
     instances = []
     for dt in data:
         
@@ -371,9 +436,6 @@ def load_EARL_data(file, add_extra_info_fn, config):
     new_instances = add_extra_info_fn(instances, data, config)
     assert len(new_instances) == len(instances)
     
-    logger.info('Loaded {} EARL instances ({} trigger types and {} role types) from {}'.format(
-        len(new_instances), len(trigger_type_set), len(role_type_set), file))
-    
     return new_instances, type_set
 
 def convert_ED_to_EAE(data, gold):
@@ -412,3 +474,49 @@ def combine_ED_and_EAE_to_E2E(ed_predicitons, eae_predictions):
         e2e_predictions.append(ed_prediciton)
 
     return e2e_predictions
+
+def save_predictions(file, predictions, data=None, offset_map=None):
+    if data:
+        assert len(predictions) == len(data)
+        
+    with open(file, 'w') as fp:
+        for i, prediction in enumerate(predictions):
+            event_mentions = []
+            for event in prediction["events"]:
+                arguments = [{"role": a[2], "start": a[0], "end": a[1]} for a in event["arguments"]]
+                
+                event_mention = {
+                    "event_type": event["trigger"][2],  
+                    "trigger": {
+                        "start": event["trigger"][0], 
+                        "end": event["trigger"][1], 
+                    }, 
+                    "arguments": arguments
+                }
+                
+                if data and offset_map:
+                    event_mention["trigger"]["text"] = data[i]["text"][offset_map[i][event_mention["trigger"]["start"]][0]:offset_map[i][event_mention["trigger"]["end"]-1][1]]
+                    event_mention["trigger"]["offset_start"] = offset_map[i][event_mention["trigger"]["start"]][0]
+                    event_mention["trigger"]["offset_end"] = offset_map[i][event_mention["trigger"]["end"]-1][1]
+                    for a in arguments:
+                        a["text"] = data[i]["text"][offset_map[i][a["start"]][0]:offset_map[i][a["end"]-1][1]]
+                        a["offset_start"] = offset_map[i][a["start"]][0]
+                        a["offset_end"] = offset_map[i][a["end"]-1][1]
+                else:
+                    event_mention["trigger"]["text"] = " ".join(prediction["tokens"][event_mention["trigger"]["start"]:event_mention["trigger"]["end"]])
+                    for a in arguments:
+                        a["text"] = " ".join(prediction["tokens"][a["start"]:a["end"]])
+                
+                event_mentions.append(event_mention)
+                
+            out = {
+                "doc_id": prediction["doc_id"], 
+                "wnd_id": prediction["wnd_id"], 
+                "tokens": prediction["tokens"], 
+                "event_mentions": event_mentions, 
+            }
+                
+            if data:
+                out["text"] = data[i]["text"]
+                
+            fp.write(json.dumps(out)+"\n")
