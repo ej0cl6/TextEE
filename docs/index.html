@@ -24,6 +24,10 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <link href="https://unpkg.com/tabulator-tables@6.2.0/dist/css/tabulator_bulma.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://unpkg.com/tabulator-tables@6.2.0/dist/js/tabulator.min.js"></script>
+  <style>.tabulator {font-size: 11px;}</style>
 </head>
 <body>
 
@@ -75,7 +79,7 @@
             <span class="author-block"><sup>1</sup>University of Illinois Urbana-Champaign</span>,
             <span class="author-block"><sup>2</sup>University of Southern California</span>,
             <span class="author-block"><sup>3</sup>University of California, Los Angeles</span>,
-            <span class="author-block"><sup>4</sup>Standford University</span>
+            <span class="author-block"><sup>4</sup>Stanford University</span>
           </div>
 
           <div class="column has-text-centered">
@@ -172,9 +176,10 @@
         <h3 class="title is-4">News</h3>
         <div class="content has-text-justified">
           <ul>
-            <li><strong>[2024/02/23]</strong> TextEE supports the CEDAR approach now!</li>
-            <li><strong>[2023/12/26]</strong> TextEE supports three more datasets: MLEE, Genia2011, Genia2013!</li>
-            <li><strong>[2023/11/15]</strong> We release TextEE. Feel free to contact us if you want to contribute your models or datasets!</li>
+            <li><strong>[04/21/2024]</strong> TextEE supports two more datasets: SPEED and MUC-4.</li>
+            <li><strong>[02/23/2024]</strong> TextEE supports the CEDAR approach now.</li>
+            <li><strong>[12/26/2023]</strong> TextEE supports three more datasets: MLEE, Genia2011, Genia2013.</li>
+            <li><strong>[11/15/2023]</strong> We release TextEE. Feel free to contact us if you want to contribute your models or datasets!</li>
           </ul>
         </div>
       </div>
@@ -200,9 +205,11 @@
             <li><strong>PHEE</strong>: <a href="https://arxiv.org/abs/2210.12560">PHEE: A Dataset for Pharmacovigilance Event Extraction from Text</a>, EMNLP 2022</li>
             <li><strong>MEE</strong>: <a href="https://arxiv.org/abs/2211.05955">MEE: A Novel Multilingual Event Extraction Dataset</a>, EMNLP 2022</li>
             <li><strong>FewEvent</strong>: <a href="https://arxiv.org/abs/1910.11621">Meta-Learning with Dynamic-Memory-Based Prototypical Network for Few-Shot Event Detection</a>, WSDM 2020</li>
+            <li><strong>SPEED</strong>: <a href="https://arxiv.org/abs/2404.01679">Event Detection from Social Media for Epidemic Prediction</a>, NAACL 2024</li>
             <li><strong>MAVEN</strong>: <a href="https://arxiv.org/abs/2004.13590">MAVEN: A Massive General Domain Event Detection Dataset</a>, EMNLP 2020</li>
             <li><strong>RAMS</strong>: <a href="https://arxiv.org/abs/1911.03766">Multi-Sentence Argument Linking</a>, ACL 2020</li>
             <li><strong>WikiEvents</strong>: <a href="https://arxiv.org/abs/2104.05919">Document-Level Event Argument Extraction by Conditional Generation</a>, NAACL 2021</li>
+            <li><strong>MUC-4</strong>: <a href="https://aclanthology.org/volumes/M92-1/">Fourth Message Understanding Conference</a>, MUC-4 1992</li>
             <li><strong>GENEVA</strong>: <a href="https://arxiv.org/abs/2205.12505">GENEVA: Benchmarking Generalizability for Event Argument Extraction with Hundreds of Event Types and Argument Roles</a>, ACL 2023</li>
           </ul>
         </div>
@@ -244,23 +251,30 @@
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-full-width">
         <h3 class="title is-4">Results</h3>
 
         <h3 style="margin-bottom: 10px;">End-to-End Event Extraction</h3>
-        <div style="margin-bottom: 40px;"><img src="static/images/e2e.png" class="center"></div>
+        <div id="e2e-table-1"></div>
+        <div id="e2e-table-2"></div>
+        <div id="e2e-table-3"></div>
+        <div id="e2e-table-4"></div>
 
-        <h3 style="margin-bottom: 10px;">Event Detection</h3>
-        <div style="margin-bottom: 40px;"><img src="static/images/ed.png" class="center"></div>
+        <h3 style="margin-bottom: 10px; margin-top: 50px;">Event Detection</h3>
+        <div id="ed-table-1"></div>
+        <div id="ed-table-2"></div>
+        <!-- <div style="margin-bottom: 40px;"><img src="static/images/ed.png" class="center"></div> -->
 
-        <h3 style="margin-bottom: 10px;">Event Argument Extraction</h3>
-        <div><img src="static/images/eae.png" class="center"></div>
+        <h3 style="margin-bottom: 10px; margin-top: 50px;">Event Argument Extraction</h3>
+        <div id="eae-table-1"></div>
+        <div id="eae-table-2"></div>
+        <div id="eae-table-3"></div>
+        <div id="eae-table-4"></div>
+
       </div>
     </div>
   </div>
 </section>
-
-
 
 
 <section class="section" id="BibTeX">
@@ -316,6 +330,6 @@
     </div>
   </div>
 </footer>
-
+<script src="./table.js"></script>
 </body>
 </html>
